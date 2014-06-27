@@ -1,0 +1,23 @@
+p.message {
+    padding:10px;
+    margin: 10px 10px 0;
+    border: 1px solid #FFF;
+}
+ 
+p#SuccessMessage {
+    color:#3E933A;
+    background:#E2F7D8;
+    border-color:#9FDE9C;
+}
+ 
+p#NoticeMessage {
+    color:#CCBD00;
+    background:#FFF8D7;
+    border-color:#F1E988;
+}
+ 
+p#ErrorMessage {
+    color: #DA1D1D;
+    background: #FFDFDF;
+    border-color: #FFBBBB;
+}

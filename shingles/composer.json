@@ -1,0 +1,17 @@
+{
+	"name" : "irx/template",
+	"description" : "The Internetrix template",
+	"require" : {
+		"silverstripe/cms" : "3.1.5",
+		"silverstripe/userforms" : "dev-master",
+		"ajshort/silverstripe-addressable" : "dev-master",
+		"silverstripe/framework" : "3.1.5",
+		"sheadawson/silverstripe-linkable" : "dev-master",
+		"undefinedoffset/sortablegridfield" : "0.3.1",
+		"silverstripe/recaptcha" : "dev-master",
+		"silverstripe/subsites" : "dev-master",
+		"silverstripe/multiform" : "dev-master",
+		"ajshort/silverstripe-gridfieldextensions" : "dev-master"
+	},
+	"minimum-stability" : "dev"
+}

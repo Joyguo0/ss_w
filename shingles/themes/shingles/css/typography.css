@@ -1,0 +1,167 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Content */
+
+h1, h2, h3, h4, h5, h6 { padding:9px 0; line-height: 1.6em; }
+
+h1 {
+	text-transform:uppercase;
+	color:#525c87;
+	font-size:1.5em;
+	font-weight:700;
+}
+
+h2 {
+	color:#525c87;
+	font-size:1.4em;
+	font-weight:700;
+}
+
+h3 {
+	color:#525c87;
+	font-size:1.3125em;
+	font-weight:700;
+}
+
+h4 {
+	color:#525c87;
+	font-size:1.25em;
+	font-weight:600;
+}
+
+h5 {
+	color:#525c87;
+	font-size:1.125em;
+	font-weight:600;
+}
+
+h6 {
+	color:#525c87;
+	font-size:1em;
+	text-transform:uppercase;
+}
+
+img {
+	margin:10px 0;
+	max-width:100%;
+}
+
+img.left {
+	float:left;
+	max-width:95%;
+	margin:10px 5% 10px 0;
+}
+
+img.right {
+	float:right;
+	max-width:95%;
+	margin:10px 0 10px 5%;
+}
+
+p {
+	color: #6d717b;
+	font-size:1em;
+	line-height: 1.8em;
+	padding:9px 0px;
+}
+
+q, blockquote {
+	color: #6d717b;
+	font-size:1.125em;
+	line-height: 1.8em;
+	float:left;
+	max-width:33%;
+	margin:9px 0px;
+	padding:0 25px;
+	border-left:1px solid #e8434f;
+	display:block;
+	font-style:italic;
+}
+
+a, a:link, a:visited {
+	color: #3497da;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#3497da;
+	text-decoration:underline;
+}
+
+a:active, a:focus {
+	color:#3497da;
+	text-decoration:none;
+	outline:none;
+}
+
+ul {
+	list-style: none;
+}
+
+ul li {
+	line-height:1.8em;
+	color:#6d717b;
+	background:url(../images/list.png) 15px 19px no-repeat;
+	padding: 8px 0px 8px 30px;
+	margin:0;
+}
+
+ul li p, ul li h1, ul li h2, ul li h3, ul li h4, ul li h5, ul li h6, ol li p, ol li h1, ol li h2, ol li h3, ol li h4, ol li h5, ol li h6 {
+	font-size: 1em;
+	line-height: 1.8em;
+	padding: 0;
+}
+
+ol {
+	list-style:decimal;
+	padding-left:30px;
+}
+
+ol li {
+	color:#6d717b;
+	line-height:1.8em;
+	padding:9px 0;
+}
+
+strong {
+	font-weight:bold;
+}
+
+i {
+	font-style:italic;
+}
+
+table {
+	width:100%;
+	margin:8px 0;
+	font-size:1em;
+	color:#6d717b;
+	line-height:1.8em;
+	border:1px solid #ccc;
+}
+
+table th {
+	padding: 0px;
+	border: 1px solid #ccc;
+	background-color: #efefef;
+	text-align: left;
+	font-weight: bold;
+}
+
+table td {
+	padding: 0px;
+	border: 1px solid #ccc;
+	background-color: #ffffff;
+}
+
+.typography p.bordered img, .content p.bordered img, .typography img.bordered {
+    padding: 3px !important;
+    background: #FFF;
+    border: 1px solid #bcc1d4 !important;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) !important;
+    -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) !important;
+    -o-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) !important;
+    -ms-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) !important;
+}
