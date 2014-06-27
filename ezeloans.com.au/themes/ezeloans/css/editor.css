@@ -1,0 +1,10 @@
+/**
+ * This support file is used to style the WYSIWYG editor in the CMS
+ */
+
+@import "typography.css?2";
+
+.typography ul li {
+    line-height:2.8em;
+    background:url(../images/list.png) 15px 18px no-repeat;
+}

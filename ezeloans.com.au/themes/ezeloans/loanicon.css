@@ -1,0 +1,68 @@
+/* Horizontal Loan Icons */
+
+.loans-horiz-area {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+a.loans-horiz {
+    padding:1em 0;
+    display:block;
+    text-align:center;
+    text-decoration:none;
+}
+
+a.loans-horiz div {
+    width:100%;
+    max-width:94px;
+    height:106px;
+    margin:0 auto;
+    background-repeat:no-repeat;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    background-image:url(images/icons-med.png);
+    background-image:url(images/icons-med.svg), none;
+    background-size:658px 106px;
+}
+
+.ie a.loans-horiz div {background-image:url(images/icons-med.png);}
+
+a.loans-horiz .cars {
+    background-position: 0px 0px;
+}
+
+a.loans-horiz .boats {
+    background-position: -94px 0px;
+}
+
+a.loans-horiz .caravans {
+    background-position: -188px 0px;
+}
+
+a.loans-horiz .bikes {
+    background-position: -282px 0px;
+}
+
+a.loans-horiz .trucks {
+    background-position: -376px 0px;
+}
+
+a.loans-horiz .personal {
+    background-position: -470px 0px;
+}
+
+a.loans-horiz .equipment {
+    background-position: -564px 0px;
+}
+
+a.loans-horiz:hover div {
+    -webkit-animation-name: pop;
+    animation-name: pop;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}

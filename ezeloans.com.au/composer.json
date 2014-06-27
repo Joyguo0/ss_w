@@ -1,0 +1,12 @@
+{
+	"name" : "irx/template",
+	"description" : "The Internetrix template",
+	"require" : {
+		"unclecheese/betterbuttons" : "3.0.x-dev",
+		"silverstripe/cms" : "3.1.3",
+		"silverstripe/userforms" : "master-dev",
+		"silverstripe/framework" : "3.1.3",
+		"silverstripe/recaptcha" : "dev-master"
+	},
+	"minimum-stability" : "dev"
+}

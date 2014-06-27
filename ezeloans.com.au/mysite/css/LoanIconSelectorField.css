@@ -1,0 +1,21 @@
+.loaniconselector ul li {
+    float: left;
+    width: 150px;
+    position: relative;
+    height: 150px;
+}
+
+.loaniconselector ul li.feature {
+    padding: 0;
+}
+
+.loaniconselector ul li a.loans-horiz div {
+    left: 1.5em;
+    width:150px;
+    height: 150px;
+}
+
+.loaniconselector ul li:hover a.loans-horiz div {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}

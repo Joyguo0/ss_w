@@ -1,0 +1,15 @@
+.iconselector ul li {
+    float: left;
+    width: 150px;
+    position: relative;
+    height: 150px;
+}
+
+.iconselector ul li.feature {
+    padding: 0;
+}
+
+.iconselector ul li .feature-icon {
+    left: 1.5em;
+}
+

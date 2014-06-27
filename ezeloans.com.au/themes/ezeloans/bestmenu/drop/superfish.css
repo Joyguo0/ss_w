@@ -1,0 +1,148 @@
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sf-menu li {
+	position: relative;
+}
+.sf-menu ul {
+	position: absolute;
+	display: none;
+	top: 100%;
+	left: 50%;
+	z-index: 99;
+}
+.sf-menu > li {
+	float: left;
+}
+.sf-menu li:hover > ul,
+.sf-menu li.sfHover > ul {
+	display: block;
+}
+
+.sf-menu a {
+	display: block;
+	position: relative;
+}
+.sf-menu ul ul {
+	top: -10px;
+	left: 100%;
+}
+
+/* Skin */
+
+.sf-menu ul.drop {
+	background: #ffffff;
+	width: 200px;
+	padding: 10px 0;
+	margin-left:-100px;
+	-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 10px;
+	-webkit-box-shadow: rgba(0,0,0,0.3) 0 1px 10px;
+	box-shadow: rgba(0,0,0,0.3) 0 1px 10px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.sf-menu ul.drop:after {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #fff;
+	border-width: 6px;
+	margin-left: -6px;
+}
+
+.sf-menu ul.drop li { float: none; margin:0; }
+
+.sf-menu ul li a {
+	text-transform:none;
+	font-size:0.875em;
+	margin:0;
+	padding:10px 15px;
+	height:auto;
+	line-height:1.25em;
+	background:none;
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	border-radius:0;
+}
+
+.sf-menu li:hover ul li a {
+	background:none;
+}
+
+.sf-menu li:hover ul li a:hover, .sf-menu li:hover ul li:hover a {
+	color:#1ec2f3;
+	background:#f2f4f5;
+}
+
+.sf-menu li:hover ul li:hover li a {
+	background:none;
+	color: #10333f;
+}
+
+.sf-menu li:hover ul li li a:hover {
+	color:#1ec2f3;
+	background:#f2f4f5;
+}
+
+.sf-menu ul ul {
+	background: #ffffff;
+	width: 200px;
+	padding: 10px 0;
+	-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 10px;
+	-webkit-box-shadow: rgba(0,0,0,0.3) 0 1px 10px;
+	box-shadow: rgba(0,0,0,0.3) 0 1px 10px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+}
+
+
+/*** arrows (for all except IE7)  **/
+.sf-arrows .sf-with-ul {
+	padding-right: 25px;
+	*padding-right: 10px; 
+}
+.sf-arrows .sf-with-ul:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	margin-top: -3px;
+	height: 0;
+	width: 0;
+	
+	border: 5px solid transparent;
+	border-top-color: #B3C7CF;
+}
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+	border-top-color: #1ec2f3;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+	margin-top: -5px;
+	margin-right: -3px;
+	border-color: transparent;
+	border-left-color: #5b6265;
+}
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+	border-left-color: #1ec2f3;
+}
