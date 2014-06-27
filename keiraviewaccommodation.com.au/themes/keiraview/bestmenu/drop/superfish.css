@@ -1,0 +1,150 @@
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sf-menu li { 
+	position: relative;
+}
+
+.sf-menu li.megahere { position:static; }
+
+.sf-menu ul {
+	position: absolute;
+	display: none;
+	top: 100%;
+	left: 0;
+	z-index: 99;
+}
+.sf-menu > li {
+	/* float: left; */
+}
+.sf-menu li:hover > ul,
+.sf-menu li.sfHover > ul {
+	display: block;
+}
+
+.sf-menu li:hover, .sf-menu li.sfHover, 
+.sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active { 
+
+     z-index: 1; 
+}
+
+
+.sf-menu a {
+	display: block;
+	position: relative;
+}
+.sf-menu ul ul {
+	top: 0;
+	left: 100%;
+}
+
+/*
+.sf-arrows .sf-with-ul {
+	padding-right: 2.5em;
+	*padding-right: 1em; 
+}
+.sf-arrows .sf-with-ul:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	margin-top: -3px;
+	height: 0;
+	width: 0;
+	border: 5px solid transparent;
+	border-top-color: #dFeEFF; 
+	border-top-color: rgba(255,255,255,.5);
+}
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+	border-top-color: white; 
+}
+.sf-arrows ul .sf-with-ul:after {
+	margin-top: -5px;
+	margin-right: -3px;
+	border-color: transparent;
+	border-left-color: #dFeEFF; 
+	border-left-color: rgba(255,255,255,.5);
+}
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+	border-left-color: white;
+}
+*/
+
+/* Megamenu */
+
+.sf-menu .sf-mega {
+	position: absolute;
+	display: none;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	background: #FFF;
+}
+
+/*** mega menu dropdown ***/
+.sf-mega {}
+.sf-mega-section {}
+.sf-mega ul {}
+.sf-mega li {}
+.sf-mega h2 {}
+
+/* Brett's MegaMenu Styles */
+
+header nav ul li .sf-mega li {
+	width:16.666%;
+	float:left;
+}
+
+header nav ul li .sf-mega a:hover {}
+
+/* Droptabs Like 'Builders' */
+
+.drop-tabs {
+	border:1px solid #9aa9c8;
+	padding:2px;
+	background:#FFF;
+	margin:0 0 9px 0;
+}
+
+.drop-tabs img {
+	max-width:100%;
+}
+
+header nav ul li .sf-mega .table a:hover {
+	background:#f6f8ff;
+	color:#ff7c07;
+	border-bottom:2px solid #ff7c07;
+}
+
+
+@media all and (max-width: 768px) {
+	
+	/* Header Nav Mobile */
+	
+	.sf-menu ul {
+		position:relative;
+		display:block;
+	}
+	
+	.sf-menu .sf-mega { /* Megamenu */
+		position:relative;
+		display:block;
+		background:none;
+	}
+	
+	.drop-tabs {
+		display:none;
+	}
+	
+	.me {
+		display:block;
+	}
+	
+}

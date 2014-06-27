@@ -1,0 +1,5 @@
+{
+	"name" : "irx/template",
+	"description" : "The Internetrix template",
+	"minimum-stability" : "dev"
+}
