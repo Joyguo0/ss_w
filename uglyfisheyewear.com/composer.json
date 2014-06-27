@@ -1,0 +1,29 @@
+{
+	"name" : "irx/template",
+	"description" : "The Internetrix template",
+	"require" : {
+		"simonwelsh/gridfieldrelationhandler" : "dev-master",
+		"silverstripe/cms" : "3.1.5",
+		"swipestripe/swipestripe-category" : "master-dev@dev",
+		"swipestripe/swipestripe-flatfeeshipping" : "dev-master",
+		"colymba/gridfield-bulk-editing-tools" : "dev-master",
+		"silverstripe/framework" : "3.1.5",
+		"silverstripe/recaptcha" : "dev-master",
+		"swipestripe/swipestripe-addresses" : "2.1.x-dev",
+		"tractorcow/silverstripe-twitter" : "dev-master",
+		"swipestripe/swipestripe-coupon" : "2.1.x-dev",
+		"ajshort/silverstripe-gridfieldextensions" : "dev-master",
+		"swipestripe/swipestripe" : "2.1.x-dev",
+		"silverstripe/newsletter" : "dev-master",
+		"unclecheese/betterbuttons" : "3.0.x-dev",
+		"swipestripe/swipestripe-currency" : "master-dev@dev",
+		"silverstripe/userforms" : "dev-master",
+		"ajshort/silverstripe-addressable" : "master-dev@dev",
+		"silverstripe/googlesitemaps" : "dev-master",
+		"sheadawson/silverstripe-linkable" : "dev-master",
+		"unclecheese/display-logic" : "dev-master",
+		"silverstripe/subsites" : "dev-master",
+		"silverstripe/multiform" : "dev-master"
+	},
+	"minimum-stability" : "dev"
+}

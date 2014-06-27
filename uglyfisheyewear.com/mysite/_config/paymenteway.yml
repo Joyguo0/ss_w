@@ -1,0 +1,41 @@
+PaymentGateway:
+  environment:
+    'dev'
+
+PaymentProcessor:
+  supported_methods:
+    dev:
+      - 'EwayRapid'
+    live:
+      - 'EwayRapid'
+
+RapidGateway:
+  live:
+    # User credentials
+    Payment.Username: ""
+    Payment.Password: ""
+
+    #Method Options: SOAP,POST,REST,RPC
+    "Request:Method": 'SOAP'
+
+    #Format Options: JSON, XML
+    "Request:Format": 'JSON'
+
+  dev:
+    # User credentials
+    Payment.Username: "A1001CfKewMd7IgXb+5FHtdDWliSSEJa5v+YReDpxFlDUiM4oDei4wbQSIb8i6eWoKcGvf"
+    Payment.Password: "jason123"
+
+    #Method Options: SOAP,POST,REST,RPC
+    "Request:Method": 'SOAP'
+
+    #Format Options: JSON, XML
+    "Request:Format": 'JSON'
+
+    # Set to 1 to see the response objects for CreateAccessCode & GetAccessCodeResult
+    # Also, it is able to see the raw response/request messages in either JSON or XML format being sent to the RapidAPI End Point.
+    ShowDebugInfo: 0
+    
+    # Set supported currency
+    supported_currencies:
+      'AUD' : 'Australian Dollar'

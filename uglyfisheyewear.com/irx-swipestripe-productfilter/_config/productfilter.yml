@@ -1,0 +1,15 @@
+---
+name: SwipeStripe Product Filter
+---
+ProductCategory:
+  extensions: 
+    - 'PF_ProductCategoryExtension'
+ProductCategory_Controller:
+  extensions: 
+    - 'PF_ProductCategoryControllerExtension'
+Attribute:
+  extensions: 
+    - 'PF_AttributeExtension'
+Option:
+  extensions: 
+    - 'PF_OptionExtension'

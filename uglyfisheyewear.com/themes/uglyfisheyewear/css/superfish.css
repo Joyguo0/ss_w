@@ -1,0 +1,99 @@
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.sf-menu li {
+    position: relative;
+}
+.sf-menu ul {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    z-index: 9999999;
+    min-width: 5.2em !important;
+}
+.sf-menu > li {
+    float: left;
+}
+.sf-menu li:hover > ul,
+.sf-menu li.sfHover > ul {
+    display: block;
+}
+
+.sf-menu ul.sf-mega {
+	width: 100%;
+	left: 0;
+	background: #000;
+	border: 2px solid #fff;
+}
+
+.sf-menu ul.sf-mega h4 a {
+	font-family: 'bebasregular', arial, san serif;
+	font-size:0.8em;
+}
+
+.sf-menu ul.sf-mega a {
+	border: none;
+	color: #fff;
+	text-align:left;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 0.9em;
+	letter-spacing: 0;
+	font-weight:400;
+}
+
+.sf-menu ul.sf-mega a:hover {
+	border: none;
+	background: none;
+	color: #d12421;
+}
+
+.sf-menu ul.sf-mega li span {
+	font-size: 0.75em;
+	float: left;
+	margin-top: -0.5em;
+	margin-bottom: 0.5em;
+	margin-left: 0.2em;
+	color: #666;
+	text-align: left;
+	width: 95%;
+}
+	
+.sf-menu a {
+    position: relative;
+}
+
+ul.sf-menu li.mega-menu {position: static;}
+
+ul.sf-menu li ul.sf-mega ul {
+    top: 0;
+    left: 0;
+    z-index: 0;
+    position: relative;
+    display:block;
+    float: left;
+	padding: 0.5em 1em;
+}
+
+ul.sf-menu li ul.sf-mega ul li h4 a {
+	text-decoration:underline;
+}
+
+ul.sf-mega li {
+    float: left;
+    width: 100%;
+    border:none;
+}
+
+.sf-menu li.mega-menu.mega-6 ul.sf-mega {
+	background: url(../images/mega-bg-6.jpg) 0 0 repeat-y;
+	background-size: 100%;
+}
+
+.sf-menu li.mega-menu ul.sf-mega {
+	background: url(../images/mega-bg-4.jpg) 0 0 repeat-y;
+	background-size: 100%;
+}

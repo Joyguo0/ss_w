@@ -1,0 +1,41 @@
+---
+Name: mysite
+After: 'framework/*','cms/*'
+---
+# YAML configuration for SilverStripe
+# See http://doc.silverstripe.org/framework/en/topics/configuration
+# Caution: Indentation through two spaces, not tabs
+SSViewer:
+  theme: 'uglyfisheyewear'
+SiteConfig:
+  extensions:
+    - SiteConfigExtension
+Product:
+  extensions:
+    - ProductBugFixExtension
+CartPage:
+  extensions:
+    - CartPageExtension
+CartPage_Controller:
+  extensions:
+    - CartPage_Controller_Extension
+    - CouponModifierField_Extension
+CartForm:
+  extensions: 
+    - 'Coupon_CheckoutFormExtension'
+    - 'CartForm_IRX_Extension'
+OrderForm:
+  extensions: 
+    - 'OrderForm_IRX_Extension'
+GridFieldDetailForm_ItemRequest:
+  extensions:
+    - IRXGridFieldBetterButtonsItemRequest
+Option:
+  extensions:
+    - OptionExtension
+Newsletter:
+  extensions:
+    - NewsletterExtension
+LeftAndMain:
+  extra_requirements_css:
+    - 'mysite/css/editor.css'

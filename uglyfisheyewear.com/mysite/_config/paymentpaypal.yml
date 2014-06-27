@@ -1,0 +1,18 @@
+PaymentGateway:
+  environment:
+    'dev'
+PaymentProcessor:
+  supported_methods:
+    dev:
+      - 'PayPalExpress'
+    live:
+      - 'PayPalExpress'
+PaymentExpressGateway_PxPay:
+  live:
+    authentication:
+      user_id: 'PxPayUserId'
+      key: 'PxPayKey'
+  dev:
+    authentication:
+      user_id: 'PxPayUserId'
+      key: 'PxPayKey'

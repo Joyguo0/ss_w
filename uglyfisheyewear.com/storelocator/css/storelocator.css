@@ -1,0 +1,221 @@
+/************* store location finder page ********************** */
+ #store-locator-map {
+    background: #f4f4f4;
+    width: 870px;
+    height: 615px;
+    float: left;
+}
+.ui-helper-hidden-accessible {
+    display: none;
+}
+#store-locator-map-mobile {
+    background: #f4f4f4;
+    width: 100%;
+    height: 210px;
+    float: left;
+}
+#map-links {
+    clear: both;
+    display: block;
+    font-size: 11px;
+    padding-top: 10px;
+}
+#reset-map {
+    background: url("../images/button-reset-map.png") no-repeat scroll left center transparent;
+    padding-left: 20px;
+}
+#map-help {
+    background: url("../images/button-help.png") no-repeat scroll left center transparent;
+    margin-left: 10px;
+    padding-left: 20px;
+}
+#map-help-content {
+    display: none;
+    padding-top: 10px !important;
+}
+#map-help-content p {
+    margin-top: 10px;
+}
+#search-branches {
+    float: right;
+    height: 420px;
+    width: 100%;
+}
+#search-branches h2 {
+    background: url(../images/bg-h4.gif) bottom left repeat-x;
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+}
+#search-suburb-form label {
+    display: block;
+    margin-bottom: 2px;
+    font-style: normal;
+    font-weight: bold;
+    white-space:normal;
+}
+#search-suburb-form input.action {
+    float: none;
+}
+#suburb-search label {
+    text-transform: none;
+    margin: 0 0 0 8px;
+    text-align: left;
+    font-size: 15px;
+    width: 95%;
+    float:left;
+    display:block;
+    line-height:14px;
+    margin-bottom:10px;
+}
+#suburb-search label.search-location-label {
+    float:left;
+    width:100%;
+}
+input.store-checkbox {
+    float:left;
+    width:13px;
+    display:block;
+}
+input.suburb-search-input {
+    border: 1px solid #A7A7A7;
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px;
+    width: 200px;
+}
+input.ui-autocomplete-input {
+    width: 200px;
+}
+#store-listing {
+    overflow: auto;
+}
+.store-checkbox {
+    width: 100%;
+    float: left;
+}
+#all-stores {
+    background: url("../images/bg-branch-repeat.gif") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    float: left;
+    margin-left: 0;
+    margin-top: 25px;
+}
+#all-stores h2 {
+    color: #595959;
+    margin-top: 5px;
+    padding-left: 0;
+    padding-bottom: 5px;
+    margin-bottom:0px;
+    background: 0;
+    width: 310px;
+    border-bottom: 1px solid #bab9b8;
+    font-size: 17px;
+}
+.store-list {
+    display: none;
+    height: 420px;
+}
+.store-list h2 {
+    height: 20px;
+}
+.store-list-container {
+    overflow: auto;
+    height: 320px;
+    width: 270px;
+    padding: 5px;
+    background: #E9E9E9;
+    float: left;
+    background: url('../images/bg-branch-repeat.gif') repeat-x;
+}
+#search-results {
+    margin-left: 0px;
+    float: left;
+    margin-top: 25px;
+    background: url('../images/bg-branch-repeat.gif') repeat-x;
+}
+.store h4 {
+    font-size: 14px !important;
+    font-weight: normal;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-family:'Francois One', sans-serif;
+}
+.store h4 span {
+    font-weight: normal;
+    color: #666;
+}
+.store h4 a {
+    color: #D32221;
+}
+.store-list.loading {
+    background: url(../../../cms/images/network-save.gif) center center no-repeat;
+}
+ul#select-state {
+    padding:0px;
+    margin: 0 0 0 10px;
+}
+/**
+ * Taken from the aristo jQuery UI theme.
+ */
+ .ui-autocomplete {
+    position: absolute;
+    z-index: 2 !important;
+    background: #FFFFFF;
+    border: 1px solid #b1b1b1 !important;
+    border-top: none;
+    padding: 0 !important;
+    max-height: 250px;
+    overflow-y: auto;
+    width: 232px;
+}
+.ui-autocomplete li {
+    font-weight:bold;
+    text-transform:uppercase;
+}
+.ui-autocomplete-loading {
+    background: white url(../../../cms/images/network-save.gif) right center no-repeat;
+}
+.ui-menu {
+    list-style: none;
+    padding: 2px;
+    margin: 0;
+    display: block;
+    float: left;
+}
+.ui-menu .ui-menu-item {
+    background: none !important;
+    margin: 0;
+    padding: 0;
+    zoom: 1;
+    float: left;
+    clear: left;
+    width: 100%;
+    cursor: pointer;
+}
+.ui-menu .ui-menu-item a {
+    text-decoration: none;
+    display: block;
+    border: none;
+    padding: 2px;
+    line-height: 1.5;
+}
+.ui-menu .ui-menu-item a.ui-state-hover, .ui-menu .ui-menu-item a.ui-state-active {
+    background: #b1b1b1;
+    margin: 0 !important;
+    color: #CC3333 !important;
+    text-shadow: none !important;
+}
+#search-results p.store-para {
+    font-size: 2em;
+    font-family:'Didact Gothic', Verdana, sans-serif;
+    color: #CFCFCF;
+    border-bottom: thin solid #333;
+    width: inherit;
+    padding-top: 10px;
+    margin-bottom: 15px;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+#store-locator-map img {
+    max-width: inherit !important;
+}
