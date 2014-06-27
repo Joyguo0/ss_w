@@ -1,0 +1,19 @@
+{
+	"name" : "irx/template",
+	"description" : "The Internetrix template",
+	"require" : {
+		"simonwelsh/gridfieldrelationhandler" : "dev-master",
+		"silverstripe/cms" : "3.1.5",
+		"silverstripe/framework" : "3.1.5",
+		"silverstripe/recaptcha" : "dev-master",
+		"ajshort/silverstripe-gridfieldextensions" : "dev-master",
+		"unclecheese/betterbuttons" : "3.0.x-dev",
+		"silverstripe/userforms" : "dev-master",
+		"ajshort/silverstripe-addressable" : "master-dev@dev",
+		"silverstripe/googlesitemaps" : "dev-master",
+		"unclecheese/display-logic" : "dev-master",
+		"silverstripe/subsites" : "dev-master",
+		"lorenzo/linkable" : "dev-master"
+	},
+	"minimum-stability" : "dev"
+}
