@@ -1,0 +1,20 @@
+en_AU:
+  BBCodeParser:
+    COLORED: 'Coloured text'
+    ITALICEXAMPLE: Italic Text
+  ChangePasswordEmail_ss:
+    HELLO: 'G''day'
+  File:
+    NOFILESIZE: 'File size is zero bytes.'
+  ForgotPasswordEmail_ss:
+    HELLO: 'G''day'
+  HtmlEditorField:
+    CSSCLASSCENTER: 'Centred, on its own.'
+  LeftAndMain:
+    PLEASESAVE: 'Please Save Page: This page could not be updated because it hasn''t been saved yet.'
+  LeftAndMain_Menu_ss:
+    Hello: 'G''day'
+  LeftAndMain_Menu.ss:
+    Hello: 'G''day'
+  Security:
+    ALREADYLOGGEDIN: 'You don''t have access to this page. If you have another account that can access that page, you can <a href="%s">log in again</a>.'

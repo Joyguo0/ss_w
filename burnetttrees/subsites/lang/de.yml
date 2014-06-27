@@ -1,0 +1,17 @@
+de:
+  SubsiteAdmin:
+    MENUTITLE: Subsites
+  GridFieldAddFromTemplateButton:
+    AddFromTemplate: 'Neu hinzufügen von Template'
+  GroupSubsites:
+    ACCESSALL: 'Alle Subsites'
+    ACCESSONLY: 'Nur diese Subsites'
+    ACCESSRADIOTITLE: 'Dieser Gruppe Zugriff geben auf'
+    SECURITYTABTITLE: Subsites
+  SubsiteDomain:
+    DOMAIN: Domain
+    IS_PRIMARY: 'Ist primäre Domain'
+    PLURALNAME: 'Subsite Domains'
+    SINGULARNAME: 'Subsite Domain'
+  SubsitesVirtualPage:
+    SINGULARNAME: 'Subsites Virtuelle Seite'

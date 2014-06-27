@@ -1,0 +1,6 @@
+merchant ID: bbl7107147
+operator: webpayment
+password: dJu23!20Ui@nz
+
+Access Code: 
+Secure Hash Secret: 

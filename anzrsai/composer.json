@@ -1,0 +1,24 @@
+{
+	"name" : "irx/anzrsai",
+	"description" : "anzrsai.org",
+	"require" : {
+		"simonwelsh/gridfieldrelationhandler" : "dev-master",
+		"silverstripe/spamprotection" : "dev-master",
+		"silverstripe/cms" : "3.1.4",
+		"silverstripe/newsletter" : "dev-master",
+		"unclecheese/betterbuttons" : "3.0.x-dev",
+		"silverstripe/userforms" : "dev-master",
+		"ajshort/silverstripe-addressable" : "dev-master",
+		"silverstripe/comments" : "dev-master",
+		"colymba/gridfield-bulk-editing-tools" : "dev-master",
+		"silverstripe/framework" : "3.1.4",
+		"silverstripe-themes/simple" : "dev-master",
+		"undefinedoffset/sortablegridfield" : "0.3.1",
+		"unclecheese/display-logic" : "dev-master",
+		"silverstripe/recaptcha" : "1.2.0",
+		"silverstripe/multiform" : "dev-master",
+		"silverstripe/blog" : "dev-master",
+		"ajshort/silverstripe-gridfieldextensions" : "dev-master"
+	},
+	"minimum-stability" : "dev"
+}

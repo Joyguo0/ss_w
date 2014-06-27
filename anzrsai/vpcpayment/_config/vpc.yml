@@ -1,0 +1,7 @@
+---
+Name: vpc
+---
+VPCPayment:
+  VPCVersion: '1'
+  CommandType: 'pay'
+  DisplayLanguage: 'en'

@@ -1,0 +1,3 @@
+Director:
+  rules:
+    'fliaam12345': 'UserForceLogin'
