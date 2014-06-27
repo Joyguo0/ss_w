@@ -1,0 +1,100 @@
+﻿<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Images operations</title>
+	
+</head>
+<body>
+
+<!-- text below wil be shown if JavaScript disabled at browser -->
+<span id="noscriptdiv" style="border:1px  solid #FF0000;display:block;padding:5px;text-align:left; background: #FDF2F2;color:#000;">Active Scripting (JavaScript) should be enabled in your browser for this application to function properly!</span>
+<script type="text/javascript">
+	document.getElementById('noscriptdiv').style.visibility = 'hidden';
+	document.getElementById('noscriptdiv').style.height = 0;
+	document.getElementById('noscriptdiv').style.padding = 0;
+	document.getElementById('noscriptdiv').style.border = 0;
+</script>
+
+
+<div id="MultiPowUpload_holder">
+<strong>You need at least 10 version of Flash player!</strong>
+<a href="http://www.adobe.com/go/getflashplayer">&nbsp;<img border="0" src="images/get_flash_player.gif" alt="Get Adobe Flash player" /></a>
+</div>
+<!-- SWFObject home page: http://code.google.com/p/swfobject/
+You can replace src value with the http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js (Most users has such file cached)
+ -->
+<script type="text/javascript" src="Extra/swfobject.js"></script>
+<script type="text/javascript">
+	var params = {  
+		BGColor: "#FFFFFF"
+	};
+	
+	var attributes = {  
+		id: "MultiPowUpload",  
+		name: "MultiPowUpload"
+	};
+	
+	var flashvars = {
+	  "serialNumber": "put your serial number here",
+	  "uploadUrl": "FileProcessingScripts/PHP/uploadfiles.php",
+	  "fileFilter.types":"Images|*.jpg:*.jpeg:*.gif:*.png:*.bmp",
+	  "sendThumbnails": "true",
+	  "sendOriginalImages": "false",
+	  "useExternalInterface": "true",
+	  "fileView.defaultView":"thumbnails",
+	  "thumbnail.width": "160",
+	  "thumbnail.height": "120",
+	  "thumbnail.resizeMode": "fit",
+	  "thumbnail.format": "JPG",
+	  "thumbnail.jpgQuality": "85",
+	  "thumbnail.backgroundColor": "#000000",
+	  "thumbnail.transparentBackground": "true",
+	  "thumbnail.autoRotate": "true",
+	  "readImageMetadata": "true",
+	  "thumbnailView.allowCrop": "true",
+	  "thumbnailView.allowRotate": "true",
+	  "thumbnailView.cropRectKeepAspectRatio": "NO",
+	  "thumbnailView.showCropRectDimensions": "true"
+	};
+	//Default MultiPowUpload should have minimum width=400 and minimum height=180
+	swfobject.embedSWF("ElementITMultiPowUpload.swf", "MultiPowUpload_holder", "450", "350", "10.0.0", "Extra/expressInstall.swf", flashvars, params, attributes);
+</script>
+
+
+
+<script type="text/javascript">	
+	var path_to_file = "";
+	
+	function MultiPowUpload_onThumbnailUploadComplete(li, response)
+	{ 
+		response = decodeURIComponent(response);
+		//get current file processing script and combine path to file
+		path_to_file = MultiPowUpload.getParameter("uploadUrl");		
+		path_to_file = path_to_file.substring(0, path_to_file.lastIndexOf("/")+1) + "UploadedFiles/";
+		
+		//Here we need parse server response
+		//and find url to uploaded thumbnails	
+		
+		var keyword = 'File ';
+		var keywor_end = " was successfully uploaded";
+		var ind = response.indexOf(keyword,0);				
+		while(ind>=0)
+		{
+			url = response.substring(ind+keyword.length, response.indexOf(keywor_end, ind));			
+			addThumbnail(url);
+			ind = response.indexOf(keyword, ind+keyword.length+1); 
+		}		
+	}
+	
+	function addThumbnail(source)
+	{
+		var Img = document.createElement("img");
+		Img.style.margin = "5px";
+		Img.src = path_to_file+source+"?"+(new Date()).getTime();;
+		document.getElementById("thumbnails").appendChild(Img);
+	}
+</script>
+
+</body>
+</html>

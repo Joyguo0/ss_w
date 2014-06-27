@@ -1,0 +1,434 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Truckworld</title>
+
+<!-- HTML5 Shiv -->
+<!--[if lte IE 8]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- fonts -->
+
+<style type="text/css" >
+	@font-face {
+    font-family: 'AvenirLTStd85Heavy';
+    src: url(../fonts/av-heavy.eot);
+    src: url(../fonts/av-heavy.eot) format('embedded-opentype'),
+}
+
+@font-face {
+    font-family: 'AvenirLTStd45Book';
+    src: url(../fonts/avenirltstd-book_0.eot);
+    src: url(../fonts/avenirltstd-book_0.eot) format('embedded-opentype'),
+}
+
+</style>
+   
+<!-- jQuery -->
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- IE Stylesheet -->
+
+<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+
+<!-- Advanced Search -->
+<link href="css/advanced-search.css" rel="stylesheet"/>
+<script type="text/javascript" src="js/advanced-toggle.js"></script>
+
+<!-- Responsive Grid -->
+<link rel="stylesheet" href="css/onepc.css">
+
+<!-- jQuery Easing Plugin -->
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+<!-- HorizontalNav jQuery Plugin - Fit Full Width -->
+<script type="text/javascript" src="js/jquery.horizontalNav.js"></script>
+<script>
+	$(document).ready(function(){
+	  $('.full-width').horizontalNav({
+		responsive: true,
+		tableDisplay: true
+	  });
+	});
+</script>
+    
+    <!-- return to top --> 
+    
+    <script>
+jQuery(document).ready(function() {
+    var offset = 220;
+    var duration = 1000;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.back-to-top').fadeIn(duration);
+        } else {
+            jQuery('.back-to-top').fadeOut(duration);
+        }
+    });
+    
+    jQuery('.back-to-top').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+});    
+	</script>
+
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="headwrap">
+
+<!-- Top of Header -->
+
+		<div class="wrapper">
+        	<div class="col10">
+            	<div class="headlinks">
+                    <a href="/"><img src="images/icons/User.png">  Sign In</a>
+                </div>
+                <div class="headlinks"> 
+                <a href="/"><img src="images/icons/Plus.png">  Our Network</a>
+                </div>
+            </div>
+            <div class="col2 last headsocial">
+            	<a href="/"><img src="images/icons/Facebook.png"></a>
+            	<a href="/"><img src="images/icons/Twitter.png"></a>               
+            	<a href="/"><img src="images/icons/Youtube.png"></a>    
+            </div>
+       </div> 
+</div>           
+  	<div class="logohead-container">
+    	<div class="wrapper">
+    	<div class="col12">
+        	<div class="logohead">
+            	<div class="logo account">
+            		<a href="index.html" alt="Truckworld" title="Truckworld.com.au">
+                	<img src="images/logo.png"/></a>
+            	</div>
+                <div class="account-container">
+                	<div class="my-truckworld">
+                    	<h1>My Truckworld</h1>
+                    </div>
+                    <div class="username">
+                    	<a href="/"><h3>[Username]</a></br>Welcome Back!</h3>
+                    </div>
+                    <div class="account-links">
+                    	<a href="/">Dashboard</a> | <a href="/">Logout</a>
+                    </div>
+                </div>    
+            	<div class="bannerLeaderboard account">
+							
+							<script src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&c=28&pli=6157954&PluID=0&w=728&h=90&ord=[timestamp]&ucm=true"></script>
+<noscript>
+<a href="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=brd&FlightID=6157954&Page=&PluID=0&Pos=5073" target="_blank"><img src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=bsr&FlightID=6157954&Page=&PluID=0&Pos=5073" border=0 width=728 height=90></a>
+</noscript>
+
+        	</div></div>
+        </div>
+    </div> 
+ </div>  
+<!-- End Top of Header -->    
+
+<!-- Navigation -->
+
+<div class="navwrap">
+    <div class="wrapper"> 
+        <div class="col12">
+            <nav class="horizontal-nav full-width">
+                <ul class="menu">
+                    <li><a href="index.html"><img alt="Truckworld Home" src="images/icons/home.png"></a></li>
+                    <li><a href="/">Services</a>
+                        <div class="dropdown-5columns dealers fullwidth" id="dashboard">
+                                    
+                                        <div class="menu-head-dashboard fullwidth">
+                                        	<a href="/">Manage Ads</a>
+                                        </div>
+                                        <div class="menu-head-dashboard fullwidth">
+                                        	<a href="create-ad-step1-dealer.html">Create an Ad</a>
+                                        </div>
+                                        <div class="menu-head-dashboard fullwidth">
+                                        	<a href="create-ad-step1-dealer.html">Advertise</a>
+                                        </div>
+                                        <div class="menu-head-dashboard fullwidth">
+                                        	<a href="/">Favourites</a>
+                                        </div>
+                                        <div class="menu-head-dashboard fullwidth">
+                                        	<a href="create-ad-step1-dealer.html">Selling Tips</a>
+                                        </div>
+                                        <div class="menu-head-dashboard fullwidth">
+                                        	<a href="/">Your Stats</a>
+                                        </div>
+                            </li>                 
+                    
+                    <li><a href="/">Account Management</a>
+                        <div class="dropdown-4columns dealers" id="dashboard">
+                                    
+                                    <div class="col2 last">
+                                        <div class="menu-head-dashboard">
+                                        	<a href="update-account-step1-dealer.html">Update Account</a>
+                                        </div>
+                                    </div>
+                                    <div class="col3 last">
+                                        <div class="menu-head-dashboard">
+                                        	<a href="/">Password Modification</a>
+                                        </div>
+                                    </div>
+                                    <div class="col2 last">
+                                        <div class="menu-head-dashboard">
+                                        	<a href="/">Preferences</a>
+                                        </div>
+                                    </div>
+                            </li>
+                                                
+                    <li><a href="/">Billing</a></li>
+                    <li><a href="/">Alerts</a>
+                    	<div class="alert-nav">
+                        	<a href="/">3</a>
+                        </div>    
+                    </li>
+                    <li><a href="index.html" class="navchat">Truckworld.com.au</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>    
+<!-- End Navigation -->
+
+<!-- Main body content -->
+
+<div class="body-wrap">
+
+<div class="wrapper">
+<!-- main body content -->
+  	<div class="offers">
+        <div class="breadcrumbs">
+    	<p><a href="/">Account Management » </a>Update Account</p>
+        </div>
+        <div class="steps-container">
+            <div class="step active" id="step1">
+                <h3>STEP 1 - Interests</h3>
+            </div>
+            <div class="step" id="step2">
+                <h3>STEP 2 - Contact Details</h3>
+            </div>
+            <div class="step" id="step3">
+                <h3>STEP 3 - Save!</h3>
+            </div>
+        </div>
+        <div class="sign-in-container">
+        	<h1>What are you interested in?</h1>
+            <div class="sign-in-form">
+            	<div class="list-check1">
+                   
+                    <input type="checkbox" id="buying" class="contact-dealer" name="" value="">
+                    <label for="buying" id="account"><span></span></label>  
+                    <input type="checkbox" id="selling" class="contact-dealer" name="" value="">
+                    <label for="selling" id="account"><span></span></label>  
+                    <input type="checkbox" id="like-trucks" class="contact-dealer" name="" value="">
+                    <label for="like-trucks" id="account"><span></span></label>  
+                    <input type="checkbox" id="im-dealer" class="contact-dealer" name="" value="">
+                    <label for="im-dealer" id="account"><span></span></label>  
+                    <input type="checkbox" id="work-industry" class="contact-dealer" name="" value="">
+                    <label for="work-industry" id="account" class="account-last"><span></span></label> 
+                </div>
+                
+                <div class="list-check2">
+                	 <ul>
+                     	<li>Buying</li>
+                        <li>Selling</li>
+                        <li>I just like trucks</li>
+                        <li>I'm a dealer</li>
+                        <li>I work in the industry</li>
+                     </ul>
+                 </div>
+                
+			</div>
+         </div>
+      <div class="offers" id="sign-in">
+    
+              <input type="submit" class="long" id="sr-submit" value="Save & Continue">  
+              
+              <a href="/" class="clear-signin">Back</a>
+      </div> 
+   </div>      
+</div>    
+<!-- End Main body content -->
+
+</div>
+<!-- Footer -->
+
+<footer>
+
+<!-- Footer Section 1 -->
+
+	<div class="footerwrap-1">
+    	<div class="wrapper">
+        	<h1>The online truck sales platform for 5,000+ dealers</h1>
+        </div>
+    </div> 
+       
+<!-- End Footer Section 1 -->
+
+<!-- Footer Section 2 -->
+
+	<div class="footerwrap-2">
+    	<div class="wrapper">
+        	<div class="col12">
+            	<h2>Browse By Category</h2>
+            	<h3>Browse Through a Wide Selection of Commercial Vehicles and Trailers in Australia</h3>
+            </div>    
+        	
+            <div class="col3">
+            	<ul>
+                	<li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+				</ul>
+            </div>
+            
+            <div class="col3">
+            	<ul>
+                	<li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+				</ul>
+            </div>
+            
+            <div class="col3">
+            	<ul>
+                	<li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+				</ul>
+            </div>
+            
+            <div class="col3 last">
+            	<ul>
+                	<li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+				</ul>
+            </div>
+        <div class="onerow">    
+            <div class="return">
+            	<a href="#" class="back-to-top"><h4>RETURN TO TOP</h4></a>
+                    </div>
+                </a>
+            </div>
+        </div>   
+    </div>
+</div>       
+<!-- End Footer Section 2 -->   
+
+
+<!-- Footer Section 3 -->            
+       <div class="footerwrap-3">
+       		<div class="wrapper">
+       		<div class="col12">
+            	<div class="col4">
+                	<img src="images/logo-footer.png" alt="Truckworld Logo" title"Truckworld Logo">
+                </div>
+                <div class="col2">
+                	<h4>TOP LINKS</h4>
+                    <ul>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>    
+			       		<li><a href="/">New Trucks</a></li>
+					</ul>
+              	</div>      
+                <div class="col2">
+                	<h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>    
+			       		<li><a href="/">New Trucks</a></li>
+					</ul>
+              	</div> 			
+                <div class="col2">
+                	<h4>TIPS & HELP</h4>
+                    <ul>
+                        <li><a href="/">About</a></li>
+                    	<li><a href="/">Live Chat</a></li>
+                        <li><a href="/">Help Centre</a></li>
+                    	<li><a href="/">Advertising Tips</a></li>
+                        <li><a href="/">Contact</a></li>
+                    	<li><a href="/">Used Trucks</a></li>    
+			       		<li><a href="/">New Truck</a></li>
+					</ul>
+              	</div> 
+                <div class="col2 last">
+                	<h4>LEGAL</h4>
+                    <ul>
+                        <li><a href="/">Privacy Policy</a></li>
+                    	<li><a href="/">Posting Policy</a></li>
+                        <li><a href="/">Terms of Use</a></li>
+					</ul>
+                	<h4>RELATED</h4>
+                    <ul>
+                        <li><a href="/">TrailerWorld.com.au</a></li>
+                    	<li><a href="/">MachineWorld.com.au</a></li>
+					</ul>                    
+              	</div>  
+           </div>
+   				<div class="onerow">
+                	<div class="col12">
+                    	<div id="footer-nav">
+                        	<ul>
+                                <li><a href="/">Post an Ad</a></li>
+                                <li><a href="/">Search For Sale</a></li>
+                                <li><a href="/">Sitemap</a></li>
+                                <li><a href="/">Truck Finance Options</a></li>
+                                <li><a href="/">Dealers</a></li>
+                                <li class="last" ><a href="/">Manufacturers</a></li>
+                            </ul>
+                        </div>
+                        </div>    
+                    <div class="col12">
+                    	<p>© Copyright Truckworld.com.au 2013. All Rights Reserved.</p>
+                    </div>
+              </div>
+         </div> 
+      </div>   
+   </div>
+</div>
+</div>
+</div>
+                             
+</footer>
+<!-- End Footer -->
+
+
+</div>
+<!-- End Page -->
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+/*! http://responsiveslides.com v1.54 by @viljamis */
+
+.rslides, .rslides2, .rslides3 {
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.rslides, .rslides2, rslides3 li {
+	-webkit-backface-visibility: hidden;
+	position: absolute;
+	display: none;
+	width: 100%;
+	left: 0;
+	top: 0;
+	margin:0;
+}
+
+.rslides, .rslides2, .rslides3 li:first-child {
+	position: relative;
+	display: block;
+	float: left;
+}
+
+.rslides3 li {
+	width: 99%;
+}
+
+.rslides, .rslides2 img {
+	display: block;
+	height: auto;
+	float: left;
+	width: 100%;
+	border: 0;
+	background-color: transparent;
+}
+
+.centered-btns_nav.next {
+	left: 25%;
+	background-position: right top;
+	right: 0;
+	color: transparent;
+}
+
+.centered-btns_nav {
+	z-index: 3;
+	position: absolute;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	top: 30%;
+	left: 5%;
+	opacity: 0.5;
+	text-indent: -9999px;
+	overflow: hidden;
+	text-decoration: none;
+	height: 35px;
+	width: 35px;
+	border-radius: 10px;
+	border: 3px solid #fff;
+	background: transparent url(../images/themes.gif) no-repeat left top;
+	margin-top: -45px;
+}
+
+.centered-btns_nav:hover {
+	opacity: 1;
+}
+
+.large-btns_nav.next {
+	left: 23%;
+	background-position: right 50%;
+	right: 0;
+	color: transparent;
+}
+
+.large-btns_nav {
+	z-index: 3;
+	position: absolute;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	opacity:0.5;
+	filter:alpha(opacity=50); /* For IE8 and earlier */
+	text-indent: -9999px;
+	overflow: hidden;
+	top: 5%;
+	bottom: 0;
+	left: 5%;
+	border-radius: 10px;
+	border: 3px solid #fff;
+	background: url(../images/themes-big.gif) no-repeat left 50%;
+	width: 42px;
+	height: 42px;
+}
+
+
+.large-btns_nav:hover {
+	opacity: 1;
+	filter:alpha(opacity=100); /* For IE8 and earlier */
+}
+
+.circle-btns_nav.next {
+	left: 23%;
+	background-position: right 50%;
+	right: 0;
+	color: transparent;
+}
+
+.circle-btns_nav {
+	z-index: 3;
+	position: relative;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	opacity:0.5;
+	filter:alpha(opacity=50); /* For IE8 and earlier */
+	text-indent: -9999px;
+	overflow: hidden;
+	margin-top: -100px;
+	margin-left: 245px;
+	left: 5%;
+	border-radius: 10px;
+	border: 3px solid #fff;
+	background: url(../images/themes-big.gif) no-repeat left 50%;
+	width: 42px;
+	height: 42px;
+}
+
+
+.circle-btns_nav:hover {
+	opacity: 1;
+	filter:alpha(opacity=100); /* For IE8 and earlier */
+}
+
+.rslides-container {
+	margin-bottom: 50px;
+	position: relative;
+	float: left;
+	width: 100%;
+	
+}
+
+.transparent-btns_nav {
+	z-index: 3;
+	position: absolute;
+	-webkit-tap-highlight-color: blue;
+	top: 37px;
+	left: -16px;
+	display: block;
+	background: #fff;
+	opacity: 1 ;
+	filter: alpha(opacity= 100);
+	width: 32px;
+	height: 32px;
+	text-indent: -9999px;
+	overflow: hidden;
+	border-radius: 17px;
+	border: 2px solid #534b99;
+	background: url(../images/themes-big.gif) no-repeat left 50%;
+	background-size: 200%;
+}
+
+.transparent-btns_nav.next {
+	left: auto;
+	right:-30px;
+	text-indent: 99999em;
+	background-position: right 50%;
+
+}

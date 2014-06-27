@@ -1,0 +1,1744 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Truckworld</title>
+
+<!-- HTML5 Shiv -->
+<!--[if lte IE 8]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- fonts -->
+
+<style type="text/css" >
+	@font-face {
+    font-family: 'AvenirLTStd85Heavy';
+    src: url(../fonts/av-heavy.eot);
+    src: url(../fonts/av-heavy.eot) format('embedded-opentype'),
+         url(../fonts/av-heavy.woff) format('woff'),
+         url(../fonts/av-heavy.ttf) format('truetype'),
+         url(../fonts/av-heavy.svg#AvenirLTStd85Heavy) format('svg');
+}
+
+@font-face {
+    font-family: 'AvenirLTStd45Book';
+    src: url(../fonts/avenirltstd-book_0.eot);
+    src: url(../fonts/avenirltstd-book_0.eot) format('embedded-opentype'),
+         url(../fonts/avenirltstd-book_0.woff) format('woff'),
+         url(../fonts/avenirltstd-book_0.ttf) format('truetype'),
+         url(../fonts/avenirltstd-book_0.svg#AvenirLTStd45Book) format('svg');
+}
+
+</style>
+   
+<!-- jQuery -->
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+
+
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Advanced Search -->
+<link href="css/advanced-search.css" rel="stylesheet"/>
+<script type="text/javascript" src="js/advanced-toggle.js"></script>
+
+<!-- Responsive Grid -->
+<link rel="stylesheet" href="css/onepc.css">
+
+<!-- Lato Font -->
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+<!-- RANGE SLIDER -->
+	<script type="text/javascript" src="js/jshashtable-2.1_src.js"></script>
+	<script type="text/javascript" src="js/jquery.numberformatter-1.2.3.js"></script>
+	<script type="text/javascript" src="js/tmpl.js"></script>
+	<script type="text/javascript" src="js/jquery.dependClass-0.1.js"></script>
+	<script type="text/javascript" src="js/draggable-0.1.js"></script>
+	<script type="text/javascript" src="js/jquery.slider.js"></script>
+
+<!-- jQuery Easing Plugin -->
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+<!-- HorizontalNav jQuery Plugin - Fit Full Width -->
+<script type="text/javascript" src="js/jquery.horizontalNav.js"></script>
+<script>
+	$(document).ready(function(){
+	  $('.full-width').horizontalNav({
+		responsive: true,
+		tableDisplay: true
+	  });
+	});
+</script>
+
+<!-- Responsive Nav -->
+<script src="js/tinynav.js"></script>
+
+    <!-- Carousel -->
+    <link rel="stylesheet" href="css/jquery.bxslider.css" media="all">
+    <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+    <script>
+		$(document).ready(function(){
+		  $('.carousel').bxSlider({
+			responsive: true,
+			slideWidth: 144,
+			minSlides: 4,
+			maxSlides: 10,
+			moveSlides: 2,
+			slideMargin: 10,
+			pager: false,
+			auto: true,
+			pause: "3000"
+		  });
+		});
+    </script>
+
+
+	<!-- Slider -->
+    <link rel="stylesheet" href="css/responsiveslides.css" media="all">
+    <script src="js/responsiveslides.js"></script>
+	<script>
+      $(function() {
+        $(".rslides").responsiveSlides({
+		  auto: false,
+		  speed: 500,
+		  timeout: 4000,
+		  pager: false,
+		  nav: true,
+		  random: false,
+		  pause: false,
+		  pauseControls: true,
+		  prevText: "Previous",
+		  nextText: "Next",  
+		  namespace: "centered-btns"
+		});
+      // Slideshow super ad
+      $(".rslides2").responsiveSlides({
+		  auto: true,
+		  speed: 3000,
+		  timeout: 4000,
+		  pager: false,
+		  nav: true,
+		  random: false,
+		  pause: false,
+		  pauseControls: true,
+		  prevText: "Previous",
+		  nextText: "Next",  
+        namespace: "large-btns"
+      });
+      });
+    </script> 
+    
+    <!-- return to top --> 
+    
+    <script>
+jQuery(document).ready(function() {
+    var offset = 220;
+    var duration = 1000;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.back-to-top').fadeIn(duration);
+        } else {
+            jQuery('.back-to-top').fadeOut(duration);
+        }
+    });
+    
+    jQuery('.back-to-top').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+});    
+	</script>
+    
+<!-- Show more show less script -->
+
+<script language="JavaScript" type="text/javascript">
+$(document).ready(function() {
+var maxHeight = $("#infopanel").css('height');
+$("#infopanel").css({'height':'180px','overflow':'hidden'});
+$(".showmore").toggle(showPanel,hidePanel);
+function showPanel(){
+$("#infopanel").animate({height:maxHeight});
+$(".showmore").text('- Fewer Details');
+}
+function hidePanel(){
+$("#infopanel").animate({height:"180px"});
+$(".showmore").text('+ More Details');
+}
+});
+</script>   
+
+<!-- Tabs -->
+
+<script src="js/jquery.easytabs.min.js" type="text/javascript"></script>
+<script src="js/jquery.hashchange.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    $(document).ready( function() {
+      $('#tab-container').easytabs();
+	  $('#tab-container1').easytabs();
+    });
+  </script>
+  
+  
+<!-- show hide divs-->  
+
+<script type="text/javascript">
+$(document).ready(function(){	
+    $('.example2').hide().before('<a href="#" id="toggle-example2" class="button">View Saved Ads</a>');
+	$('a#toggle-example2').click(function() {
+		$('.example2').slideToggle(500);
+		return false;
+	});
+});
+$(document).ready(function(){	
+    $('.example3').hide().before('<a href="#" id="toggle-example3" class="button">Saved Searches</a>');
+	$('a#toggle-example3').click(function() {
+		$('.example3').slideToggle(500);
+		return false;
+	});
+});
+$(document).ready(function(){	
+    $('.example4').hide().before('<a href="#" id="toggle-example4" class="button">Compare Saved</a>');
+	$('a#toggle-example4').click(function() {
+		$('.example4').slideToggle(500);
+		return false;
+	});
+});
+
+</script>
+
+<!-- toggle with image change effect -->  
+                    
+<script type="text/javascript">
+jQuery(document).ready(function($) { 
+ 
+    // Find the toggles and hide their content
+    $('.toggle').each(function(){
+        $(this).find('.toggle-content').hide();
+    });
+ 
+    // When a toggle is clicked (activated) show their content
+    $('.toggle a.toggle-trigger').click(function(){
+        var el = $(this), parent = el.closest('.toggle');
+ 
+        if( el.hasClass('active') )
+        {
+            parent.find('.toggle-content').slideToggle();
+            el.removeClass('active');
+        }
+        else
+        {
+            parent.find('.toggle-content').slideToggle();
+            el.addClass('active');
+        }
+        return false;
+    });
+ 
+});  //End
+</script>  
+
+  
+<!-- select box -->
+
+<link href="css/jquery.selectbox.css" type="text/css" rel="stylesheet" />
+  
+<script type="text/javascript" src="js/jquery.selectbox-0.2.js"></script>
+<script type="text/javascript">
+$(function () {
+	$(".trucksearch").selectbox();
+	$("#radius").selectbox();
+	$(".advanced-search").selectbox();
+});
+</script>  
+
+
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="headwrap">
+
+<!-- Top of Header -->
+
+		<div class="wrapper">
+        	<div class="col10">
+            	<div class="headlinks">
+                    <a href="/"><img src="images/icons/User.png">  Sign In</a>
+                </div>
+                <div class="headlinks"> 
+                <a href="/"><img src="images/icons/Plus.png">  Our Network</a>
+                </div>
+            </div>
+            <div class="col2 last headsocial">
+            	<a href="/"><img src="images/icons/Facebook.png"></a>
+            	<a href="/"><img src="images/icons/Twitter.png"></a>               
+            	<a href="/"><img src="images/icons/Youtube.png"></a>    
+            </div>
+       </div> 
+</div>           
+  	<div class="logohead-container">
+    	<div class="wrapper">
+    	<div class="col12">
+        	<div class="logohead">
+            	<div class="logo">
+            		<a href="index.html" alt="Truckworld" title="Truckworld.com.au">
+                	<img src="images/logo.png"/></a>
+            	</div>
+            <div class="bannerLeaderboard">
+							
+							<script src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&c=28&pli=6157954&PluID=0&w=728&h=90&ord=[timestamp]&ucm=true"></script>
+<noscript>
+<a href="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=brd&FlightID=6157954&Page=&PluID=0&Pos=5073" target="_blank"><img src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=bsr&FlightID=6157954&Page=&PluID=0&Pos=5073" border=0 width=728 height=90></a>
+</noscript>
+
+        	</div></div>
+        </div>
+    </div> 
+ </div>  
+<!-- End Top of Header -->    
+
+<!-- Navigation -->
+
+<div class="navwrap">
+    <div class="wrapper"> 
+        <div class="col12">
+            <nav class="horizontal-nav full-width">
+                <ul class="menu">
+                    <li><a href="index.html"><img src="images/icons/home.png"></a></li>
+                    <li><a href="/">Truck Search</a>
+                    
+                                <div class="dropdown-4columns"><!-- Container 4 columns starts here -->
+                                    
+                                    <div class="col-1">
+                                    
+                                        <ul class="blue">
+                                            <li><a href="#" title="Home">Home</a></li>
+                                            <li><a href="#" title="About Us">About</a></li>
+                                            <li><a href="#" title="Images">Images</a></li>
+                                            <li><a href="#" title="Sign in">Sign in</a></li>
+                                        </ul>   
+                                         
+                                    </div>
+                            
+                                    <div class="col-1">
+                                    
+                                        <ul class="blue">
+                                            <li><a href="#" title="Home">Home</a></li>
+                                            <li><a href="#" title="About Us">About</a></li>
+                                            <li><a href="#" title="Images">Images</a></li>
+                                            <li><a href="#" title="Sign in">Sign in</a></li>
+                                        </ul>   
+                                         
+                                    </div>
+                            
+                                    <div class="col-1">
+                                    
+                                        <ul class="blue">
+                                            <li><a href="#" title="Home">Home</a></li>
+                                            <li><a href="#" title="About Us">About</a></li>
+                                            <li><a href="#" title="Images">Images</a></li>
+                                            <li><a href="#" title="Sign in">Sign in</a></li>
+                                        </ul>   
+                                         
+                                    </div>
+                            
+                                    <div class="col-1">
+                                    
+                                        <ul class="blue">
+                                            <li><a href="#" title="Home">Home</a></li>
+                                            <li><a href="#" title="About Us">About</a></li>
+                                            <li><a href="#" title="Images">Images</a></li>
+                                            <li><a href="#" title="Sign in">Sign in</a></li>
+                                        </ul>   
+                                         
+                                    </div>
+                            
+                            </li><!-- Container 4 columns ends here -->
+
+                    
+                    <li><a href="/">Sell Your Truck</a></li>
+                    <li><a href="/">Buy Used Trucks</a></li>
+                    <li><a href="/">Buy New Trucks</a></li>
+                    <li><a href="/">Dealers</a>
+                    
+                                                    <div class="dropdown-4columns dealers"><!-- Container 4 columns starts here -->
+                                    
+                                    <div class="col-1">
+                                    
+                                        <div class="menu-head">
+                                        	<h4>Find a dealer</h4>
+                                        </div>
+                                        
+                                        <div class="menu-content">
+                                        	<p>Use the map and browse truck dealers from around Australia</p>
+                                            <div class="dropmenu button">
+                                            	<a href="/">FIND DEALER</a>
+                                            </div>
+                                        </div>    
+                                         
+                                    </div>
+                                    <div class="col-1">
+                                    
+                                        <div class="menu-head">
+                                        	<h4>Become a Dealer</h4>
+                                        </div>
+                                        
+                                        <div class="menu-content">
+                                        	<p>Register as a dealer & sell your trucks on Truckworld</p>
+                                            <div class="dropmenu button">
+                                            	<a href="/">JOIN US</a>
+                                            </div>
+                                        </div>    
+                                         
+                                    </div>
+                                    <div class="col-1">
+                                    
+                                        <div class="menu-head">
+                                        	<h4>Manufacturers</h4>
+                                        </div>
+                                        
+                                        <div class="menu-content">
+                                        	<p>Check out the manufacturer pages & browse their products</p>
+                                            <div class="dropmenu button">
+                                            	<a href="/">BROWSE</a>
+                                            </div>
+                                        </div>    
+                                         
+                                    </div>
+                                    <div class="col-1">
+                                    
+                                        <div class="menu-head">
+                                        	<h4>Dealer Sign In</h4>
+                                        </div>
+                                        
+                                        <div class="menu-content end">
+                                        	<p>Use the map and browse truck dealers from around Australia</p>
+                                            <div class="dropmenu  button">
+                                            	<a href="/">SIGN IN</a>
+                                            </div>
+                                        </div>    
+                                         
+                                    </div>
+                                    
+                                    <div class="menu-footer">
+                                    	<h4>Find Trucks for Sale or Post Trucks Sale Ads at Truckworld.com.au</h4>
+                                    </div>
+                            
+                            </li><!-- Container 4 columns ends here -->
+                    
+                    <li><a href="/">My Truckworld</a></li>
+                    <li><a href="/" class="navchat">Live Chat Now</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>    
+<!-- End Navigation -->
+
+
+<!--Mega Drop Down Menu HTML. Retain given CSS classes-->
+
+<!-- Main Search -->
+
+<div class="searchwrap">
+	<div class="wrapper">
+    	<div class="col12">
+        	<h1>Search over 30 truck makes, and 40,000 truck products Australia wide</h1>
+        </div>
+        <div class="col12">
+        <div id="search-h">
+				
+<form action="/Search" class="home-search" method="post">                                
+							<div id="search-box">
+                               <label for="sr-box" class="advanced-label search-for"><h2>Search For:</h2></label>
+                                    <input type="text" id="sr-box" placeholder="Enter Keyword(s)" autocomplete="off">
+                                    
+                   				 <!-- GSA active search  -->                
+                                    
+                                    <div id="live-update" style="display: none;">
+                                    	<div id="lu-suggestion">
+                                        	<ul>
+                                            	<li><a href="/"><strong>Ent</strong>ering more keywords may result in a longer search result</a></li>
+                                            	<li><a href="/"><strong>Ent</strong>ertainment</a></li>
+                                                <li><a href="/"><strong>Ent</strong>erprise</a></li>
+                                                <li><a href="/">Segm<strong>ent</strong></a></li>
+                                            </ul>   
+                                        </div>
+                                        <div class="lu-ads-container">
+                                            <div id="lu-news">
+                                                <h7>Ads</h7>
+                                            </div>    
+                                            <a href="/" class="lu-link">
+                                            	<img src="images/red-small.png"><h5>2013 FREIGHTLINER ARGOSY</h5><h6>$59,990</h6>
+                                            </a>
+                                            <a href="/" class="lu-link">
+                                            	<img src="images/red-small.png"><h5>2013 FREIGHTLINER ARGOSY</h5><h6>$59,990</h6>
+                                            </a>  
+                                            <a href="/" class="lu-link">
+                                            	<img src="images/red-small.png"><h5>2013 FREIGHTLINER ARGOSY</h5><h6>$59,990</h6>
+                                            </a>  
+                                        </div>
+                                        
+                                        <div class="lu-ads-container">
+                                            <div id="lu-news">
+                                                <h7>New Trucks</h7>
+                                            </div>    
+                                            <a href="/" class="lu-link">
+                                            	<img src="images/red-small.png"><h5>2013 FREIGHTLINER ARGOSY</h5><h6>$59,990</h6>
+                                            </a>
+                                            <a href="/" class="lu-link">
+                                            	<img src="images/red-small.png"><h5>2013 FREIGHTLINER ARGOSY</h5><h6>$59,990</h6>
+                                            </a>  
+                                            <a href="/" class="lu-link">
+                                            	<img src="images/red-small.png"><h5>2013 FREIGHTLINER ARGOSY</h5><h6>$59,990</h6>
+                                            </a>     
+                                        </div>
+                                        
+                                        <div class="lu-news-container">
+                                            <div id="lu-news">
+                                                <h7>News</h7>
+                                            </div>    
+                                            <a href="/"  id="news" class="lu-link">
+                                            	<h4>Lorem ipsum dolor sit amet</h4><h5>Nunc fermentum justo vel consectetur aliquam...</h5><h6>11 Aug 2013</h6>
+                                            </a>
+                                            <a href="/"  id="news" class="lu-link">
+                                            	<h4>Lorem ipsum dolor sit amet</h4><h5>Nunc fermentum justo vel consectetur aliquam...  </h5><h6>11 Aug 2013</h6>
+                                            </a>  
+                                            <a href="/"  id="news" class="lu-link">
+                                            	<h4>Lorem ipsum dolor sit amet</h4><h5>Nunc fermentum justo vel consectetur aliquam...  </h5><h6>11 Aug 2013</h6>
+                                            </a>
+                                        </div>      
+                                        <div class="lu-dealers-container">
+                                            <div id="lu-news">
+                                                <h7>Dealers</h7>
+                                            </div>    
+                                            <a href="/" id="news" class="lu-link">
+                                            	<h5>AA Semi Trailer Trading</h5><h6>341 -345 Kororoit Creek Rd</h6><h6>Altona VIC 3018</h6>
+                                            </a>
+                                            <a href="/" id="news" class="lu-link">
+                                            	<h5>AA Semi Trailer Trading</h5><h6>341 -345 Kororoit Creek Rd</h6><h6>Altona VIC 3018</h6>
+                                            </a>
+                                            <a href="/" id="news" class="lu-link">
+                                            	<h5>AA Semi Trailer Trading</h5><h6>341 -345 Kororoit Creek Rd</h6><h6>Altona VIC 3018</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                           <!-- end GSA active search  -->         
+                                
+								<!-- start hidden -->
+								<div id="advanced-options-wrapper">
+									<div id="advanced-options">
+                                    <div class="advanced-options-first">	
+										<div class="advanced-one first">
+											<label class="advanced-label">
+												<h2>Condition</h2>
+											</label>
+                                                 <input type="checkbox" id="ch1" name="" value="">
+                                                 <label for="ch1" id="truck-search-advanced"><span></span>New</label>
+                                                 <input type="checkbox" id="ch2" name="" value="">
+                                                 <label for="ch2" id="truck-search-advanced"><span></span>Used</label>
+                                                 <input type="checkbox" id="ch3" name="" value="">
+                                                 <label for="ch3" id="truck-search-advanced"><span></span>Demo</label>                     
+										</div>
+										<div class="advanced-one">
+		                                    <label for="category" class="advanced-label">
+												<h2>Category</h2>
+		                                    </label>
+                                            	<div class="advanced-wrap">	
+                                                    <select id="category" name="category" class="advanced-search" tabindex="1">
+                                                        <option value="">All Catgeories</option>
+                                                            <option value="1">USA</option>
+                                                            <option value="9">Canada</option>
+                                                            <option value="2">France</option>
+                                                            <option value="3">Spain</option>
+                                                            <option value="6">Bulgaria</option>
+                                                            <option value="7" disabled="disabled">Greece</option>
+                                                            <option value="8">Italy</option>
+                                                    </select>
+                                                </div>    
+		                                </div>
+		                                <div class="advanced-one">
+											<label for="application" class="advanced-label">
+												<h2>Application</h2>
+											</label>
+                                            	<div class="advanced-wrap">	
+                                                    <select id="application" name="application" class="advanced-search" tabindex="1">
+                                                        <option value="">All Applications</option>
+                                                            <option value="1">USA</option>
+                                                            <option value="9">Canada</option>
+                                                            <option value="2">France</option>
+                                                            <option value="3">Spain</option>
+                                                            <option value="6">Bulgaria</option>
+                                                            <option value="7" disabled="disabled">Greece</option>
+                                                            <option value="8">Italy</option>
+                                                    </select>
+                                                </div>    
+										</div>
+		                                <div class="advanced-one">
+											<label for="make" class="advanced-label">
+												<h2>Make</h2>
+											</label>
+                                            	<div class="advanced-wrap">	
+                                                    <select id="make" name="category" class="advanced-search" tabindex="1">
+                                                        <option value="">All Makes</option>
+                                                            <option value="1">USA</option>
+                                                            <option value="9">Canada</option>
+                                                            <option value="2">France</option>
+                                                            <option value="3">Spain</option>
+                                                            <option value="6">Bulgaria</option>
+                                                            <option value="7" disabled="disabled">Greece</option>
+                                                            <option value="8">Italy</option>
+                                                    </select>
+                                                </div>    
+										</div>
+										<div class="advanced-one last">
+											<label for="model" class="advanced-label">
+												<h2>Model</h2>
+											</label>
+                                            	<div class="advanced-wrap">	
+                                                    <select id="Model" name="model" class="advanced-search" tabindex="1">
+                                                        <option value="">All Models</option>
+                                                            <option value="1">USA</option>
+                                                            <option value="9">Canada</option>
+                                                            <option value="2">France</option>
+                                                            <option value="3">Spain</option>
+                                                            <option value="6">Bulgaria</option>
+                                                            <option value="7" disabled="disabled">Greece</option>
+                                                            <option value="8">Italy</option>
+                                                    </select>
+                                                </div>    
+                                       </div> 
+                                    </div>   
+                                 <div class="onerow"></div>
+                                 	<div class="advanced-options-second">
+										<div class="advanced-one minmax first">
+											<label for="PriceFrom" class="advanced-label minmax">
+												<h2>Price</h2>
+											</label>
+                                            	<div class="advanced-wrap small">	
+                                                <select id="PriceFrom" name="PriceFrom" class="advanced-search" tabindex="1">
+                                                    <option value="">Min</option>
+                                                        <option value="1">USA</option>
+                                                        <option value="9">Canada</option>
+                                                        <option value="2">France</option>
+                                                        <option value="3">Spain</option>
+                                                        <option value="6">Bulgaria</option>
+                                                        <option value="7" disabled="disabled">Greece</option>
+                                                        <option value="8">Italy</option>
+                                                </select>
+                                                </div>    
+                                        	<div class="advanced-wrap small">	
+                                                <select id="PriceTo" name="PriceTo" class="advanced-search" tabindex="1">
+                                                    <option value="">Max</option>
+                                                        <option value="1">USA</option>
+                                                        <option value="9">Canada</option>
+                                                        <option value="2">France</option>
+                                                        <option value="3">Spain</option>
+                                                        <option value="6">Bulgaria</option>
+                                                        <option value="7" disabled="disabled">Greece</option>
+                                                        <option value="8">Italy</option>
+                                                </select>
+                                                </div>    
+										</div>
+										<div class="advanced-one minmax">
+											<label for="YearFrom" class="advanced-label minmax">
+												<h2>Year</h2>
+											</label>
+                                       	<div class="advanced-wrap small">	
+                                              <select id="YearFrom" name="YearFrom" class="advanced-search" tabindex="1">
+                                                  <option value="">Min</option>
+                                                      <option value="1">USA</option>
+                                                      <option value="9">Canada</option>
+                                                      <option value="2">France</option>
+                                                      <option value="3">Spain</option>
+                                                      <option value="6">Bulgaria</option>
+                                                      <option value="7" disabled="disabled">Greece</option>
+                                                      <option value="8">Italy</option>
+                                              </select>
+                                         </div>
+                                         <div class="advanced-wrap small">	
+                                              <select id="YearTo" name="YearTo" class="advanced-search" tabindex="1">
+                                                  <option value="">Min</option>
+                                                      <option value="1">USA</option>
+                                                      <option value="9">Canada</option>
+                                                      <option value="2">France</option>
+                                                      <option value="3">Spain</option>
+                                                      <option value="6">Bulgaria</option>
+                                                      <option value="7" disabled="disabled">Greece</option>
+                                                      <option value="8">Italy</option>
+                                              </select>           
+                                            </div>
+                                        </div>  
+                                      </div>
+                                  </div>
+                              </div>
+                          <!-- end hidden -->
+                          <input type="submit" id="sr-submit" value="Search">
+                          <div class="clear"></div>
+                          <a id="advanced" class="advanced-link">Advanced Search +</a>
+                          <div class="clear"></div>
+						</form>	
+	    
+			</div>
+        </div>    
+	</div>
+</div>        
+<!-- End Main Search -->
+
+<!-- Main body content -->
+
+<div class="body-wrap">
+
+<div class="wrapper">
+
+<!-- breadcrumbs -->
+
+    <div class="onerow">
+    	<div class="breadcrumbs">
+    	<p><a href="/">Home »</a> Buy New Trucks</p>
+        </div>
+    </div>    
+
+<!-- Left Column -->
+
+
+<div class="left-col">
+           
+           <!-- truck / dealer search tabs -->
+           
+           <div id="tab-container" class="tab-container">
+              <ul class='etabs side'>
+                <li class='tab side' id="search-truck"><a href="#truck-search-form">Search New</a></li>
+                <li class='tab side' id="search-dealer"><a href="#dealer-search-form">Dealer Search</a></li>
+              </ul>
+              
+            <!-- truck search form -->  
+              
+	<div class="truck-search">              
+          <div id="truck-search-form">
+        	<form class="trucksearch-form">
+                	
+                <div class="trucksearch-select">
+                        <select name="trucksearch" class="trucksearch" tabindex="1">
+                            <option value="">Category</option>
+                            <optgroup label="North America">
+                                <option value="1">USA</option>
+                                <option value="9">Canada</option>
+                            </optgroup>
+                            <optgroup label="Europe">
+                                <option value="2">France</option>
+                                <option value="3">Spain</option>
+                                <option value="6">Bulgaria</option>
+                                <option value="7" disabled="disabled">Greece</option>
+                                <option value="8">Italy</option>
+                            </optgroup>
+                            <optgroup label="Asia" disabled="disabled">
+                                <option value="5">Japan</option>
+                                <option value="11">China</option>
+                            </optgroup>
+                            <option value="4">Brazil</option>
+                            <option value="10">South Africa</option>
+                        </select>
+                    <a href="/" class="cancel" id="select" alt="cancel category truck search" title="Cancel Category Truck Search"><img src ="images/icons/Cancel.png"></a>
+               </div>  
+                <div class="trucksearch-select">
+                        <select name="trucksearch" class="trucksearch" tabindex="2">
+                                <option value="1">USA</option>
+                                <option value="9">Canada</option>
+                                <option value="2">France</option>
+                                <option value="3">Spain</option>
+                                <option value="6">Bulgaria</option>
+                                <option value="7" disabled="disabled">Greece</option>
+                                <option value="8">Italy</option>
+                        </select>
+                    	<a href="/" class="cancel" id="select" alt="cancel application truck search" title="Cancel Application Truck Search"><img src ="images/icons/Cancel.png"></a>
+               </div>     
+               <div class="trucksearch-select">
+                        <select name="trucksearch" class="trucksearch" tabindex="3">
+                            <option value="">Make</option>
+                                <option value="1">USA</option>
+                                <option value="9">Canada</option>
+                                <option value="2">France</option>
+                                <option value="3">Spain</option>
+                                <option value="6">Bulgaria</option>
+                                <option value="7" disabled="disabled">Greece</option>
+                                <option value="8">Italy</option>
+                        </select>
+                    	<a href="/" class="cancel" id="select" alt="cancel make truck search" title="Cancel Make Truck Search"><img src ="images/icons/Cancel.png"></a>
+               </div> 
+                <div class="trucksearch-select">
+                        <select name="trucksearch" class="trucksearch" tabindex="4">
+                            <option value="">Model</option>
+                                <option value="1">USA</option>
+                                <option value="9">Canada</option>
+                                <option value="2">France</option>
+                                <option value="3">Spain</option>
+                                <option value="6">Bulgaria</option>
+                                <option value="7" disabled="disabled">Greece</option>
+                                <option value="8">Italy</option>
+                        </select>
+                    	<a href="/" class="cancel" id="select" alt="cancel model truck search" title="Cancel Model Truck Search"><img src ="images/icons/Cancel.png"></a>
+               </div>  
+                
+				 <div class="trucksearch-select up">
+                 <h5>Price</h5>
+					<div class="layout">
+                    <div class="layout-slider" style="width: 100%">
+                      <span style="display: inline-block; width: 250px; padding: 0 5px;"><input id="Slider1" type="slider" name="price" value="75000.5;400000" /></span>
+                    </div>
+                    <script type="text/javascript" charset="utf-8">
+                      jQuery("#Slider1").slider({ from: 0, to: 500000, step: 1000, smooth: true, round: 0, dimension: "&nbsp;$", skin: "plastic" });
+                    </script>
+                </div>    
+            </div>      
+ 
+               <div class="trucksearch-select">
+               		<input type="text" name"location" class="truck-search" placeholder="Location">
+                    	<a href="/" class="cancel" alt="cancel model truck search" title="Cancel Model Truck Search"><img src ="images/icons/Cancel.png"></a>
+               </div>  
+                  
+               <div class="trucksearch-select">
+               		<h5>Radius</h5>
+                    	<div class="radius-wrap">	
+                            <select name="trucksearch" id="radius" tabindex="3">
+                                <option value="">+50km</option>
+                                    <option value="1">USA</option>
+                                    <option value="9">Canada</option>
+                                    <option value="2">France</option>
+                                    <option value="3">Spain</option>
+                                    <option value="6">Bulgaria</option>
+                                    <option value="7" disabled="disabled">Greece</option>
+                                    <option value="8">Italy</option>
+                            </select>
+                        </div>    
+                    	<a href="/" class="cancel" id="select" alt="cancel location radius truck search" title="Cancel location Radius Truck Search"><img src ="images/icons/Cancel.png"></a>
+               </div>
+               
+               <div class="trucksearch-select">              
+                     	<input type="checkbox" id="dealer" name="" value="dealer">
+                        <label for="dealer" id="truck-search"><span></span>Dealer</label>
+                        <input type="checkbox" id="private" name="" value="private">
+                        <label for="private" id="truck-search"><span></span>Private</label>
+               </div>         
+               <div class="trucksearch-select">               
+               			<input type="text" class="truck-search" name"Keywords" placeholder="Keywords">
+                    	<a href="/" class="cancel" alt="cancel location radius truck search" title="Cancel location Radius Truck Search"><img src ="images/icons/Cancel.png"></a>
+               </div>
+               
+               <div class="trucksearch-select">               
+               			<a type="submit" id="search-button" class="button submit" onClick="">SEARCH</a> 
+                    	<a href="/" class="cancel">Clear All</a>
+               </div>                        
+			</form>
+	
+		</div>
+        
+                  <div id="dealer-search-form">
+        	<form class="trucksearch-form">
+                <div class="trucksearch-select">
+                        <select name="trucksearch" class="trucksearch" tabindex="4">
+                            <option value="">Type</option>
+                                <option value="1">USA</option>
+                                <option value="9">Canada</option>
+                                <option value="2">France</option>
+                                <option value="3">Spain</option>
+                                <option value="6">Bulgaria</option>
+                                <option value="7" disabled="disabled">Greece</option>
+                                <option value="8">Italy</option>
+                        </select>
+                    <a href="/" class="cancel" id="select" alt="cancel category truck search" title="Cancel Category Truck Search"><img src ="images/icons/Cancel.png"></a>
+               </div>  
+                <div class="trucksearch-select">
+                        <select name="trucksearch" class="trucksearch" tabindex="4">
+                            <option value="">Sub Type</option>
+                                <option value="1">USA</option>
+                                <option value="9">Canada</option>
+                                <option value="2">France</option>
+                                <option value="3">Spain</option>
+                                <option value="6">Bulgaria</option>
+                                <option value="7" disabled="disabled">Greece</option>
+                                <option value="8">Italy</option>
+                        </select>
+                    	<a href="/" class="cancel" id="select" alt="cancel application truck search" title="Cancel Application Truck Search"><img src ="images/icons/Cancel.png"></a>
+               </div>     
+               <div class="trucksearch-select">
+                        <select name="trucksearch" class="trucksearch" tabindex="4">
+                            <option value="">Make</option>
+                                <option value="1">USA</option>
+                                <option value="9">Canada</option>
+                                <option value="2">France</option>
+                                <option value="3">Spain</option>
+                                <option value="6">Bulgaria</option>
+                                <option value="7" disabled="disabled">Greece</option>
+                                <option value="8">Italy</option>
+                        </select>
+                    	<a href="/" class="cancel" id="select" alt="cancel make truck search" title="Cancel Make Truck Search"><img src ="images/icons/Cancel.png"></a>
+               </div> 
+              
+               <div class="trucksearch-select">
+               		<input type="text" name"location" class="truck-search" placeholder="Location">
+                    	<a href="/" class="cancel" alt="cancel model truck search" title="Cancel Model Truck Search"><img src ="images/icons/Cancel.png"></a>
+               </div>  
+                  
+               <div class="trucksearch-select">
+               		<h5>Radius</h5>
+                    	<div class="radius-wrap">	
+                            <select name="trucksearch" class="trucksearch" tabindex="3">
+                                <option value="">+50km</option>
+                                    <option value="1">USA</option>
+                                    <option value="9">Canada</option>
+                                    <option value="2">France</option>
+                                    <option value="3">Spain</option>
+                                    <option value="6">Bulgaria</option>
+                                    <option value="7" disabled="disabled">Greece</option>
+                                    <option value="8">Italy</option>
+                            </select>
+                        </div>      
+                    	<a href="/" class="cancel" id="select" alt="cancel location radius truck search" title="Cancel location Radius Truck Search"><img src ="images/icons/Cancel.png"></a>
+               </div>
+               <div class="trucksearch-select">               
+               			<input type="text" class="truck-search" name"Keywords" placeholder="Keywords">
+                    	<a href="/" class="cancel" alt="cancel location radius truck search" title="Cancel location Radius Truck Search"><img src ="images/icons/Cancel.png"></a>
+               </div>
+               
+               <div class="trucksearch-select">               
+               			<a type="submit" id="search-button" class="button submit" onClick="">SEARCH</a> 
+                    	<a href="/" class="cancel">Clear All</a>
+               </div>                        
+			</form>
+		</div>
+   	</div>     
+                    
+            <!-- End dealer form -->
+            
+            <!-- start featured dealer -->
+            
+            	<div class="featured-dealer" id="dealer-search-form">
+                	<div class="dark-title top">
+                    	<h4>Featured Dealer</h4>
+                    </div>
+                    <div class="featured-dealer-image">
+                    	<img src="images/featured-dealer.jpg" title="Adtrans Truck Centre" alt="Adtrans Truck Centre">
+                    </div>
+                    <div class="dealer-details">
+                    	<h4>ADTRANS TRUCK CENTRE</h4>
+                        <p>Cnr Boundary & Raymond Roads</p><p>Laverton North VIC 3026</p>
+                        <h5>call now: 0401 020 304</h5>
+                        <h5><a href ="/">dealer.truckworld.com.au</a></h5>
+                    </div>
+                </div>    
+            <!-- end featured dealer -->
+            
+            
+            <!----- end search tabs ------------->
+            
+            	
+            <!-- start login join -->
+            
+      <div class="signin-join">
+      	<div class="signin button">
+        	<a href="/">Sign in</a>
+        </div>
+      	<div class="join button">
+        	<a href="/">Join</a>
+        </div>    
+     </div>      
+     
+     		<!-- end login join -->          
+
+
+			<!-- start show hide left links --->
+            
+       <div class="left-links-container ">
+       		<div class="example2 left-links">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis sagittis lectus. Curabitur quam arcu, adipiscing quis pretium in, pharetra eget dolor.</p>
+			</div>   
+             <div class="example3 left-links">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis sagittis lectus. Curabitur quam arcu, adipiscing quis pretium in, pharetra eget dolor.</p>
+			</div>
+              <div class="example4 left-links">
+				<a href="/" class="compare-saved">	
+                	<div class="compare-thumb">
+                		<img src="images/compare-thumb.jpg">
+                    </div>
+                	<h6>2013 FREIGHTLINER ARGOSY</h6>
+                    <h6>$59,990</h6>  
+                </a> 
+                <a href="/" class="cancel">
+                	<img src="images/icons/Cancel.png">
+                </a> 
+                <a href="/" class="compare-saved">	
+                	<div class="compare-thumb">
+                		<img src="images/compare-thumb.jpg">
+                    </div>
+                	<h6>2013 FREIGHTLINER ARGOSY</h6>
+                    <h6>$59,990</h6>  
+                </a> 
+                <a href="/" class="cancel">
+                	<img src="images/icons/Cancel.png">
+                </a>  
+                
+                <div class="compare">
+                	<a href="/">Compare (2)</a>
+                </div>  
+			</div>
+        </div>  
+
+
+			<!-- end show hide left links --->
+
+			<!-- left side ad --->
+		
+        <div class="left-ad-container">
+        
+        <script src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&amp;c=28&amp;pli=7665993&amp;PluID=0&amp;w=300&amp;h=250&amp;ord=[timestamp]&amp;ucm=true"></script>
+        
+        </div>
+        
+        <!-- newsletter sign up -->
+        <div class="dark-title">
+            	<h4>Lets Stay in Touch</h4>
+        </div>
+        <div class="newsletter-container">
+            <div class="newsletter-subscribe">
+            	<input type="text" name"newsletter"="" placeholder="Subscribe to our Newsletter">
+            </div>  
+           	<div class="newsletter-inputs">
+                     <input type="checkbox" id="dealer1" name="" value="">
+                     <label for="dealer1" id="truck-search"><span></span>Dealer</label>
+                     <input type="checkbox" id="dealer2" name="" value="">
+                     <label for="dealer2" id="truck-search"><span></span>Private</label> 
+                	<div class="sign-up">
+                		<a href="/">Sign Up</a>
+                	</div>           
+            </div>   
+            <div class="follow-us">
+                <h2>Follow Us</h2>
+                </div>
+                <div id="follow-links" class="left-links">
+                	<ul>
+                		<li><a href="/"><img src="images/icons/facebook-48.png"></a></li>
+                        <li><a href="/"><img src="images/icons/twitter-48.png"></a></li>
+                        <li><a href="/"><img src="images/icons/youtube-48.png"></a></li>
+                        <li><a href="/"><img src="images/icons/googleplus-48.png"></a></li>
+                    </ul>    
+               	</div>
+            </div>    
+		</div>
+	</div>
+
+<!-- End Left Column -->
+
+<!-- Middle Column -->
+
+
+<div class="middle-col">
+  	<div class="middle-container top">
+    	<h1 class="end">Buy New Trucks</h1>
+      <div class="col9 results-top">
+      		<h2>Featured New Releases</h2>
+      </div>      
+            
+            <div class="col3 last results-pag">
+                    <ul>
+                        <li><a href="/">1</a></li>
+                        <li><a href="/">2</a></li>
+                        <li><a href="/">3</a></li>
+                        <li><a href="/">4</a></li>
+                        <li><a href="/">»</a></li> 
+                    </ul>
+           </div>
+   			 <!-- content -->
+                                
+               <!-- New Truck Manufacturer Ad --> 
+               
+                	<div class="super-ad top-margin">
+                    	<div class="dark-head">
+                        	<a href="/" title="View Truckworld ad">2013 ISUZU NPS 300 4x4 Dual Cab,Table / Tray Top Drop Sides,4x4</a>
+
+                        </div>
+                                <div class="super-slide-container">
+                                <div class="callbacks_container dif_caption" id="slider-home">
+                            <ul class="rslides2">
+                              <li>
+                                <a href="#"><img src="images/izuzu1.jpg" alt=""></a>
+                              </li>
+                              <li>
+                                <a href="#"><img src="images/izuzu2.jpg" alt=""></a>
+                              </li>
+                              <li>
+                                <a href="#"><img src="images/izuzu3.jpg" alt=""></a>
+                              </li>
+                              <li>
+                                <a href="#"><img src="images/izuzu4.jpg" alt=""></a>
+                              </li>
+                              <li>
+                                <a href="#"><img src="images/izuzu5.jpg" alt=""></a>
+                              </li>                              
+                            </ul>
+                        </div>
+                        </div>
+                        <div class="super-content">
+                        	<h5 class="margin-bottom">From</h5>
+                        	<h1>$99,990</h1>
+                            <a href="/"><img src="images/isuzu-logo-small.png"></a>
+                            <div class="details">
+                            	<a href="/" title="Save & Compare"><img src="images/icons/save-16.png">Save & Compare</a>
+                            </div>    
+
+                        </div>
+                        <div class="super-details manu">
+                            <div class="details">
+                            	<a href="/"><img src="images/icons/truck.png">Prime Mover</a></li>
+                            </div>    
+                            <div class="details manu-top">
+                        		<a href="/"><img src="images/icons/6x6.png">6x4</a>
+							</div>
+                            <div class="details">
+                        		<a href="/"><img src="images/icons/engine.png">560HP</a>
+							</div>
+                            <div class="details">
+                            	<a href="/">ERG Class: Heavy</a></li>
+                            </div>    
+                            <div class="details">
+                        		<a href="/">131 000 Kgs (GCM)</a>
+							</div>
+                            <div class="details">
+                        		<a href="/">26 000 Kgs (GVM)</a>
+							</div> 
+
+                           <div class="view-ad button super">
+                                <a href="/">View</a>
+                           </div>     
+                       </div>
+                   </div>
+                   
+                   <!-- End Truck Manufacturer Ad -->
+                   
+                   
+               <!-- New Truck Manufacturer Ad --> 
+               
+                	<div class="super-ad top-margin">
+                    	<div class="dark-head">
+                        	<a href="/" title="View Truckworld ad">2013 ISUZU NPS 300 4x4 Dual Cab,Table / Tray Top Drop Sides,4x4</a>
+
+                        </div>
+                                <div class="super-slide-container">
+                                <div class="callbacks_container dif_caption" id="slider-home">
+                            <ul class="rslides2">
+                              <li>
+                                <a href="#"><img src="images/izuzu1.jpg" alt=""></a>
+                              </li>
+                              <li>
+                                <a href="#"><img src="images/izuzu2.jpg" alt=""></a>
+                              </li>
+                              <li>
+                                <a href="#"><img src="images/izuzu3.jpg" alt=""></a>
+                              </li>
+                              <li>
+                                <a href="#"><img src="images/izuzu4.jpg" alt=""></a>
+                              </li>
+                              <li>
+                                <a href="#"><img src="images/izuzu5.jpg" alt=""></a>
+                              </li>                              
+                            </ul>
+                        </div>
+                        </div>
+                        <div class="super-content">
+                        	<h5 class="margin-bottom">From</h5>
+                        	<h1>$99,990</h1>
+                            <a href="/"><img src="images/isuzu-logo-small.png"></a>
+                            <div class="details">
+                            	<a href="/" title="Save & Compare"><img src="images/icons/save-16.png">Save & Compare</a>
+                            </div>    
+
+                        </div>
+                        <div class="super-details manu">
+                            <div class="details">
+                            	<a href="/"><img src="images/icons/truck.png">Prime Mover</a></li>
+                            </div>    
+                            <div class="details manu-top">
+                        		<a href="/"><img src="images/icons/6x6.png">6x4</a>
+							</div>
+                            <div class="details">
+                        		<a href="/"><img src="images/icons/engine.png">560HP</a>
+							</div>
+                            <div class="details">
+                            	<a href="/">ERG Class: Heavy</a></li>
+                            </div>    
+                            <div class="details">
+                        		<a href="/">131 000 Kgs (GCM)</a>
+							</div>
+                            <div class="details">
+                        		<a href="/">26 000 Kgs (GVM)</a>
+							</div> 
+
+                           <div class="view-ad button super">
+                                <a href="/">View</a>
+                           </div>     
+                       </div>
+                   </div>
+                   
+                   <!-- End Truck Manufacturer Ad -->
+                   
+                   
+               <!-- New Truck Manufacturer Ad --> 
+               
+                	<div class="super-ad top-margin">
+                    	<div class="dark-head">
+                        	<a href="/" title="View Truckworld ad">2013 ISUZU NPS 300 4x4 Dual Cab,Table / Tray Top Drop Sides,4x4</a>
+
+                        </div>
+                                <div class="super-slide-container">
+                                <div class="callbacks_container dif_caption" id="slider-home">
+                            <ul class="rslides2">
+                              <li>
+                                <a href="#"><img src="images/izuzu1.jpg" alt=""></a>
+                              </li>
+                              <li>
+                                <a href="#"><img src="images/izuzu2.jpg" alt=""></a>
+                              </li>
+                              <li>
+                                <a href="#"><img src="images/izuzu3.jpg" alt=""></a>
+                              </li>
+                              <li>
+                                <a href="#"><img src="images/izuzu4.jpg" alt=""></a>
+                              </li>
+                              <li>
+                                <a href="#"><img src="images/izuzu5.jpg" alt=""></a>
+                              </li>                              
+                            </ul>
+                        </div>
+                        </div>
+                        <div class="super-content">
+                        	<h5 class="margin-bottom">From</h5>
+                        	<h1>$99,990</h1>
+                            <a href="/"><img src="images/isuzu-logo-small.png"></a>
+                            <div class="details">
+                            	<a href="/" title="Save & Compare"><img src="images/icons/save-16.png">Save & Compare</a>
+                            </div>    
+
+                        </div>
+                        <div class="super-details manu">
+                            <div class="details">
+                            	<a href="/"><img src="images/icons/truck.png">Prime Mover</a></li>
+                            </div>    
+                            <div class="details manu-top">
+                        		<a href="/"><img src="images/icons/6x6.png">6x4</a>
+							</div>
+                            <div class="details">
+                        		<a href="/"><img src="images/icons/engine.png">560HP</a>
+							</div>
+                            <div class="details">
+                            	<a href="/">ERG Class: Heavy</a></li>
+                            </div>    
+                            <div class="details">
+                        		<a href="/">131 000 Kgs (GCM)</a>
+							</div>
+                            <div class="details">
+                        		<a href="/">26 000 Kgs (GVM)</a>
+							</div> 
+
+                           <div class="view-ad button super">
+                                <a href="/">View</a>
+                           </div>     
+                       </div>
+                   </div>
+                   
+                   <!-- End Truck Manufacturer Ad -->
+                   
+                   
+                   <!---- middle of search results ad container ------->	
+                   
+                   	<div class="bannerSearch-container top-margin bottom-margin end">
+                    	<p>Advertisement</p>
+                    	<div class="bannerSearch">
+                        	<script src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&c=28&pli=6157921&PluID=0&w=468&h=60&ord=[timestamp]&ucm=true"></script>
+<noscript>
+<a href="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=brd&FlightID=6157921&Page=&PluID=0&Pos=5945" target="_blank"><img src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=bsr&FlightID=6157921&Page=&PluID=0&Pos=5945" border=0 width=468 height=60></a>
+</noscript>
+                   		</div>
+                   </div>
+
+	<!---- browse by category -------->
+
+	<div class="onerow"></div>
+
+    <h2 id="browse">Browse By Make</h2>
+    
+     <!-- Categories one row Start -->
+    
+    	<div class="category-container">
+        	<div class="category-image">
+            	<a href="/" title="Category Title"><img src="images/category-img.jpg" alt="category Title" title="Category Title"></a>
+    		</div>
+            <div class="category-title">
+            	<a href="/" title="Category Title">Brand Title</a>
+            </div>    
+        </div>
+        
+    	<div class="category-container">
+        	<div class="category-image">
+            	<a href="/" title="Category Title"><img src="images/category-img.jpg" alt="category Title" title="Category Title"></a>
+    		</div>
+            <div class="category-title">
+            	<a href="/" title="Category Title">Brand Title</a>
+            </div>    
+        </div>        
+        
+    	<div class="category-container">
+        	<div class="category-image">
+            	<a href="/" title="Category Title"><img src="images/category-img.jpg" alt="category Title" title="Category Title"></a>
+    		</div>
+            <div class="category-title">
+            	<a href="/" title="Category Title">Brand Title</a>
+            </div>    
+        </div>
+        
+    	<div class="category-container">
+        	<div class="category-image">
+            	<a href="/" title="Category Title"><img src="images/category-img.jpg" alt="category Title" title="Category Title"></a>
+    		</div>
+            <div class="category-title">
+            	<a href="/" title="Category Title">Brand Title</a>
+            </div>    
+        </div>            
+
+    	<div class="category-container">
+        	<div class="category-image">
+            	<a href="/" title="Category Title"><img src="images/category-img.jpg" alt="category Title" title="Category Title"></a>
+    		</div>
+            <div class="category-title">
+            	<a href="/" title="Category Title">Brand Title</a>
+            </div>    
+        </div>
+   
+   	<!-- Categories one row finish -->
+    
+         <!-- Categories one row Start -->
+    
+    	<div class="category-container">
+        	<div class="category-image">
+            	<a href="/" title="Category Title"><img src="images/category-img.jpg" alt="category Title" title="Category Title"></a>
+    		</div>
+            <div class="category-title">
+            	<a href="/" title="Category Title">Brand Title</a>
+            </div>    
+        </div>
+        
+    	<div class="category-container">
+        	<div class="category-image">
+            	<a href="/" title="Category Title"><img src="images/category-img.jpg" alt="category Title" title="Category Title"></a>
+    		</div>
+            <div class="category-title">
+            	<a href="/" title="Category Title">Brand Title</a>
+            </div>    
+        </div>        
+        
+    	<div class="category-container">
+        	<div class="category-image">
+            	<a href="/" title="Category Title"><img src="images/category-img.jpg" alt="category Title" title="Category Title"></a>
+    		</div>
+            <div class="category-title">
+            	<a href="/" title="Category Title">Brand Title</a>
+            </div>    
+        </div>
+        
+    	<div class="category-container">
+        	<div class="category-image">
+            	<a href="/" title="Category Title"><img src="images/category-img.jpg" alt="category Title" title="Category Title"></a>
+    		</div>
+            <div class="category-title">
+            	<a href="/" title="Category Title">Brand Title</a>
+            </div>    
+        </div>            
+
+    	<div class="category-container">
+        	<div class="category-image">
+            	<a href="/" title="Category Title"><img src="images/category-img.jpg" alt="category Title" title="Category Title"></a>
+    		</div>
+            <div class="category-title">
+            	<a href="/" title="Category Title">Brand Title</a>
+            </div>    
+        </div>
+   
+   	<!-- Categories one row finish -->
+    
+         <!-- Categories one row Start -->
+    
+    	<div class="category-container">
+        	<div class="category-image">
+            	<a href="/" title="Category Title"><img src="images/category-img.jpg" alt="category Title" title="Category Title"></a>
+    		</div>
+            <div class="category-title">
+            	<a href="/" title="Category Title">Brand Title</a>
+            </div>    
+        </div>
+        
+    	<div class="category-container">
+        	<div class="category-image">
+            	<a href="/" title="Category Title"><img src="images/category-img.jpg" alt="category Title" title="Category Title"></a>
+    		</div>
+            <div class="category-title">
+            	<a href="/" title="Category Title">Brand Title</a>
+            </div>    
+        </div>        
+        
+    	<div class="category-container">
+        	<div class="category-image">
+            	<a href="/" title="Category Title"><img src="images/category-img.jpg" alt="category Title" title="Category Title"></a>
+    		</div>
+            <div class="category-title">
+            	<a href="/" title="Category Title">Brand Title</a>
+            </div>    
+        </div>
+        
+    	<div class="category-container">
+        	<div class="category-image">
+            	<a href="/" title="Category Title"><img src="images/category-img.jpg" alt="category Title" title="Category Title"></a>
+    		</div>
+            <div class="category-title">
+            	<a href="/" title="Category Title">Brand Title</a>
+            </div>    
+        </div>            
+
+    	<div class="category-container">
+        	<div class="category-image">
+            	<a href="/" title="Category Title"><img src="images/category-img.jpg" alt="category Title" title="Category Title"></a>
+    		</div>
+            <div class="category-title">
+            	<a href="/" title="Category Title">Brand Title</a>
+            </div>    
+        </div>
+   
+   	<!-- Categories one row finish -->
+    
+         <!-- Categories one row Start -->
+    
+    	<div class="category-container">
+        	<div class="category-image">
+            	<a href="/" title="Category Title"><img src="images/category-img.jpg" alt="category Title" title="Category Title"></a>
+    		</div>
+            <div class="category-title">
+            	<a href="/" title="Category Title">Brand Title</a>
+            </div>    
+        </div>
+        
+    	<div class="category-container">
+        	<div class="category-image">
+            	<a href="/" title="Category Title"><img src="images/category-img.jpg" alt="category Title" title="Category Title"></a>
+    		</div>
+            <div class="category-title">
+            	<a href="/" title="Category Title">Brand Title</a>
+            </div>    
+        </div>        
+        
+    	<div class="category-container">
+        	<div class="category-image">
+            	<a href="/" title="Category Title"><img src="images/category-img.jpg" alt="category Title" title="Category Title"></a>
+    		</div>
+            <div class="category-title">
+            	<a href="/" title="Category Title">Brand Title</a>
+            </div>    
+        </div>
+        
+    	<div class="category-container">
+        	<div class="category-image">
+            	<a href="/" title="Category Title"><img src="images/category-img.jpg" alt="category Title" title="Category Title"></a>
+    		</div>
+            <div class="category-title">
+            	<a href="/" title="Category Title">Brand Title</a>
+            </div>    
+        </div>            
+
+    	<div class="category-container">
+        	<div class="category-image">
+            	<a href="/" title="Category Title"><img src="images/category-img.jpg" alt="category Title" title="Category Title"></a>
+    		</div>
+            <div class="category-title">
+
+            	<a href="/" title="Category Title">Brand Title</a>
+            </div>    
+        </div>
+   	</div>
+   	<!-- Categories one row finish -->
+                    
+    <!-- content -->
+		
+   <div class="lower-content top-margin">       
+               <h2>Find Trucks for Sale or Post Trucks Sale Ads at Truckworld.com.au</h2>
+        <div id="infopanel">    
+               <p>Are you planning to buy or sell trucks, used trailers or other commercial vehicles in Australia? Then you’ve definitely come to the right place. Truckworld.com.au is Australia’s premier online store to find trucks for sale; or sell trucks, utes, buses and trailers in Australia. We’ve got the best assortment of trailers, buses, vans, machinery and trucks on sale. So if you’re looking to buy, you’re definitely spoilt for choice here at Truckworld.com.au.</p>
+               <p>Selling a truck or any commercial vehicle can be difficult, especially if you’re a private seller and have limited means of advertising. If you’re one of those having difficulty selling your machinery or vehicles, then let Truckworld.com.au be your partner. Here at Truckworld.com.au you can quickly and easily advertise and sell your truck, trailer, van, bus, ute or other parts and machinery in three easy steps. Simply register, create your ad and start selling!</p>
+
+                <p>Every day thousands of dealers and interested buyers view and visit our website, so once you advertise with us you’re sure to reach more buyers Australia-wide.</p>
+
+                <p>We offer three reasonably-priced advertising packages to suit any advertising budget and need, as well as a special feature ad option that puts your product in a priority position to improve ranking in search results and further ensure the sale of your product.</p>
+
+                <p>Searching for the vehicle you need is fast and easy here at Truckworld.com.au. You can search by category, condition, make, model, application and type. You can also search for trucks by brand or find a franchised dealer near you with just a click.</p>
+
+                <p>Be one of the many satisfied dealers and customers who have taken advantage of our services. Buy or sell your trucks, trailers, vans, buses and utes here at Truckworld.com.au today!</p>
+    </div>
+    <div class="showmore">+ More Detail</div>
+    </div>          
+</div>   
+<!-- Right Column -->
+
+<div class="right-col manu">
+    
+<!-- right ad start --> 
+    
+    <div class="right-ad-container dealer-profile top">
+    	<script src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&c=28&pli=6157955&PluID=0&w=120&h=600&ord=[timestamp]&ucm=true"></script>
+<noscript>
+<a href="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=brd&FlightID=6157955&Page=&PluID=0&Pos=3437" target="_blank"><img src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=bsr&FlightID=6157955&Page=&PluID=0&Pos=3437" border=0 width=120 height=600></a>
+</noscript>
+	</div>
+
+<!-- end right ad-->  
+
+
+	<div class="right-links-container">
+    	<div class="right-links">
+        	<h5>Browse By Category</h5>
+                <ul>
+                    <li><a href="/">Utes &amp; Vans For Sale</a></li>
+                    <li><a href="/">Car Licence Trucks</a></li>
+                    <li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+                    <li><a href="/">Prime Mover Trucks</a></li>
+                    <li><a href="/">Tipper Trucks</a></li>
+                    <li><a href="/">Trailer Sales</a></li>
+                    <li><a href="/">Bus Sales</a></li>
+                    <li><a href="/">Machine Sales</a></li>
+                    <li><a href="/">Forklift Sales</a></li>
+                    <li><a href="/">Parts &amp; Accessories</a></li>
+                    <li><a href="/">Truck Bodies</a></li>
+                </ul> 
+        </div>   
+	</div>  
+
+
+<div class="right-links-container">
+    	<div class="right-links">
+        	<h5>[Make Title]</br>Related News</h5>
+    	</div>
+        <div class="related-news">
+        	<h5>Lorem ipsum dolor sit amet</h5>
+            <p>Nunc fermentum justo vel consectetur aliquam...</p>
+            <h6>11 Aug 2013</h6>
+        </div>
+        <div class="related-news">
+        	<h5>Lorem ipsum dolor sit amet</h5>
+            <p>Nunc fermentum justo vel consectetur aliquam...</p>
+            <h6>11 Aug 2013</h6>
+        </div>
+        <div class="related-news">
+        	<h5>Lorem ipsum dolor sit amet</h5>
+            <p>Nunc fermentum justo vel consectetur aliquam...</p>
+            <h6>11 Aug 2013</h6>
+        </div>
+        <div class="related-news">
+        	<h5>Lorem ipsum dolor sit amet</h5>
+            <p>Nunc fermentum justo vel consectetur aliquam...</p>
+            <h6>11 Aug 2013</h6>
+        </div>
+        <div class="related-news">
+        	<h5>Lorem ipsum dolor sit amet</h5>
+            <p>Nunc fermentum justo vel consectetur aliquam...</p>
+            <h6>11 Aug 2013</h6>
+        </div>                                
+    </div>
+    
+
+<!-- End Right Column -->
+
+
+</div>
+<!-- End Main body content -->
+
+</div>
+<!-- Footer -->
+
+<footer>
+
+<!-- Footer Section 1 -->
+
+	<div class="footerwrap-1">
+    	<div class="wrapper">
+        	<h1>The online truck sales platform for 5,000+ dealers</h1>
+        </div>
+    </div> 
+       
+<!-- End Footer Section 1 -->
+
+<!-- Footer Section 2 -->
+
+	<div class="footerwrap-2">
+    	<div class="wrapper">
+        	<div class="col12">
+            	<h2>Browse By Category</h2>
+            	<h3>Browse Through a Wide Selection of Commercial Vehicles and Trailers in Australia</h3>
+            </div>    
+        	
+            <div class="col3">
+            	<ul>
+                	<li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+				</ul>
+            </div>
+            
+            <div class="col3">
+            	<ul>
+                	<li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+				</ul>
+            </div>
+            
+            <div class="col3">
+            	<ul>
+                	<li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+				</ul>
+            </div>
+            
+            <div class="col3 last">
+            	<ul>
+                	<li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+				</ul>
+            </div>
+        <div class="onerow">    
+            <div class="return">
+            	<a href="#" class="back-to-top"><h4>RETURN TO TOP</h4></a>
+                    </div>
+                </a>
+            </div>
+        </div>   
+    </div>
+    
+<!-- End Footer Section 2 -->   
+
+
+<!-- Footer Section 3 -->            
+       <div class="footerwrap-3">
+       		<div class="wrapper">
+       		<div class="col12">
+            	<div class="col4">
+                	<img src="images/logo-footer.png" alt="Truckworld Logo" title"Truckworld Logo">
+                </div>
+                <div class="col2">
+                	<h4>TOP LINKS</h4>
+                    <ul>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>    
+			       		<li><a href="/">New Trucks</a></li>
+					</ul>
+              	</div>      
+                <div class="col2">
+                	<h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>    
+			       		<li><a href="/">New Trucks</a></li>
+					</ul>
+              	</div> 			
+                <div class="col2">
+                	<h4>TIPS & HELP</h4>
+                    <ul>
+                        <li><a href="/">About</a></li>
+                    	<li><a href="/">Live Chat</a></li>
+                        <li><a href="/">Help Centre</a></li>
+                    	<li><a href="/">Advertising Tips</a></li>
+                        <li><a href="/">Contact</a></li>
+                    	<li><a href="/">Used Trucks</a></li>    
+			       		<li><a href="/">New Truck</a></li>
+					</ul>
+              	</div> 
+                <div class="col2 last">
+                	<h4>LEGAL</h4>
+                    <ul>
+                        <li><a href="/">Privacy Policy</a></li>
+                    	<li><a href="/">Posting Policy</a></li>
+                        <li><a href="/">Terms of Use</a></li>
+					</ul>
+                	<h4>RELATED</h4>
+                    <ul>
+                        <li><a href="/">TrailerWorld.com.au</a></li>
+                    	<li><a href="/">MachineWorld.com.au</a></li>
+					</ul>                    
+              	</div>  
+           </div>
+   				<div class="onerow">
+                	<div class="col12">
+                    	<div id="footer-nav">
+                        	<ul>
+                                <li><a href="/">Post an Ad</a></li>
+                                <li><a href="/">Search For Sale</a></li>
+                                <li><a href="/">Sitemap</a></li>
+                                <li><a href="/">Truck Finance Options</a></li>
+                                <li><a href="/">Dealers</a></li>
+                                <li class="last" ><a href="/">Manufacturers</a></li>
+                            </ul>
+                        </div>
+                        </div>    
+                    <div class="col12">
+                    	<p>© Copyright Truckworld.com.au 2013. All Rights Reserved.</p>
+                    </div>
+              </div>
+         </div> 
+      </div>   
+   </div>
+</div>
+</div>
+</div>
+                             
+</footer>
+<!-- End Footer -->
+
+
+</div>
+<!-- End Page -->
+
+
+
+<!-- Tiny Nav Call -->
+<script>
+	$("#nav").tinyNav({
+	  active: 'selected', // String: Set the "active" class
+	  header: 'Navigation', // String: Specify text for "header" and show header instead of the active item
+	  label: '' // String: Sets the <label> text for the <select> (if not set, no label will be added)
+	});
+</script>
+
+
+</body>
+</html>

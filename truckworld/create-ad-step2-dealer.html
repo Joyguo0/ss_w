@@ -1,0 +1,883 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Truckworld</title>
+
+<!-- HTML5 Shiv -->
+<!--[if lte IE 8]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- fonts -->
+
+<style type="text/css" >
+	@font-face {
+    font-family: 'AvenirLTStd85Heavy';
+    src: url(../fonts/av-heavy.eot);
+    src: url(../fonts/av-heavy.eot) format('embedded-opentype'),
+}
+
+@font-face {
+    font-family: 'AvenirLTStd45Book';
+    src: url(../fonts/avenirltstd-book_0.eot);
+    src: url(../fonts/avenirltstd-book_0.eot) format('embedded-opentype'),
+}
+
+</style>
+   
+<!-- jQuery -->
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- IE Stylesheet -->
+
+<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+
+<!-- Advanced Search -->
+<link href="css/advanced-search.css" rel="stylesheet"/>
+<script type="text/javascript" src="js/advanced-toggle.js"></script>
+
+<!-- Responsive Grid -->
+<link rel="stylesheet" href="css/onepc.css">
+
+<!-- jQuery Easing Plugin -->
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+<!-- HorizontalNav jQuery Plugin - Fit Full Width -->
+<script type="text/javascript" src="js/jquery.horizontalNav.js"></script>
+<script>
+	$(document).ready(function(){
+	  $('.full-width').horizontalNav({
+		responsive: true,
+		tableDisplay: true
+	  });
+	});
+</script>
+
+    <!-- return to top --> 
+    
+    <script>
+jQuery(document).ready(function() {
+    var offset = 220;
+    var duration = 1000;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.back-to-top').fadeIn(duration);
+        } else {
+            jQuery('.back-to-top').fadeOut(duration);
+        }
+    });
+    
+    jQuery('.back-to-top').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+});    
+	</script>
+  
+<!-- select box -->
+
+<link href="css/jquery.selectbox.css" type="text/css" rel="stylesheet" />
+  
+<script type="text/javascript" src="js/jquery.selectbox-0.2.js"></script>
+<script type="text/javascript">
+$(function () {
+	$(".trucksearch").selectbox();
+	$("#radius").selectbox();
+	$(".advanced-search").selectbox();
+});
+</script>
+
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="headwrap">
+
+<!-- Top of Header -->
+
+		<div class="wrapper">
+        	<div class="col10">
+            	<div class="headlinks">
+                    <a href="/"><img src="images/icons/User.png">  Sign In</a>
+                </div>
+                <div class="headlinks"> 
+                <a href="/"><img src="images/icons/Plus.png">  Our Network</a>
+                </div>
+            </div>
+            <div class="col2 last headsocial">
+            	<a href="/"><img src="images/icons/Facebook.png"></a>
+            	<a href="/"><img src="images/icons/Twitter.png"></a>               
+            	<a href="/"><img src="images/icons/Youtube.png"></a>    
+            </div>
+       </div> 
+</div>           
+  	<div class="logohead-container">
+    	<div class="wrapper">
+    	<div class="col12">
+        	<div class="logohead">
+            	<div class="logo account">
+            		<a href="index.html" alt="Truckworld" title="Truckworld.com.au">
+                	<img src="images/logo.png"/></a>
+            	</div>
+                <div class="account-container">
+                	<div class="my-truckworld">
+                    	<h1>My Truckworld</h1>
+                    </div>
+                    <div class="username">
+                    	<a href="/"><h3>Dealer</a></br>Welcome Back!</h3>
+                    </div>
+                    <div class="account-links">
+                    	<a href="/">Dashboard</a> | <a href="/">Logout</a>
+                    </div>
+                </div>    
+            	<div class="bannerLeaderboard account">
+							
+							<script src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&c=28&pli=6157954&PluID=0&w=728&h=90&ord=[timestamp]&ucm=true"></script>
+<noscript>
+<a href="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=brd&FlightID=6157954&Page=&PluID=0&Pos=5073" target="_blank"><img src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=bsr&FlightID=6157954&Page=&PluID=0&Pos=5073" border=0 width=728 height=90></a>
+</noscript>
+
+        	</div></div>
+        </div>
+    </div> 
+ </div>  
+<!-- End Top of Header -->    
+
+<!-- Navigation -->
+
+<div class="navwrap">
+    <div class="wrapper"> 
+        <div class="col12">
+            <nav class="horizontal-nav full-width">
+                <ul class="menu">
+                    <li><a href="index.html"><img alt="Truckworld Home" src="images/icons/home.png"></a></li>
+                    <li><a href="/">Services</a>
+                        <div class="dropdown-5columns dealers fullwidth" id="dashboard">
+                                    
+                                        <div class="menu-head-dashboard fullwidth">
+                                        	<a href="/">Manage Ads</a>
+                                        </div>
+                                        <div class="menu-head-dashboard fullwidth">
+                                        	<a href="create-ad-step1-dealer.html">Create an Ad</a>
+                                        </div>
+                                        <div class="menu-head-dashboard fullwidth">
+                                        	<a href="create-ad-step1-dealer.html">Advertise</a>
+                                        </div>
+                                        <div class="menu-head-dashboard fullwidth">
+                                        	<a href="/">Favourites</a>
+                                        </div>
+                                        <div class="menu-head-dashboard fullwidth">
+                                        	<a href="create-ad-step1-dealer.html">Search Engine</a>
+                                        </div>
+                                        <div class="menu-head-dashboard fullwidth">
+                                        	<a href="/">Dealer Site</a>
+                                        </div>
+                                        <div class="menu-head-dashboard fullwidth">
+                                        	<a href="/">Your Stats</a>
+                                        </div>
+                            
+                            </li>                 
+                    
+                    <li><a href="/">Account Management</a>
+                        <div class="dropdown-4columns dealers" id="dashboard">
+                                    
+                                    <div class="col2 last">
+                                        <div class="menu-head-dashboard">
+                                        	<a href="update-account-step1-dealer.html">Update Account</a>
+                                        </div>
+                                    </div>
+                                    <div class="col3 last">
+                                        <div class="menu-head-dashboard">
+                                        	<a href="/">Password Modification</a>
+                                        </div>
+                                    </div>
+                                    <div class="col2 last">
+                                    
+                                        <div class="menu-head-dashboard">
+                                        	<a href="/">Manage Users</a>
+                                        </div>
+                                    </div>
+                                    <div class="col2 last">
+                                        <div class="menu-head-dashboard">
+                                        	<a href="/">Preferences</a>
+                                        </div>
+                                    </div>
+                            </li>
+                                                
+                    <li><a href="/">Billing</a></li>
+                    <li><a href="/">Subscription</a></li>
+                    <li><a href="/">Alerts</a>
+                    	<div class="alert-nav" id="dealer">
+                        	<a href="/">3</a>
+                        </div>    
+                    </li>
+                    <li><a href="index.html" class="navchat">Truckworld.com.au</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>    
+<!-- End Navigation -->
+
+<!-- Main body content -->
+
+<div class="body-wrap">
+
+<div class="wrapper">
+<!-- main body content -->
+  	<div class="offers">
+        <div class="breadcrumbs">
+    	<p><a href="/">Services » Create an Ad » </a>Step2 Enter Details</p>
+        </div>
+  <!----- steps ------->      
+        
+        <div class="steps-container">
+            <div class="step create-steps" id="step1-dealer">
+                <h3>STEP 1 - Choose Category</h3>
+            </div>
+            <div class="step active create-steps" id="step2-dealer">
+                <h3>STEP 2 - Enter Details</h3>
+            </div>
+            <div class="step create-steps" id="step3-dealer">
+                <h3>STEP 3 - Upload Images</h3>
+            </div>
+            <div class="step create-steps" id="step4-dealer">
+                <h3>STEP 4 - Preview Ad</h3>
+            </div>
+            <div class="step create-steps" id="step5-dealer">
+                <h3>STEP 5 - Pay & Publish</h3>
+            </div>
+        </div>
+        
+  <!----- end steps ------->
+  
+        <div class="sign-in-container  step2-dealer">
+            <div class="sign-in-form"  id="create-ad">
+            	<div class="col12 last">
+                	<h1>Enter the details of your new ad.</h1>
+                </div>
+            	<div class="col12 last">
+                	<h5>Please note that fields marked with * are required.</h5>
+                </div> 
+                <div class="onerow"></div>               
+                      <div class="col3">
+                              <label for="category" id="details">Select a Condition</label>
+                      </div>
+                        <div class="col3" id="sign-in">
+                        	 <div class="enquiry-location">
+                                    <select name="trucksearch" class="trucksearch" id="category" tabindex="4">
+                                        <option value="">Select Condition</option>
+                                        <option value="">New</option>
+                                        <option value="">Used</option>
+                                    </select>
+                              </div>      
+                          </div>
+                          <div class="onerow"></div> 
+                          <div class="col3">
+                              <label for="price" id="details">Price</label>
+                              <h6>To display POA type in value 0 only.</h6>
+                          </div>
+                          <div class="col3" id="sign-in">
+                             <label for="price" id="inner-label">$AUD</label>
+                             <input type="text" name="name" class="create-ad-form" id="price" placeholder="Enter Value"> 
+                      	  </div>
+                           <div class="col3">
+                                      <label for="price-note" id="details">Price Note</label>
+                          </div>
+                          <div class="col3 last" id="sign-in">
+                                 <input type="text" name="name" class="create-ad-form" id="price-note" placeholder="E.g. Includes GST"> 
+                          </div>
+                          
+                          <div class="onerow"></div>
+                          
+                          <div class="col3">
+                              <label for="price" id="details">Make</label>
+                          </div>
+                          <div class="col3" id="sign-in">
+                            <div class="enquiry-location">
+                                    <select name="trucksearch" class="trucksearch" id="category" tabindex="4">
+                                        <option value="">Select Make</option>
+										<option value="">All Makes</option>
+                                        <option value="19">ATKINSON (1)</option>
+                                        <option value="225">AUSTRAL DENNING (4)</option>
+                                        <option value="672">AUSTRAL TRIDENT (4)</option>
+                                        <option value="21">BEDFORD (3)</option>
+                                        <option value="723">CAT (1)</option>
+                                        <option value="38">DAF (38)</option>
+                                        <option value="39">DAIHATSU DELTA (24)</option>
+                                        <option value="41">DODGE (1)</option>
+                                        <option value="47">FIAT (3)</option>
+                                        <option value="48">FORD (94)</option>
+                                        <option value="607">FOTON (4)</option>
+                                        <option value="50">FREIGHTLINER (157)</option>
+                                        <option value="953">FUSO (93)</option>
+                                        <option value="65">HINO (577)</option>
+                                        <option value="124">HYUNDAI (2)</option>
+                                        <option value="73">INTERNATIONAL (107)</option>
+                                        <option value="75">ISUZU (780)</option>
+                                        <option value="76">IVECO (211)</option>
+                                        <option value="801">JAC (11)</option>
+                                        <option value="87">KENWORTH (185)</option>
+                                        <option value="88">KIA (15)</option>
+                                        <option value="104">MACK (85)</option>
+                                        <option value="940">MAGIRUS DEUTZ (1)</option>
+                                        <option value="105">MAN (36)</option>
+                                        <option value="111">MAZDA (35)</option>
+                                        <option value="113">MERCEDES BENZ (98)</option>
+                                        <option value="115">MITSUBISHI FUSO (813)</option>
+                                        <option value="943">NISSAN DIESEL (24)</option>
+                                        <option value="350">OKA (1)</option>
+                                        <option value="134">PETERBILT (4)</option>
+                                        <option value="142">SCANIA (66)</option>
+                                        <option value="149">STERLING (26)</option>
+                                        <option value="158">TOYOTA (16)</option>
+                                        <option value="126">UD (121)</option>
+                                        <option value="166">VOLKSWAGEN (2)</option>
+                                        <option value="167">VOLVO (122)</option>
+                                        <option value="168">WESTERN STAR (52)</option>
+                                    </select>
+                               </div>   
+                      	  </div>
+                           <div class="col3">
+                                      <label for="make" id="details">Model</label>
+                          </div>
+                          <div class="col3 last" id="sign-in">
+                               <div class="enquiry-location">
+                                    <select name="trucksearch" class="trucksearch" id="make" tabindex="4">
+                                        <option value="">Select Condition</option>
+                                        <option value="">Make 1</option>
+                                        <option value="">make 2</option>
+                                    </select>
+                               </div>  
+                          </div>
+                          
+                          <div class="onerow"></div>
+                    
+                          <div class="col3">
+                              <label for="type" id="details">Type</label>
+                          </div>
+                          <div class="col3" id="sign-in">
+                            <div class="enquiry-location">
+                                    <select name="trucksearch" class="trucksearch" id="type" tabindex="4">
+                                        <option value="">Select Type</option>
+										<option value="">Type 1</option>
+                                        <option value="">Type 2</option>
+                                        <option value="">Type 3</option>
+                                    </select>
+                               </div>   
+                      	  </div>
+                           <div class="col3">
+                                      <label for="make" id="details">Location</label>
+                          </div>
+                          <div class="col3 last" id="sign-in">
+                               <div class="enquiry-location">
+                                    <select name="trucksearch" class="trucksearch" id="location" tabindex="4">
+                                        <option value="">Select Condition</option>
+                                        <option value="">Location 1</option>
+                                        <option value="">Location 2</option>
+                                    </select>
+                               </div>  
+                          </div>
+                          
+                          <div class="onerow"></div>
+                          
+                          <div class="col3">
+                          			<label for="contact-numbers" id="details">Contact Number(s)</label>
+                          </div>
+                          <div class="col9 last">
+                          		<table id="contact-numbers">
+                                	<tbody>
+                                    	<tr id="ad-contacts-top">
+                                        	<td id="ad-contacts"></td>
+                                        	<td id="ad-contacts">Contact Name</td>
+                                            <td id="ad-contacts">Phone</td>
+                                            <td id="ad-contacts">Mobile</td>
+                                        </tr>
+                                        <tr>
+                                        	<td id="contacts-light"><input type="checkbox" id="name1" name="" value="" checked="">
+                                          	<label for="name1" id="subscribe"><span></span></label></td>
+                                         	<td id="contacts-light">Contact NAME</td>
+                                            <td id="contacts-light">02 9222 222</td>
+                                            <td id="contacts-light">0411 111 111</td>
+                                        </tr>
+                                        <tr>
+                                        	<td id="contacts-dark"><input type="checkbox" id="name2" name="" value="">
+                                          	<label for="name2" id="subscribe"><span></span></label></td>
+                                         	<td id="contacts-dark">Contact NAME</td>
+                                            <td id="contacts-dark">02 9222 222</td>
+                                            <td id="contacts-dark">0411 111 111</td>
+                           				</tr>
+                                        <tr>
+                                        	<td id="contacts-light"><input type="checkbox" id="name3" name="" value="">
+                                          	<label for="name3" id="subscribe"><span></span></label></td>
+                                         	<td id="contacts-light">Contact NAME</td>
+                                            <td id="contacts-light">02 9222 222</td>
+                                            <td id="contacts-light">0411 111 111</td>
+                           				</tr>
+                                        <tr>
+                                        	<td id="contacts-dark"><input type="checkbox" id="name4" name="" value="">
+                                          	<label for="name4" id="subscribe"><span></span></label></td>
+                                         	<td id="contacts-dark">Contact NAME</td>
+                                            <td id="contacts-dark">02 9222 222</td>
+                                            <td id="contacts-dark">0411 111 111</td>
+                           				</tr>                                                                                
+                                   </tbody>
+                              </table>          	                 
+               		 	</div>
+                        
+                        <div class="onerow"></div>
+                        
+                        <div class="col3">
+                        	 <label for="truck-description" id="details">* Description</label>
+                             <h6><strong>4000</strong> characters remaining</h6>
+						</div>
+                        <div class="col9 last">
+                        	<textarea rows="4" cols="50" type="text" class="account" id="notes"></textarea>
+                        </div> 
+                    
+                    	<div class="onerow"></div>
+                        
+                        <div class="col3">
+                                  <label for="application" id="details">* Application</label>
+                                  <h6>Three (3) applications maximum per truck ad.</h6>
+                        </div>
+                        <div class="col6">
+                              <table id="application">
+                                  <tbody>
+                                      <tr>
+                                          <td id="contacts-dark"><input type="checkbox" id="application1" name="" value="" checked="">
+                                          <label for="application1" id="subscribe"><span></span>Application 1</label></td>
+                                          <td id="contacts-dark"><input type="checkbox" id="application2" name="" value="">
+                                          <label for="application2" id="subscribe"><span></span>Application 2</label></td>
+                                          <td id="contacts-dark"><input type="checkbox" id="application3" name="" value="">
+                                          <label for="application3" id="subscribe"><span></span>Application 3</label></td>                                             
+                                      </tr>
+                                      <tr>
+                                          <td id="contacts-dark"><input type="checkbox" id="application4" name="" value="">
+                                          <label for="application4" id="subscribe"><span></span>Application 4</label></td>
+                                          <td id="contacts-dark"><input type="checkbox" id="application5" name="" value="" checked="">
+                                          <label for="application5" id="subscribe"><span></span>Application 5</label></td>
+                                          <td id="contacts-dark"><input type="checkbox" id="application6" name="" value="">
+                                          <label for="application6" id="subscribe"><span></span>Application 6</label></td>                                             
+                                      </tr>
+                                      <tr>
+                                          <td id="contacts-dark"><input type="checkbox" id="application7" name="" value="">
+                                          <label for="application7" id="subscribe"><span></span>Application 7</label></td>
+                                          <td id="contacts-dark"><input type="checkbox" id="application8" name="" value="" checked="">
+                                          <label for="application8" id="subscribe"><span></span>Application 8</label></td>
+                                          <td id="contacts-dark"><input type="checkbox" id="application9" name="" value="">
+                                          <label for="application9" id="subscribe"><span></span>Application 9</label></td>                                           
+                                      </tr>                                      
+                                 </tbody>
+                            </table>          	                 
+                      </div>
+                      
+                      <div class="col3 last" id="application-selected">                     
+                           <a href="/"><img src="images/icons/cancel.png"></a><h5>Application 1</h5>
+                           <a href="/"><img src="images/icons/cancel.png"></a><h5>Application 5</h5>
+                           <a href="/"><img src="images/icons/cancel.png"></a><h5>Application 8</h5>
+                      </div>
+                      
+                      <div class="onerow"></div>
+                      
+                      <div class="col3">
+                          <label for="kms" id="details">Kilometres</label>
+                      </div>
+                      <div class="col3" id="sign-in">
+                         <label for="calc1" id="inner-label">km's</label>
+                         <input type="text" name="name" class="create-ad-form" id="kms" placeholder="Enter Value"> 
+                      </div>
+                       <div class="col3">
+                          <label for="wheel-base" id="details">Wheel Base</label>
+                      </div>
+                      <div class="col3 last" id="sign-in">
+                         <label for="calc1" id="inner-label">mm</label>
+                         <input type="text" name="name" class="create-ad-form" id="wheel-base" placeholder="Enter Wheel Base">  
+                      </div>
+                      
+                      <div class="onerow"></div>      
+                      
+                      <div class="col3">
+                          <label for="gvm" id="details">* GVM</label>
+                      </div>
+                      <div class="col3" id="sign-in">
+                         <label for="calc1" id="inner-label">kg</label>
+                         <input type="text" name="name" class="create-ad-form" id="gvm" placeholder="Enter GVM"> 
+                      </div>
+                       <div class="col3">
+                          <label for="gcm" id="details">GCM</label>
+                      </div>
+                      <div class="col3 last" id="sign-in">
+                         <label for="calc1" id="inner-label">kg</label>
+                         <input type="text" name="name" class="create-ad-form" id="gcm" placeholder="Enter GCM">  
+                      </div>
+                      
+                      <div class="onerow"></div>   
+                      
+                      <div class="col3">
+                          <label for="tare" id="details">Tare</label>
+                      </div>
+                      <div class="col3" id="sign-in">
+                         <label for="calc1" id="inner-label">kg</label>
+                         <input type="text" name="name" class="create-ad-form" id="tare" placeholder="Enter GVM"> 
+                      </div>
+                       <div class="col3">
+                          <label for="year" id="details">Year Built</label>
+                      </div>
+                      <div class="col3 last" id="sign-in">
+                         <div class="enquiry-location">
+                              <select name="trucksearch" class="trucksearch" id="year" tabindex="4">
+                                  <option value="">Select Year</option>
+                                  <option value="">2013</option>
+                                  <option value="">2012</option>
+                                  <option value="">2011</option>
+                                  <option value="">2010</option>
+                                  <option value="">2009</option>
+                              </select>
+                         </div>  
+                      </div>
+                      
+                      <div class="onerow"></div>     
+                      
+                      <div class="col3">
+                          <label for="rego" id="details">Resgistration</label>
+                          <h6>Use TBA if unregistered</h6>
+                      </div>
+                      <div class="col3" id="sign-in">
+                         <input type="text" name="name" class="create-ad-form" id="rego" placeholder="Enter Rego Number"> 
+                      </div>
+                       <div class="col3">
+                          <label for="chasis" id="details">Chasis Number</label>
+                          <h6>Required if unregistered</h6>
+                      </div>
+                      <div class="col3 last" id="sign-in">
+                         <input type="text" name="name" class="create-ad-form" id="chasis" placeholder="Enter Chasis Number">  
+                      </div>
+                      
+                      <div class="onerow"></div> 
+                      
+                      <div class="col3">
+                          <label for="engine-no" id="details">Engine Number</label>
+                      </div>
+                      <div class="col3" id="sign-in">
+                         <input type="text" name="name" class="create-ad-form" id="engine-no" placeholder="Enter Engine Number"> 
+                      </div>
+                       <div class="col3">
+                          <label for="chasis" id="details">Engine Power</label>
+                          <h6>HP or KW - use drop down to select</h6>
+                      </div>
+                      <div class="col1" id="sign-in">
+                         <input type="text" name="name" class="create-ad-form" id="power" placeholder="E.g. 250">  
+                      </div>
+                      <div class="col2 last" id="sign-in">
+                         <div class="enquiry-location">
+                              <select name="trucksearch" class="trucksearch" id="power" tabindex="4">
+                                  <option value="">Kilowatts</option>
+                                  <option value="" selected="">Horse Power</option>
+                              </select>
+                         </div>  
+                      </div>
+                      
+                      <div class="onerow"></div>  
+                      
+                      <div class="col3">
+                          <label for="trans" id="details">Transmission Speeds</label>
+                      </div>
+                      <div class="col3" id="sign-in">
+                         <label for="calc1" id="inner-label">spd</label>
+                         <input type="text" name="name" class="create-ad-form" id="trans calc1" placeholder="E.g. 18"> 
+                      </div>
+                       <div class="col3">
+                          <label for="axle" id="details">Axle Configuration</label>
+                      </div>
+                      <div class="col3 last" id="sign-in">
+                         <div class="enquiry-location">
+                              <select name="trucksearch" class="trucksearch" id="axle" tabindex="4">
+                                  	<option value="">Select Axle Configuration</option>
+                                    <option value="">Single steer / single drive (4x2)</option>
+                                    <option value="">Single steer / lazy axle (6x2)</option>
+                                    <option value="">Single steer / pusher lazy axle (6x2)</option>
+                                    <option value="">Single steer / bogie drive (6x4)</option>
+                                    <option value="">Single Steer Live / bogie drive (6x6)</option>
+                                    <option value="">Twin steer / single single drive (6x2)</option>
+                                    <option value="">Twin steer / lazy axle (8x2)</option>
+                                    <option value="">Twin steer / bogie drive (8x4)</option>
+                                    <option value="">Twin Steer Live / bogie drive (8x4)</option>
+                                    <option value="">4x4</option>
+                              </select>
+                         </div>  
+                      </div>
+                      
+                      <div class="onerow"></div>   
+                      
+                      <div class="col3">
+                          <label for="diff" id="details">Differential Ratio</label>
+                      </div>
+                      <div class="col3" id="sign-in">
+                         <input type="text" name="name" class="create-ad-form" id="diff" placeholder="E.g. 4.11"> 
+                      </div>
+                       <div class="col3">
+                          <label for="suspension" id="details">Type of Suspension</label>
+                      </div>
+                      <div class="col3 last" id="sign-in">
+                         <div class="enquiry-location">
+                              <select name="trucksearch" class="trucksearch" id="suspension" tabindex="4">
+                                    <option value="">Select Suspension Type</option>
+                                    <option value="33">Taper Leaf</option>
+                                    <option value="34">Airglide 460</option>
+                                    <option value="35">Airglide</option>
+                                    <option value="36">Spring</option>
+                                    <option value="37">Coil + Leaf</option>
+                                    <option value="38">HAS460 Airbag</option>
+                                    <option value="39">AG400 AirGlide</option>
+                                    <option value="21">Leaf</option>
+                                    <option value="20">Walking beam</option>
+                                    <option value="16">6 rod</option>
+                                    <option value="22">Camel Back</option>
+                                    <option value="17">Rubber Block</option>
+                                    <option value="15">Airbag</option>
+                                    <option value="27">Torsion Bar</option>
+                                    <option value="28">Tuftrac</option>
+                                    <option value="32">Wishbone</option>
+                              </select>
+                         </div>  
+                      </div>
+                      
+                      <div class="onerow"></div>                                                                                          
+                                                                                 
+                        <div class="col3">
+                                  <label for="application" id="details">* Additional Features</label>
+                                  	<h6>Include any additional
+                                        feature itmes not
+                                        available on our list
+                                        using the text box.
+                                        Please separate each
+                                        item with a comma.</h6>
+                        </div>
+                        <div class="col6">
+                              <table id="features">
+                                  <tbody>
+                                      <tr>
+                                          <td id="contacts-dark"><input type="checkbox" id="featured1" name="" value="" checked="">
+                                          <label for="featured1" id="subscribe"><span></span>featured 1</label></td>
+                                          <td id="contacts-dark"><input type="checkbox" id="featured2" name="" value="">
+                                          <label for="featured2" id="subscribe"><span></span>featured 2</label></td>
+                                          <td id="contacts-dark"><input type="checkbox" id="featured3" name="" value="">
+                                          <label for="featured3" id="subscribe"><span></span>featured 3</label></td>                                             
+                                      </tr>
+                                      <tr>
+                                          <td id="contacts-dark"><input type="checkbox" id="featured4" name="" value="">
+                                          <label for="featured4" id="subscribe"><span></span>Feature 4</label></td>
+                                          <td id="contacts-dark"><input type="checkbox" id="featured5" name="" value="" checked="">
+                                          <label for="featured5" id="subscribe"><span></span>Feature 5</label></td>
+                                          <td id="contacts-dark"><input type="checkbox" id="featured6" name="" value="">
+                                          <label for="featured6" id="subscribe"><span></span>Feature 6</label></td>                                             
+                                      </tr>
+                                      <tr>
+                                          <td id="contacts-dark"><input type="checkbox" id="featured7" name="" value="">
+                                          <label for="featured7" id="subscribe"><span></span>Feature 7</label></td>
+                                          <td id="contacts-dark"><input type="checkbox" id="featured8" name="" value="" checked="">
+                                          <label for="featured8" id="subscribe"><span></span>Feature 8</label></td>
+                                          <td id="contacts-dark"><input type="checkbox" id="featured9" name="" value="">
+                                          <label for="featured9" id="subscribe"><span></span>Feature 9</label></td>                                           
+                                      </tr>
+                                  </tbody>
+                              </table>    
+                           <input type="text" class="create-ad-form" placeholder="Enter additional features">
+                      </div>
+                      
+                      <div class="col3 last" id="application-selected">                     
+                           <a href="/"><img src="images/icons/cancel.png"></a><h5>Featured 1</h5>
+                           <a href="/"><img src="images/icons/cancel.png"></a><h5>Featured 5</h5>
+                           <a href="/"><img src="images/icons/cancel.png"></a><h5>Featured 8</h5>
+                      </div>                                           
+             	</form>  
+                <div class="onerow"></div>                   
+        	    <div class="offers margin-top" id="sign-in">
+                   <input type="submit" class="long" id="sr-submit" value="Save &amp; Continue">  
+            	<a href="/" class="clear-signin">« Cancel</a>
+       		</div>                                          
+		</div>
+     </div>  
+   </div>   	
+</div>    
+<!-- End Main body content -->
+
+</div>
+<!-- Footer -->
+
+<footer>
+
+<!-- Footer Section 1 -->
+
+	<div class="footerwrap-1">
+    	<div class="wrapper">
+        	<h1>The online truck sales platform for 5,000+ dealers</h1>
+        </div>
+    </div> 
+       
+<!-- End Footer Section 1 -->
+
+<!-- Footer Section 2 -->
+
+	<div class="footerwrap-2">
+    	<div class="wrapper">
+        	<div class="col12">
+            	<h2>Browse By Category</h2>
+            	<h3>Browse Through a Wide Selection of Commercial Vehicles and Trailers in Australia</h3>
+            </div>    
+        	
+            <div class="col3">
+            	<ul>
+                	<li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+				</ul>
+            </div>
+            
+            <div class="col3">
+            	<ul>
+                	<li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+				</ul>
+            </div>
+            
+            <div class="col3">
+            	<ul>
+                	<li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+				</ul>
+            </div>
+            
+            <div class="col3 last">
+            	<ul>
+                	<li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+				</ul>
+            </div>
+        <div class="onerow">    
+            <div class="return">
+            	<a href="#" class="back-to-top"><h4>RETURN TO TOP</h4></a>
+                    </div>
+                </a>
+            </div>
+        </div>   
+    </div>
+</div>       
+<!-- End Footer Section 2 -->   
+
+
+<!-- Footer Section 3 -->            
+       <div class="footerwrap-3">
+       		<div class="wrapper">
+       		<div class="col12">
+            	<div class="col4">
+                	<img src="images/logo-footer.png" alt="Truckworld Logo" title"Truckworld Logo">
+                </div>
+                <div class="col2">
+                	<h4>TOP LINKS</h4>
+                    <ul>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>    
+			       		<li><a href="/">New Trucks</a></li>
+					</ul>
+              	</div>      
+                <div class="col2">
+                	<h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>    
+			       		<li><a href="/">New Trucks</a></li>
+					</ul>
+              	</div> 			
+                <div class="col2">
+                	<h4>TIPS & HELP</h4>
+                    <ul>
+                        <li><a href="/">About</a></li>
+                    	<li><a href="/">Live Chat</a></li>
+                        <li><a href="/">Help Centre</a></li>
+                    	<li><a href="/">Advertising Tips</a></li>
+                        <li><a href="/">Contact</a></li>
+                    	<li><a href="/">Used Trucks</a></li>    
+			       		<li><a href="/">New Truck</a></li>
+					</ul>
+              	</div> 
+                <div class="col2 last">
+                	<h4>LEGAL</h4>
+                    <ul>
+                        <li><a href="/">Privacy Policy</a></li>
+                    	<li><a href="/">Posting Policy</a></li>
+                        <li><a href="/">Terms of Use</a></li>
+					</ul>
+                	<h4>RELATED</h4>
+                    <ul>
+                        <li><a href="/">TrailerWorld.com.au</a></li>
+                    	<li><a href="/">MachineWorld.com.au</a></li>
+					</ul>                    
+              	</div>  
+           </div>
+   				<div class="onerow">
+                	<div class="col12">
+                    	<div id="footer-nav">
+                        	<ul>
+                                <li><a href="/">Post an Ad</a></li>
+                                <li><a href="/">Search For Sale</a></li>
+                                <li><a href="/">Sitemap</a></li>
+                                <li><a href="/">Truck Finance Options</a></li>
+                                <li><a href="/">Dealers</a></li>
+                                <li class="last" ><a href="/">Manufacturers</a></li>
+                            </ul>
+                        </div>
+                        </div>    
+                    <div class="col12">
+                    	<p>© Copyright Truckworld.com.au 2013. All Rights Reserved.</p>
+                    </div>
+              </div>
+         </div> 
+      </div>   
+   </div>
+</div>
+</div>
+</div>
+                             
+</footer>
+<!-- End Footer -->
+
+</div>
+<!-- End Page -->
+
+<!-- Tiny Nav Call -->
+
+</body>
+</html>

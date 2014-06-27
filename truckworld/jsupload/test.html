@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title> - jsFiddle demo</title>
+  <script type='text/javascript' src='jquery-1.9.1.js'></script>
+  <script type='text/javascript' src="jQueryRotate.js"></script>
+  <style type='text/css'>
+    #preview img {
+    max-height: 300px;
+    max-width: 300px;
+	}
+  </style>
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+$('a').click(function(){
+    var a = $('img').getRotateAngle();
+    var d = Math.abs($('#degree').val());
+    
+    if($(this).attr('id') == 'counter'){
+       //d = -Math.abs(+a - +d);
+        d = a - d;
+    }
+    else{d = +a + +d;}
+   
+    $('img').rotate({animateTo:d});
+});
+
+/* image preview */
+$('#file').change(function(){
+    var oFReader = new FileReader();
+    oFReader.readAsDataURL(this.files[0]);
+    console.log(this.files[0]);
+    oFReader.onload = function (oFREvent) {
+        $('#preview').html('<img src="'+oFREvent.target.result+'">');
+    };
+});
+});//]]>  
+</script>
+</head>
+<body>
+  <form method="POST" action="uploadfiles.php" enctype="multipart/form-data">
+    <input type="file" name='aa' id="file">
+    <div id="preview"></div>
+    <br>
+    <a href="#" id="counter"><- counter</a>
+        <select id="degree">
+            <option>90</option>
+            <option>45</option>
+        </select>
+    <a href="#" id="clockwise">clockwise -></a>
+    <hr>
+    <button type="submit">save image</button>
+</form>
+  
+</body>
+
+
+</html>
+

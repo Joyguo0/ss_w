@@ -1,0 +1,651 @@
+/* *********************************************************************************************************************
+	One% CSS Grid - 12 Columns Fluid CSS Grid System
+
+	Why One% ? Let’s count ...
+		we have 12 columns (magic number divided by 2, 3, 4, 6)
+
+		for 12 columns we need 11 margins
+
+		so if we count margin 3%, then 3% * 11 margins = 33%
+
+		and if we count width of 1 column 5.5%, than 5.5% * 12 columns = 66%
+
+		in the end we have 33% + 66% = 99% aaand ???
+
+		1% is still here so that's the name - One%
+
+	2 starting options ? Let’s count a bit more ...
+		1200px - perfectly fits 1280 screens
+			12 columns
+			margin 3% / 36px (full-width)
+			col1 5.5% / 66px (full-width)
+		1000px - perfectly fits 1024 screens
+			12 columns
+			margin 3% / 30px (full-width)
+			col1 5.5% / 55px (full-width)
+*/
+
+
+
+
+
+/* *********************************************************************************************************************
+ * Main container for all
+ */
+.wrapper {
+	margin: 0 auto;
+	
+	max-width: 1200px;
+}
+
+.onerow {
+	clear: both;
+}
+
+/* *********************************************************************************************************************
+ * Common columns definitions
+ */
+.col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12 {
+	float: left;
+	margin: 0 3% 0 0;
+}
+
+.col1.last, .col2.last, .col3.last, .col4.last, .col5.last, .col6.last, .col7.last, .col8.last, .col9.last, .col10.last, .col11.last, .col12 {
+	margin: 0;
+}
+
+.col1 { width: 5.5%; }
+.col2 { width: 14%; }
+.col3 { width: 22.5%; }
+.col4 { width: 31%; }
+.col5 { width: 39.5%; }
+.col6 { width: 48%; }
+.col7 { width: 56.5%; }
+.col8 { width: 65%; }
+.col9 { width: 73.5%; }
+.col10 { width: 82%; }
+.col11 { width: 90.5%; }
+.col12 { width: 99%; margin: 0; }
+
+
+.left-col {
+	width: 25%;
+	margin-right: 2.5%;
+	float: left;
+}
+
+.middle-col {
+	width: 55%;
+	margin-right: 2.5%;
+	float: left;
+	margin-top: 2.5%;
+}
+
+.right-col {
+	width: 15%;
+	float: left;
+}
+
+.right-col.manu {
+	margin-top: 2.5%;
+}
+
+.middle-col.ad-view {
+	width: 45%;
+	margin-right: 2.5%;
+	float: left;
+	margin-top: 2.5%;
+}
+
+.right-col.ad-view {
+	width: 25%;
+	float: left;
+}
+
+.two-col {
+	width: 67.5%;
+	float: left;
+	background: white;
+	padding: 0 2.5%;
+}
+
+.two-col.manu {
+	width: 72.5%;
+	padding: 0;
+	background: transparent;
+}
+
+/* *********************************************************************************************************************
+ * Disable padding left/right 10px if I'm 1024 or gibber - correct percentage math
+ */
+@media all and (max-width: 1280px) {
+	
+	body {
+		font-size:0.9em;
+	}
+	
+	/* Page Wrap */
+
+	.page {
+		width:1260px;
+	}
+	
+	/* Body Wrap */
+	
+	.body-wrap {
+		max-width: 1200px;
+	}
+	
+	/* Footer */
+
+	footer {
+		max-width: 1200px;
+	}
+	
+	/* Split pages */
+	
+	.contact-left {
+		width:100%;
+		margin-right:0;
+	}
+	
+	.contact-right {
+		width:100%;
+	}
+
+	.textright p {
+		font-size: 0.75em;
+		margin: 2% 0;
+		padding: 0;
+	}
+	
+		footer a.facebook, footer a.twitter, footer a.youtube, footer a.googleplus {
+		background-size: 100%;
+		width: 30px;
+		height: 30px;
+	}
+	
+	/* Menu Change! */
+	
+  
+	
+}
+
+@media (max-width: 1075px) {
+	
+	.dropdown-4columns {
+		width: 70%;
+	}
+
+	.advanced-label h2 {
+		font-size: 120%;
+	}
+	
+	.advanced-wrap .sbHolder {
+		width: 160px !important;
+	}
+	
+	.sbHolder {
+		width: 90%;
+	}
+	
+	.radius-wrap .sbHolder {
+		width: 50% !important;
+	}
+
+	.advanced-wrap .sbSelector {
+		width: 160px !important; 
+	}
+	
+	.advanced-wrap.small .sbHolder {
+		width: 90px !important;
+	}
+
+
+	label#truck-search-advanced {
+		font-size: 0.9em;
+		margin-right: 2%;
+	}
+	
+	.logo img {
+		width: 80%;
+		padding: 3% 10%;
+	}
+	
+	.jslider {
+		width: 82%;
+	}
+	
+	label#truck-search {
+		margin-right: 0.5em;
+		font-size: 11px;
+	}
+	
+	.tab.side a {
+		font-size: 1em;
+		margin: 5% 0;
+	}
+	
+	input.truck-search {
+		width: 80% !important;
+	}
+	
+	.signup-right {
+		width: auto;
+	}
+	
+	#follow-links img {
+		width: 15%;
+	}
+	
+	.newsletterwrap {
+		width: 96%;
+		padding: 0 2%;
+	}
+
+	a#newsletter-button.button.submit {
+		font-size: 1.2em;
+		margin-top: 42%;
+	}
+		
+	.slide h5 {
+		font-size: 11px;
+	}
+	
+	.footerwrap-3 {
+		width: 96%;
+		padding: 2%;
+	}
+	
+	.super-content {
+		height: auto;
+	}
+	
+	.super-content h5 {
+		margin-bottom: 5%;
+	}
+	
+	.right-col {
+		display: none;
+	}
+	
+	.right-col.ad-view {
+		display: block;
+	}
+	
+	.middle-col {
+		width: 72.5%;
+		margin-right: 0;
+	}
+	
+	.left-ad-container, .right-ad-container {
+		display: none;
+	}
+	
+	.horizontal-nav ul li a {
+		font-size: 0.9em;
+	}
+	
+	.share-adview {
+		width: 100%;
+		float: left;
+		margin: 1em auto;
+		text-align:center;
+	}
+	
+	.compare-thumb img {
+		width: 100%;
+	}
+	
+	.tools ul li a {
+		text-align: center;
+		font-size: 1.2em;
+	}
+	
+	#ribbon {
+		top: -18px;
+		left: 325px;
+	}
+		
+	.enquiry-container.middle.tablet {
+		display: block;
+	}
+	
+	.ad-image.sold {
+		margin-bottom:-502px;
+	}
+	
+	.sample {
+		font-size: 0.8em;
+	}
+	
+	.sample h2#second {
+		background-size: 8%;
+	}
+	
+	.sign-up a {
+		font-size: 1em;
+		padding: 8% 10%;
+		border-radius: 7px;
+	}
+	
+	.dealer-directory ul li {
+		margin: 0 0.40em;
+	}
+	
+	.sign-up.view-dealer {
+		font-size: 0.8em;
+	}
+	
+	.offer-info {
+		width: 27%;
+		float: left;
+	}
+	
+	.offer-ad {
+		width: 70%;
+	}
+	
+	.offer-info h1 {
+		font-size: 1.2em;
+	}
+	
+	.offer-info h3 {
+		font-size: 1em;
+	}
+
+	.offer-info ul li {
+		font-size: 1em;
+		background-size: 10%;
+		line-height: 1.2em;
+		margin-bottom: 2%;
+		margin-top: 2%;
+	}
+	#dashboard.dropdown-1column, #dashboard.dropdown-2columns, #dashboard.dropdown-3columns, #dashboard.dropdown-4columns, #dashboard.dropdown-5columns {margin-top: -7px;}
+	
+	.dashboard-buttons a {
+		font-size: 0.85em;
+	}
+	
+	.enquiry-location {
+		font-size: 0.8em;
+	}
+	
+	.dashboard-ad-image {
+		width: 40%;
+	}
+	
+	a.buy-package {
+		background-size: 100%;
+		height: 39px;
+	}
+	
+	a.buy-package:hover {
+		background-position: 0 -39px;
+	} 
+	
+	.offer-info-package {
+		width: 23%;
+	}
+	
+	td#first-col {
+		font-size: 0.8em;
+	}
+	
+	td#second-col {
+		font-size: 0.8em;
+	}
+	
+	.offer-ad {
+		width: 78%;
+	}
+}
+
+@media only screen 
+and (min-device-width : 600px) 
+and (max-device-width : 800px) {
+
+	a.buy-package {
+		height: 36px;
+	}
+	
+	a.buy-package:hover {
+		background-position: 0 -36px;
+	} 	
+
+	#ribbon {
+		left: 283px;
+	}		
+	
+	input#sr-submit {
+		padding: 0.3em 1em;
+	}
+		
+	label#truck-search {
+		margin-right: 0.3em;
+	}
+
+	.sign-up {
+		width: 50%;
+		float: right;
+		margin-bottom: 10px;
+	}
+	
+	.dropdown-4columns {
+		width: 85%;
+	}
+
+	.sign-in-container {
+		width: 60%;
+	}
+
+	.step p {
+		font-size: 0.9em;
+	}
+	
+	.step h3 {
+		font-size: 1.1em;
+	}
+
+	#sign-in.offers.profile {
+		margin-bottom: 0;
+		width: 100%;
+		padding: 0;
+		margin: 0px auto;
+		float: left;
+		text-align: center;
+	}
+	
+	input#sr-submit.long {
+		padding: 0.5em 0.8em 0.4em;
+		text-transform: uppercase;
+		float: left;
+		width: 100%;
+		font-size: 1em;
+	}
+	
+	a.clear-signin {
+		text-align: center;
+		width: 100%;
+		margin-left: 0;
+	}
+	
+	#manage-ads-icons {
+		font-size: 0.8em;
+	}
+	
+}
+
+
+
+@media (max-width: 600px) {
+	
+	.col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11 {
+		float: none;
+		width: 99%;
+	}
+	
+	.middle-col, .middle-col.ad-view, .left-col, .right-col.ad-view  {
+		width: 95%;
+		margin: 2.5%;
+	}
+	
+	
+	.bannerLeaderboard, .headsocial {display: none;}
+	
+	.headlinks {
+		width: 50%;
+		float: left;
+		margin-top: 0;
+		text-align: center;
+		padding: 2% 0;
+	}
+	
+	/* Logo */
+	
+	.logo {
+		width: 100%;
+		margin:0 auto;
+		display:block;
+		float: left;
+	}
+	
+	/* Page Wrap */
+
+	.page {
+		width:500px;
+	}
+	
+	/* Body Wrap */
+	
+	.body-wrap {
+		width: 420px;
+		background: #FFF;
+	}
+	
+	.banner {
+		margin: 0 auto 20px auto;
+	}
+	
+	.rslides {
+		margin: 0 auto;
+	}
+	
+	/* Footer */
+
+	footer {
+		width: 420px;
+	}
+	
+	ul.sidebar {
+		margin-top:20px;
+	}
+	
+	
+	.textright p {
+		font-size: 1.6em;
+		text-align: left;
+		margin: 0;
+		line-height: 1.5em;
+		padding: 0;
+		letter-spacing: 0.1em;
+	}
+	
+	.search {
+		float: right;
+		width: 100%;
+		margin-top: 5%;
+		margin-bottom: 0;
+	}
+	
+	#contact input {width: 98%; margin: 0;}
+	#contact select {width: 98%; margin: 0;}
+	#contact textarea {width: 98%;margin: 0;}
+	#contact label {
+		width: 100%;
+		float: left;
+		text-align: left;
+		font-size: 1.2em;
+	}
+		
+	#contact button {margin: 5% 0;}	
+
+	footer p {font-size: 100%;}
+	
+	footer a.facebook, footer a.twitter, footer a.youtube, footer a.googleplus {
+		background-size: 100%;
+		width: 50px;
+		height: 50px;
+	}
+	
+	.show-more a:link {padding: 1% 40%;}
+	
+	.news-date {width: 10%;}
+	.news-story {width: 75%;}
+	
+	.accept {width: 96%;
+			margin: 5% 0 0 0;
+			float: left;
+	}
+	
+	#contact h5 {margin: 0; 
+}
+
+		
+	.super-content {
+		float: left;
+		width: 46%;
+		border: none;
+		font-size: 0.8em;
+	}
+	
+	.large-btns_nav {
+		width: 24px !important;
+		height: 24px !important;
+		background-size: 200% !important;
+	}
+	
+	.super-details {
+		width: 96%;
+		padding: 2%;
+		background-color: #e2e2e2;
+		border-top: 2px solid #2c2151;
+		margin-top: -2px;
+		z-index: 10;
+		position: relative;
+	}
+	
+	.super-details a {
+		font-size: 0.85em;
+	}
+	
+	.details, .details-2 {
+		width: auto;
+		display: inline;
+		margin-right: 3%;
+	}
+	
+	.details-2 p {
+		vertical-align: top;
+		line-height: 1.5em;
+		font-size: 0.85em;
+	}
+		
+	#ribbon {
+		display: none;
+	}
+	
+	.middle-col h1 {
+		text-align: center;
+		font-weight: bold;
+	}
+
+	
+}
+
+
+
+
+
+
+

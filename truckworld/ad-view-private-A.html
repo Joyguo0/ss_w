@@ -1,0 +1,1841 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Truckworld</title>
+
+<!-- HTML5 Shiv -->
+<!--[if lte IE 8]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- fonts -->
+
+<style type="text/css" >
+	@font-face {
+    font-family: 'AvenirLTStd85Heavy';
+    src: url(../fonts/av-heavy.eot);
+    src: url(../fonts/av-heavy.eot) format('embedded-opentype'),
+		 url(../fonts/av-heavy.svg#AvenirLTStd85Heavy) format('svg'),
+         url(../fonts/av-heavy.woff) format('woff'),
+         url(../fonts/av-heavy.ttf) format('truetype');
+     	 font-weight: normal;
+		 font-style: normal;
+	}
+		 
+		 
+		 @media screen and (-webkit-min-device-pixel-ratio:0) {
+			@font-face {
+			font-family: 'AvenirLTStd85Heavy';
+			src: url('../fonts/av-heavy.svg#AvenirLTStd85Heavy') format('svg');
+			}
+		 }
+
+@font-face {
+    font-family: 'AvenirLTStd45Book';
+    src: url(../fonts/avenirltstd-book_0.eot);
+    src: url(../fonts/avenirltstd-book_0.eot) format('embedded-opentype'),
+         url(../fonts/avenirltstd-book_0.woff) format('woff'),
+         url(../fonts/avenirltstd-book_0.ttf) format('truetype'),
+         url(../fonts/avenirltstd-book_0.svg#AvenirLTStd45Book) format('svg');
+}
+
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+</style>
+   
+<!-- jQuery -->
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+
+
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Advanced Search -->
+<link href="css/advanced-search.css" rel="stylesheet"/>
+<script type="text/javascript" src="js/advanced-toggle.js"></script>
+
+<!-- Responsive Grid -->
+<link rel="stylesheet" href="css/onepc.css">
+
+<!-- jQuery Easing Plugin -->
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+
+<!-- HorizontalNav jQuery Plugin - Fit Full Width -->
+<script type="text/javascript" src="js/jquery.horizontalNav.js"></script>
+<script>
+	$(document).ready(function(){
+	  $('.full-width').horizontalNav({
+		responsive: true,
+		tableDisplay: true
+	  });
+	});
+</script>
+
+    <!-- Carousel -->
+    <link rel="stylesheet" href="carousel/jquery.bxslider.css" media="all">
+    <script type="text/javascript" src="carousel/jquery.bxslider.js"></script>
+    <script>
+		$(document).ready(function(){
+		  $('.carousel-ad').bxSlider({
+			responsive: true,
+			slideWidth: 144,
+			minSlides: 7,
+			maxSlides: 10,
+			moveSlides: 2,
+			slideMargin: 2,
+			pager: false,
+			auto: false,
+			pause: "3000"
+		  });
+		});
+    </script>
+    
+    <!-- Carousel other ads -->
+    <link rel="stylesheet" href="css/jquery.bxslider.css" media="all">
+    <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+    <script>
+		$(document).ready(function(){
+		  $('.carousel-other-ads').bxSlider({
+			responsive: true,
+			slideWidth: 144,
+			minSlides: 3,
+			maxSlides: 3,
+			moveSlides: 1,
+			slideMargin: 35,
+			pager: false,
+			auto: true,
+			pause: "3000"
+		  });
+		});
+    </script>    
+
+    <!-- return to top --> 
+    
+    <script>
+jQuery(document).ready(function() {
+    var offset = 220;
+    var duration = 1000;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.back-to-top').fadeIn(duration);
+        } else {
+            jQuery('.back-to-top').fadeOut(duration);
+        }
+    });
+    
+    jQuery('.back-to-top').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+});    
+	</script>
+    
+<!-- Show more show less script -->
+
+<script language="JavaScript" type="text/javascript">
+$(document).ready(function() {
+var maxHeight = $("#infopanel").css('height');
+$("#infopanel").css({'height':'180px','overflow':'hidden'});
+$(".showmore").toggle(showPanel,hidePanel);
+function showPanel(){
+$("#infopanel").animate({height:maxHeight});
+$(".showmore").text('- Fewer Details');
+}
+function hidePanel(){
+$("#infopanel").animate({height:"180px"});
+$(".showmore").text('+ More Details');
+}
+});
+</script>   
+
+<script language="JavaScript" type="text/javascript">
+$(document).ready(function() {
+var maxHeight = $(".recent-container").css('height');
+$(".recent-container").css({'height':'150px','overflow':'hidden'});
+$(".showmore1").toggle(showPanel,hidePanel);
+function showPanel(){
+$(".recent-container").animate({height:maxHeight});
+$(".showmore1").text('- Show Less');
+}
+function hidePanel(){
+$(".recent-container").animate({height:"150px"});
+$(".showmore1").text('+ Show More (2)');
+}
+});
+</script>  
+  
+  
+<!-- show hide divs-->  
+
+<script type="text/javascript">
+$(document).ready(function(){	
+    $('.example2').hide().before('<a href="#" id="toggle-example2">View Saved Ads</a>');
+	$('a#toggle-example2').click(function() {
+		$('.example2').slideToggle(500);
+		return false;
+	});
+});
+$(document).ready(function(){	
+    $('.example3').hide().before('<a href="#" id="toggle-example3">Saved Searches</a>');
+	$('a#toggle-example3').click(function() {
+		$('.example3').slideToggle(500);
+		return false;
+	});
+});
+$(document).ready(function(){	
+    $('.example4').show().before('<a href="#" id="toggle-example4">Compare Saved</a>');
+	$('a#toggle-example4').click(function() {
+		$('.example4').slideToggle(500);
+		return false;
+	});
+});
+
+</script>
+
+
+<!-- toggle with image change effect -->  
+                    
+<script type="text/javascript">
+jQuery(document).ready(function($) { 
+ 
+    // Find the toggles and hide their content
+    $('.toggle').each(function(){
+        $(this).find('.toggle-content').show();
+    });
+ 
+    // When a toggle is clicked (activated) show their content
+    $('.toggle a.toggle-trigger').click(function(){
+        var el = $(this), parent = el.closest('.toggle');
+ 
+        if( el.hasClass('active') )
+        {
+            parent.find('.toggle-content').slideToggle();
+            el.removeClass('active');
+        }
+        else
+        {
+            parent.find('.toggle-content').slideToggle();
+            el.addClass('active');
+        }
+        return false;
+    });
+ 
+});  //End
+</script>
+  
+<!-- select box -->
+
+<link href="css/jquery.selectbox.css" type="text/css" rel="stylesheet" />
+  
+<script type="text/javascript" src="js/jquery.selectbox-0.2.js"></script>
+<script type="text/javascript">
+$(function () {
+	$(".trucksearch").selectbox();
+	$("#radius").selectbox();
+	$(".advanced-search").selectbox();
+});
+</script>  
+
+
+<!-- Tabs -->
+
+<script src="js/jquery.easytabs.min.js" type="text/javascript"></script>
+<script src="js/jquery.hashchange.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    $(document).ready( function() {
+      $('#tab-container').easytabs();
+	  $('#tab-container1').easytabs();
+	  $('#tab-container2').easytabs();
+    });
+  </script>
+  
+
+ <!-- bPopup-->
+ 
+ <script src="js/jquery.bpopup.min.js"></script>
+ 
+ <script>
+    ;(function($) {
+
+         // DOM Ready
+        $(function() {
+
+            // Binding a click event
+            // From jQuery v.1.7.0 use .on() instead of .bind()
+            $('.open-gallery').bind('click', function(e) {
+
+                // Prevents the default action to be triggered. 
+                e.preventDefault();
+
+                // Triggering bPopup when click event is fired
+                $('.gallery').bPopup();
+            });
+        });
+
+    })(jQuery);
+	
+ </script>
+
+  <!-- FlexSlider -->
+
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="js/jquery.flexslider.js"></script>
+
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('#carousel').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        itemWidth: 100,
+        itemMargin: 40,
+        asNavFor: '#slider'
+      });
+
+      $('#slider').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: true,
+        sync: "#carousel",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+  
+  <!------- share this icons ------->
+  
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "ur-1b78e695-9fe4-7fd5-92fd-aa605a73797b", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="headwrap">
+
+<!-- Top of Header -->
+
+		<div class="wrapper">
+        	<div class="col10">
+            	<div class="headlinks">
+                    <a href="/"><img src="images/icons/User.png">  Sign In</a>
+                </div>
+                <div class="headlinks"> 
+                <a href="/"><img src="images/icons/Plus.png">  Our Network</a>
+                </div>
+            </div>
+            <div class="col2 last headsocial">
+            	<a href="/"><img src="images/icons/Facebook.png"></a>
+            	<a href="/"><img src="images/icons/Twitter.png"></a>               
+            	<a href="/"><img src="images/icons/Youtube.png"></a>    
+            </div>
+       </div> 
+</div>           
+  	<div class="logohead-container">
+    	<div class="wrapper">
+    	<div class="col12">
+        	<div class="logohead">
+            	<div class="logo">
+            		<a href="index.html" alt="Truckworld" title="Truckworld.com.au">
+                	<img src="images/logo.png"/></a>
+            	</div>
+            <div class="bannerLeaderboard">
+							
+							<script src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&c=28&pli=6157954&PluID=0&w=728&h=90&ord=[timestamp]&ucm=true"></script>
+<noscript>
+<a href="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=brd&FlightID=6157954&Page=&PluID=0&Pos=5073" target="_blank"><img src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=bsr&FlightID=6157954&Page=&PluID=0&Pos=5073" border=0 width=728 height=90></a>
+</noscript>
+
+        	</div></div>
+        </div>
+    </div> 
+ </div>  
+<!-- End Top of Header -->    
+
+<!-- Navigation -->
+
+<div class="navwrap">
+    <div class="wrapper"> 
+        <div class="col12">
+            <nav class="horizontal-nav full-width">
+                <ul class="menu">
+                    <li><a href="index.html"><img src="images/icons/home.png"></a></li>
+                    <li><a href="/">Truck Search</a>
+                    
+                                <div class="dropdown-4columns"><!-- Container 4 columns starts here -->
+                                    
+                                    <div class="col-1">
+                                    
+                                        <ul class="blue">
+                                            <li><a href="#" title="Home">Home</a></li>
+                                            <li><a href="#" title="About Us">About</a></li>
+                                            <li><a href="#" title="Images">Images</a></li>
+                                            <li><a href="#" title="Sign in">Sign in</a></li>
+                                        </ul>   
+                                         
+                                    </div>
+                            
+                                    <div class="col-1">
+                                    
+                                        <ul class="blue">
+                                            <li><a href="#" title="Home">Home</a></li>
+                                            <li><a href="#" title="About Us">About</a></li>
+                                            <li><a href="#" title="Images">Images</a></li>
+                                            <li><a href="#" title="Sign in">Sign in</a></li>
+                                        </ul>   
+                                         
+                                    </div>
+                            
+                                    <div class="col-1">
+                                    
+                                        <ul class="blue">
+                                            <li><a href="#" title="Home">Home</a></li>
+                                            <li><a href="#" title="About Us">About</a></li>
+                                            <li><a href="#" title="Images">Images</a></li>
+                                            <li><a href="#" title="Sign in">Sign in</a></li>
+                                        </ul>   
+                                         
+                                    </div>
+                            
+                                    <div class="col-1">
+                                    
+                                        <ul class="blue">
+                                            <li><a href="#" title="Home">Home</a></li>
+                                            <li><a href="#" title="About Us">About</a></li>
+                                            <li><a href="#" title="Images">Images</a></li>
+                                            <li><a href="#" title="Sign in">Sign in</a></li>
+                                        </ul>   
+                                         
+                                    </div>
+                            
+                            </li><!-- Container 4 columns ends here -->
+
+                    
+                    <li><a href="/">Sell Your Truck</a></li>
+                    <li><a href="/">Buy Used Trucks</a></li>
+                    <li><a href="/">Buy New Trucks</a></li>
+                    <li><a href="/">Dealers</a>
+                    
+                                                    <div class="dropdown-4columns dealers"><!-- Container 4 columns starts here -->
+                                    
+                                    <div class="col-1">
+                                    
+                                        <div class="menu-head">
+                                        	<h4>Find a dealer</h4>
+                                        </div>
+                                        
+                                        <div class="menu-content">
+                                        	<p>Use the map and browse truck dealers from around Australia</p>
+                                            <div class="dropmenu button">
+                                            	<a href="/">FIND DEALER</a>
+                                            </div>
+                                        </div>    
+                                         
+                                    </div>
+                                    <div class="col-1">
+                                    
+                                        <div class="menu-head">
+                                        	<h4>Become a Dealer</h4>
+                                        </div>
+                                        
+                                        <div class="menu-content">
+                                        	<p>Register as a dealer & sell your trucks on Truckworld</p>
+                                            <div class="dropmenu button">
+                                            	<a href="/">JOIN US</a>
+                                            </div>
+                                        </div>    
+                                         
+                                    </div>
+                                    <div class="col-1">
+                                    
+                                        <div class="menu-head">
+                                        	<h4>Manufacturers</h4>
+                                        </div>
+                                        
+                                        <div class="menu-content">
+                                        	<p>Check out the manufacturer pages & browse their products</p>
+                                            <div class="dropmenu button">
+                                            	<a href="/">BROWSE</a>
+                                            </div>
+                                        </div>    
+                                         
+                                    </div>
+                                    <div class="col-1">
+                                    
+                                        <div class="menu-head">
+                                        	<h4>Dealer Sign In</h4>
+                                        </div>
+                                        
+                                        <div class="menu-content end">
+                                        	<p>Use the map and browse truck dealers from around Australia</p>
+                                            <div class="dropmenu  button">
+                                            	<a href="/">SIGN IN</a>
+                                            </div>
+                                        </div>    
+                                         
+                                    </div>
+                                    
+                                    <div class="menu-footer">
+                                    	<h4>Find Trucks for Sale or Post Trucks Sale Ads at Truckworld.com.au</h4>
+                                    </div>
+                            
+                            </li><!-- Container 4 columns ends here -->
+                    
+                    <li><a href="/">My Truckworld</a></li>
+                    <li><a href="/" class="navchat">Live Chat Now</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>    
+<!-- End Navigation -->
+
+
+<!--Mega Drop Down Menu HTML. Retain given CSS classes-->
+
+<!-- Main Search -->
+
+<div class="searchwrap">
+	<div class="wrapper">
+    	<div class="col12">
+        	<h1>Search over 30 truck makes, and 40,000 truck products Australia wide</h1>
+        </div>
+        <div class="col12">
+        <div id="search-h">
+				
+<form action="/Search" class="home-search" method="post">                                
+							<div id="search-box">
+                               <label for="sr-box" class="advanced-label search-for"><h2>Search For:</h2></label>
+                                    <input type="text" id="sr-box" placeholder="Enter Keyword(s)" autocomplete="off">
+                                    
+                   				 <!-- GSA active search  -->                
+                                    
+                                    <div id="live-update" style="display: none;">
+                                    	<div id="lu-suggestion">
+                                        	<ul>
+                                            	<li><a href="/"><strong>Ent</strong>ering more keywords may result in a longer search result</a></li>
+                                            	<li><a href="/"><strong>Ent</strong>ertainment</a></li>
+                                                <li><a href="/"><strong>Ent</strong>erprise</a></li>
+                                                <li><a href="/">Segm<strong>ent</strong></a></li>
+                                            </ul>   
+                                        </div>
+                                        <div class="lu-ads-container">
+                                            <div id="lu-news">
+                                                <h7>Ads</h7>
+                                            </div>    
+                                            <a href="/" class="lu-link">
+                                            	<img src="images/red-small.png"><h5>2013 FREIGHTLINER ARGOSY</h5><h6>$59,990</h6>
+                                            </a>
+                                            <a href="/" class="lu-link">
+                                            	<img src="images/red-small.png"><h5>2013 FREIGHTLINER ARGOSY</h5><h6>$59,990</h6>
+                                            </a>  
+                                            <a href="/" class="lu-link">
+                                            	<img src="images/red-small.png"><h5>2013 FREIGHTLINER ARGOSY</h5><h6>$59,990</h6>
+                                            </a>  
+                                        </div>
+                                        
+                                        <div class="lu-ads-container">
+                                            <div id="lu-news">
+                                                <h7>New Trucks</h7>
+                                            </div>    
+                                            <a href="/" class="lu-link">
+                                            	<img src="images/red-small.png"><h5>2013 FREIGHTLINER ARGOSY</h5><h6>$59,990</h6>
+                                            </a>
+                                            <a href="/" class="lu-link">
+                                            	<img src="images/red-small.png"><h5>2013 FREIGHTLINER ARGOSY</h5><h6>$59,990</h6>
+                                            </a>  
+                                            <a href="/" class="lu-link">
+                                            	<img src="images/red-small.png"><h5>2013 FREIGHTLINER ARGOSY</h5><h6>$59,990</h6>
+                                            </a>     
+                                        </div>
+                                        
+                                        <div class="lu-news-container">
+                                            <div id="lu-news">
+                                                <h7>News</h7>
+                                            </div>    
+                                            <a href="/"  id="news" class="lu-link">
+                                            	<h4>Lorem ipsum dolor sit amet</h4><h5>Nunc fermentum justo vel consectetur aliquam...</h5><h6>11 Aug 2013</h6>
+                                            </a>
+                                            <a href="/"  id="news" class="lu-link">
+                                            	<h4>Lorem ipsum dolor sit amet</h4><h5>Nunc fermentum justo vel consectetur aliquam...  </h5><h6>11 Aug 2013</h6>
+                                            </a>  
+                                            <a href="/"  id="news" class="lu-link">
+                                            	<h4>Lorem ipsum dolor sit amet</h4><h5>Nunc fermentum justo vel consectetur aliquam...  </h5><h6>11 Aug 2013</h6>
+                                            </a>
+                                        </div>      
+                                        <div class="lu-dealers-container">
+                                            <div id="lu-news">
+                                                <h7>Dealers</h7>
+                                            </div>    
+                                            <a href="/" id="news" class="lu-link">
+                                            	<h5>AA Semi Trailer Trading</h5><h6>341 -345 Kororoit Creek Rd</h6><h6>Altona VIC 3018</h6>
+                                            </a>
+                                            <a href="/" id="news" class="lu-link">
+                                            	<h5>AA Semi Trailer Trading</h5><h6>341 -345 Kororoit Creek Rd</h6><h6>Altona VIC 3018</h6>
+                                            </a>
+                                            <a href="/" id="news" class="lu-link">
+                                            	<h5>AA Semi Trailer Trading</h5><h6>341 -345 Kororoit Creek Rd</h6><h6>Altona VIC 3018</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                           <!-- end GSA active search  -->         
+                                
+								<!-- start hidden -->
+								<div id="advanced-options-wrapper">
+									<div id="advanced-options">
+                                    <div class="advanced-options-first">	
+										<div class="advanced-one first">
+											<label class="advanced-label">
+												<h2>Condition</h2>
+											</label>
+                                                 <input type="checkbox" id="ch1" name="" value="">
+                                                 <label for="ch1" id="truck-search-advanced"><span></span>New</label>
+                                                 <input type="checkbox" id="ch2" name="" value="">
+                                                 <label for="ch2" id="truck-search-advanced"><span></span>Used</label>
+                                                 <input type="checkbox" id="ch3" name="" value="">
+                                                 <label for="ch3" id="truck-search-advanced"><span></span>Demo</label>                     
+										</div>
+										<div class="advanced-one">
+		                                    <label for="category" class="advanced-label">
+												<h2>Category</h2>
+		                                    </label>
+                                            	<div class="advanced-wrap">	
+                                                    <select id="category" name="category" class="advanced-search" tabindex="1">
+                                                        <option value="">All Catgeories</option>
+                                                            <option value="1">USA</option>
+                                                            <option value="9">Canada</option>
+                                                            <option value="2">France</option>
+                                                            <option value="3">Spain</option>
+                                                            <option value="6">Bulgaria</option>
+                                                            <option value="7" disabled="disabled">Greece</option>
+                                                            <option value="8">Italy</option>
+                                                    </select>
+                                                </div>    
+		                                </div>
+		                                <div class="advanced-one">
+											<label for="application" class="advanced-label">
+												<h2>Application</h2>
+											</label>
+                                            	<div class="advanced-wrap">	
+                                                    <select id="application" name="application" class="advanced-search" tabindex="1">
+                                                        <option value="">All Applications</option>
+                                                            <option value="1">USA</option>
+                                                            <option value="9">Canada</option>
+                                                            <option value="2">France</option>
+                                                            <option value="3">Spain</option>
+                                                            <option value="6">Bulgaria</option>
+                                                            <option value="7" disabled="disabled">Greece</option>
+                                                            <option value="8">Italy</option>
+                                                    </select>
+                                                </div>    
+										</div>
+		                                <div class="advanced-one">
+											<label for="make" class="advanced-label">
+												<h2>Make</h2>
+											</label>
+                                            	<div class="advanced-wrap">	
+                                                    <select id="make" name="category" class="advanced-search" tabindex="1">
+                                                        <option value="">All Makes</option>
+                                                            <option value="1">USA</option>
+                                                            <option value="9">Canada</option>
+                                                            <option value="2">France</option>
+                                                            <option value="3">Spain</option>
+                                                            <option value="6">Bulgaria</option>
+                                                            <option value="7" disabled="disabled">Greece</option>
+                                                            <option value="8">Italy</option>
+                                                    </select>
+                                                </div>    
+										</div>
+										<div class="advanced-one last">
+											<label for="model" class="advanced-label">
+												<h2>Model</h2>
+											</label>
+                                            	<div class="advanced-wrap">	
+                                                    <select id="Model" name="model" class="advanced-search" tabindex="1">
+                                                        <option value="">All Models</option>
+                                                            <option value="1">USA</option>
+                                                            <option value="9">Canada</option>
+                                                            <option value="2">France</option>
+                                                            <option value="3">Spain</option>
+                                                            <option value="6">Bulgaria</option>
+                                                            <option value="7" disabled="disabled">Greece</option>
+                                                            <option value="8">Italy</option>
+                                                    </select>
+                                                </div>    
+                                       </div> 
+                                    </div>   
+                                 <div class="onerow"></div>
+                                 	<div class="advanced-options-second">
+										<div class="advanced-one minmax first">
+											<label for="PriceFrom" class="advanced-label minmax">
+												<h2>Price</h2>
+											</label>
+                                            	<div class="advanced-wrap small">	
+                                                <select id="PriceFrom" name="PriceFrom" class="advanced-search" tabindex="1">
+                                                    <option value="">Min</option>
+                                                        <option value="1">USA</option>
+                                                        <option value="9">Canada</option>
+                                                        <option value="2">France</option>
+                                                        <option value="3">Spain</option>
+                                                        <option value="6">Bulgaria</option>
+                                                        <option value="7" disabled="disabled">Greece</option>
+                                                        <option value="8">Italy</option>
+                                                </select>
+                                                </div>    
+                                        	<div class="advanced-wrap small">	
+                                                <select id="PriceTo" name="PriceTo" class="advanced-search" tabindex="1">
+                                                    <option value="">Max</option>
+                                                        <option value="1">USA</option>
+                                                        <option value="9">Canada</option>
+                                                        <option value="2">France</option>
+                                                        <option value="3">Spain</option>
+                                                        <option value="6">Bulgaria</option>
+                                                        <option value="7" disabled="disabled">Greece</option>
+                                                        <option value="8">Italy</option>
+                                                </select>
+                                                </div>    
+										</div>
+										<div class="advanced-one minmax">
+											<label for="YearFrom" class="advanced-label minmax">
+												<h2>Year</h2>
+											</label>
+                                       	<div class="advanced-wrap small">	
+                                              <select id="YearFrom" name="YearFrom" class="advanced-search" tabindex="1">
+                                                  <option value="">Min</option>
+                                                      <option value="1">USA</option>
+                                                      <option value="9">Canada</option>
+                                                      <option value="2">France</option>
+                                                      <option value="3">Spain</option>
+                                                      <option value="6">Bulgaria</option>
+                                                      <option value="7" disabled="disabled">Greece</option>
+                                                      <option value="8">Italy</option>
+                                              </select>
+                                         </div>
+                                         <div class="advanced-wrap small">	
+                                              <select id="YearTo" name="YearTo" class="advanced-search" tabindex="1">
+                                                  <option value="">Min</option>
+                                                      <option value="1">USA</option>
+                                                      <option value="9">Canada</option>
+                                                      <option value="2">France</option>
+                                                      <option value="3">Spain</option>
+                                                      <option value="6">Bulgaria</option>
+                                                      <option value="7" disabled="disabled">Greece</option>
+                                                      <option value="8">Italy</option>
+                                              </select>           
+                                            </div>
+                                        </div>  
+                                      </div>
+                                  </div>
+                              </div>
+                          <!-- end hidden -->
+                          <input type="submit" id="sr-submit" value="Search">
+                          <div class="clear"></div>
+                          <a id="advanced" class="advanced-link">Advanced Search +</a>
+                          <div class="clear"></div>
+						</form>	
+	    
+			</div>
+        </div>    
+	</div>
+</div>        
+<!-- End Main Search -->
+
+<!-- Main body content -->
+
+<div class="body-wrap">
+
+<div class="wrapper">
+<!-- Left Column -->
+	
+    <div class="onerow">
+    	<div class="breadcrumbs">
+    	<p><a href="/">Home »</a><a href="/"> Truck Search »</a><a href="/"> Search Results »</a>KENWORTH T600, Prime Mover< 32 + GVM, NSW</p>
+        </div>
+    </div>    
+
+
+<div class="left-col">
+           <!-- start tools -->
+            	<div class="tools-container">
+                	<div class="dark-title top">
+                    	<h4>Tools</h4>
+                    </div>
+                    <div class="tools">
+                            <ul class="tools-left">
+                                <li><a href="/"><img src="images/icons/star.png"></a></li>
+                                <li><a href="/"><img src="images/icons/back.png"></a></li>
+                                <li><a href="/"><img src="images/icons/compare-saved.png"></a></li>
+                                <li><a href="/"><img src="images/icons/email-to-friend.png"></a></li>
+                                <li><a href="/"><img src="images/icons/text-friend.png"></a></li>
+                                <li><a href="/"><img src="images/icons/print.png"></a></li>
+                                <li><a href="/"><img src="images/icons/download.png"></a></li>
+                                <li><a href="/"><img src="images/icons/search.png"></a></li>
+                                <li><a href="/"><img src="images/icons/safe.png"></a></li>
+                                <li><a href="/"><img src="images/icons/report-ad.png"></a></li>
+                            </ul> 
+                            <ul class="tools-right">
+                                <li><a href="/">Save Ad</a></li>
+                                <li><a href="/">Back to Search List</a></li>
+                                <li><a href="/">Compare</a></li>
+                                <li><a href="/">Email to a Friend</a></li>
+                                <li><a href="/">Text This to a Friend</a></li>
+                                <li><a href="/">Print This Ad</a></li>
+                                <li><a href="/">Download PDF</a></li>
+                                <li><a href="/">New Search</a></li>
+                                <li><a href="/">Safe Buying & Selling</a></li>
+                                <li><a href="/">Report This Ad</a></li>
+                            </ul>   
+                            	<div class="share">
+                                    <span class='st_facebook_hcount' displayText='Facebook'></span>
+                                    <span class='st_twitter_hcount' displayText='Tweet'></span>
+                             	</div>
+                    </div>
+               </div>    
+            <!-- end featured dealer -->
+	
+            <!-- start login join -->
+            
+      <div class="signin-join">
+      	<div class="signin button">
+        	<a href="/">Sign in</a>
+        </div>
+      	<div class="join button">
+        	<a href="/">Join</a>
+        </div>    
+     </div>      
+     
+     		<!-- end login join -->          
+
+
+			<!-- start show hide left links --->
+            
+       <div class="left-links-container ">
+       		<div class="example2 left-links">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis sagittis lectus. Curabitur quam arcu, adipiscing quis pretium in, pharetra eget dolor.</p>
+			</div>   
+             <div class="example3 left-links">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis sagittis lectus. Curabitur quam arcu, adipiscing quis pretium in, pharetra eget dolor.</p>
+			</div>
+              <div class="example4 left-links">
+				<a href="/" class="compare-saved">	
+                	<div class="compare-thumb">
+                		<img src="images/compare-thumb.jpg">
+                    </div>
+                	<h6><strong>2013 FREIGHTLINER ARGOSY</strong></h6>
+                    <h6>$59,990</h6>  
+                </a> 
+                <a href="/" class="cancel">
+                	<img src="images/icons/Cancel.png">
+                </a> 
+                <a href="/" class="compare-saved">	
+                	<div class="compare-thumb">
+                		<img src="images/compare-thumb.jpg">
+                    </div>
+                	<h6><strong>2013 FREIGHTLINER ARGOSY</strong></h6>
+                    <h6>$59,990</h6>  
+                </a> 
+                <a href="/" class="cancel">
+                	<img src="images/icons/Cancel.png">
+                </a>  
+                
+                <div class="compare">
+                	<a href="/">Compare (2)</a>
+                </div>  
+			</div>
+        </div>  
+
+	
+    		<!-- end show hide left links --->
+            
+            
+
+      <div class="dark-title top">
+      	<h4>Recently Viewed Ads</h4>
+      </div>
+      		<div class="recent-container">
+            	<div class="recent">
+                    <a href="/" class="recent-left">
+                        <img src="images/compare-thumb.jpg">
+                        <h6><strong>2013 FREIGHTLINER ARGOSY</strong>
+                        $59,990</h6>
+                    </a>
+                </div>
+                <div class="recent">    
+                    <a href="/" class="recent-left">
+                        <img src="images/compare-thumb.jpg">
+                        <h6><strong>2013 FREIGHTLINER ARGOSY</strong>
+                        $59,990</h6>
+                    </a>                
+                </div>      
+                <div class="recent">
+                    <a href="/" class="recent-left">
+                        <img src="images/compare-thumb.jpg">
+                        <h6><strong>2013 FREIGHTLINER ARGOSY</strong>
+                        $59,990</h6>
+                    </a>
+                </div>
+                <div class="recent">    
+                    <a href="/" class="recent-left">
+                        <img src="images/compare-thumb.jpg">
+                        <h6><strong>2013 FREIGHTLINER ARGOSY</strong>
+                        $59,990</h6>
+                    </a>                
+                </div>
+            </div>                       
+            
+            <div class="showmore1">+ Show More (2)</div>      
+         
+  <!------- finance calculator ----------------->       
+                
+      <div class="dark-title">
+      	<h4>Finance Calculator</h4>
+      </div>
+      
+      <div class="finance-container">           
+            <div class="calc-head">
+             <p id="italic">This calculator is provided as a guide and for estimation purposes only. Change any value to suite your needs.</p>
+            </div>
+            	<label for="interest-rate" id="calculator" >$AUD</label>
+                <input type="text" name="name" id="calc" placeholder="*Loan Amount">
+                <label for="interest-rate" id="calculator">%</label>
+                <input type="text" name="name" id="calc" placeholder="*Residual Value">
+                <div class="trucksearch-select calc">
+                <div class="featured">
+                        <select name="trucksearch" class="trucksearch" tabindex="4">
+                            <option value="">Length of Loan</option>
+                                <option value="1">USA</option>
+                                <option value="9">Canada</option>
+                                <option value="2">France</option>
+                                <option value="3">Spain</option>
+                                <option value="6">Bulgaria</option>
+                                <option value="7" disabled="disabled">Greece</option>
+                                <option value="8">Italy</option>
+                        </select>
+                </div><span id="calc">months</span>
+              </div>
+              <label for="interest-rate" id="calculator">%</label>
+              <input type="text" name="name" id="calc" placeholder="*Interest Rate"> 
+              
+             <div class="trucksearch-select calc">               
+                   <a type="submit" id="calc-button" class="button submit" onClick="">CALCULATE</a> 
+                   <a href="/" class="clear-calc">Clear All</a>
+             </div>
+        </div>                    
+        <div class="call-container">
+              <div class="call-inside calc">
+                  <p>MONTHLY REPAYMENTS</p>
+                  <h1>$395.20</h1>
+              </div>    
+        </div>
+              
+  <!---------- end finance calculator ----------------->                 
+                          
+        <!-- newsletter sign up -->
+        <div class="dark-title">
+            	<h4>Lets Stay in Touch</h4>
+        </div>
+        <div class="newsletter-container">
+            <div class="newsletter-subscribe">
+            	<input type="text" name"newsletter"="" placeholder="Subscribe to our Newsletter">
+            </div>  
+           	<div class="newsletter-inputs">
+                     <input type="checkbox" id="dealer1" name="" value="">
+                     <label for="dealer1" id="truck-search"><span></span>Dealer</label>
+                     <input type="checkbox" id="dealer2" name="" value="">
+                     <label for="dealer2" id="truck-search"><span></span>Private</label> 
+                	<div class="sign-up">
+                		<a href="/">Sign Up</a>
+                	</div>           
+            </div>   
+            <div class="follow-us">
+                <h2>Follow Us</h2>
+                </div>
+                <div id="follow-links" class="left-links">
+                	<ul>
+                		<li><a href="/"><img src="images/icons/facebook-48.png"></a></li>
+                        <li><a href="/"><img src="images/icons/twitter-48.png"></a></li>
+                        <li><a href="/"><img src="images/icons/youtube-48.png"></a></li>
+                        <li><a href="/"><img src="images/icons/googleplus-48.png"></a></li>
+                    </ul>    
+               	</div>
+            </div>    
+		</div>
+
+<!-- End Left Column -->
+
+<!-- Middle Column -->
+
+<div class="middle-col ad-view">
+    	   	<div class="light-head top">
+            	<div class="previous">
+                	<a href="/"><img src="images/icons/previous.png">PREVIOUS AD</a>
+                </div>
+                <div class="back-center">
+                	<a href="/">BACK TO SEARCH RESULTS</a>
+                </div>
+                <div class="next">  
+                	<a href="/">NEXT AD<img src="images/icons/next.png"></a>
+                </div>    
+           </div>    
+           
+           <h1>KENWORTH T600, Prime Mover< 32 + GVM, NSW </h1>
+           
+           <div class="light-head middle">
+           		<div class="ad-type">
+                	<h5>PRIVATE SALE</h5>
+                </div>
+                <div class="ad-ref">
+                	<h6>Ad Ref #:59055</h6>
+                </div>
+                <div class="price">
+                	<h1>$368,924</h1>
+                </div>
+            </div>
+                    
+    <div class="middle-container ad-view">              
+    	<div class="results-top top">
+        	<div class="save-search">
+            	<a href="/">  Save Ad</a>
+            </div>
+            <div class="compare-search">
+            	<a href="/">  Compare</a>
+            </div>
+            <div class="share-adview">
+            
+            <span class='st_facebook_hcount' displayText='Facebook'></span>
+			<span class='st_twitter_hcount' displayText='Tweet'></span>
+			<span class='st_googleplus_hcount' displayText='Google +'></span>
+			</div>
+            
+       </div>
+              
+   			 <!-- content -->
+                                
+             <!-- ad image and carousel --> 
+            <div class="ad-image">
+                 <a class="open-gallery"><img src="images/big-red.jpg"></a>
+                 
+                 <div class="gallery">	
+                        <div class="lightbox-head">
+                        <a class="b-close">x</a>
+                                    <script src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&c=28&pli=6157954&PluID=0&w=728&h=90&ord=[timestamp]&ucm=true"></script>
+                        <noscript>
+                        <a href="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=brd&FlightID=6157954&Page=&PluID=0&Pos=5073" target="_blank"><img src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=bsr&FlightID=6157954&Page=&PluID=0&Pos=5073" border=0 width=728 height=90></a>
+                        </noscript>
+                    </div>
+                    
+                 <div class="light-head top" id="lightbox">
+                    <h4>KENTWORTH T600, Prime Mover - $368,924</h4>
+                 </div>  
+                    
+                    <div class="lightbox-slide-container">
+                   
+                      <div id="slider" class="flexslider">
+                              <ul class="slides">
+                                <li>
+                                  <img src="images/1.jpg" />
+                                </li>
+                                <li>
+                                  <img src="images/2.jpg" />
+                                </li>
+                                <li>
+                                  <img src="images/3.jpg" />
+                                </li>
+                                <li>
+                                  <img src="images/4.jpg" />
+                                </li>
+                                <li>
+                                  <img src="images/5.jpg" />
+                                </li>
+                                <li>
+                                  <img src="images/6.jpg" />
+                                </li>
+                                <li>
+                                  <img src="images/7.jpg" />
+                                </li>
+                              </ul>
+                            </div>
+                            <div id="carousel" class="flexslider">
+                              <ul class="slides">
+                                <li>
+                                  <img src="images/thumbs/1.jpg" />
+                                </li>
+                                <li>
+                                  <img src="images/thumbs/2.jpg" />
+                                </li>
+                                <li>
+                                  <img src="images/thumbs/3.jpg" />
+                                </li>
+                                <li>
+                                  <img src="images/thumbs/4.jpg" />
+                                </li>
+                                <li>
+                                  <img src="images/thumbs/5.jpg" />
+                                </li>
+                                <li>
+                                  <img src="images/thumbs/6.jpg" />
+                                </li>
+                                <li>
+                                  <img src="images/thumbs/7.jpg" />
+                                </li>
+                              </ul>
+                            </div>
+                 </div>       
+                <div class="enquiry-form-container">
+                     <div class="dark-title top">
+                         <h4>Make an Enquiry</h4>
+                     </div>	
+                         <div class="enquiry-form" id="lightbox">
+                                <form>    
+                                    <input type="text" name="name" id="enquiry" placeholder="*Your Name">
+                                    <input type="tel" name="usrtel" id="enquiry" placeholder="*Contact Phone Number"> 
+                                    <input type="email" name="email" id="enquiry" placeholder="*Contact Phone Number">
+                                        <div class="enquiry-location" id="dealer">
+                                                <select name="trucksearch" class="trucksearch" tabindex="4">
+                                                    <option value="" selected>Location</option>
+                                                    <option value="">Facebook</option>
+                                                    <option value="">Twitter</option>
+                                                    <option value="">YouTube</option>
+                                                    <option value="">Pinterest</option>
+                                              </select>
+                                        </div>
+                                    <textarea rows="4" cols="10" name="email" id="enquiry" placeholder="*Your Enquiry"></textarea>
+                                    <input type="checkbox" id="subscribe1" class="contact-dealer" name="" value="" checked>
+                                         <label for="subscribe1" id="subscribe1" ><span></span>Subscribe to <strong>Truckworld.com.au</strong></label>
+                                         
+                                        <div class="trucksearch-select">               
+                                            <a type="submit" id="send-button" class="submit contact-dealer" onClick="">SEND</a> 
+                                            <a id="contact-dealer" href="/" class="clear-enquiry">Clear All</a>
+                                        </div> 
+                               </form>     
+                          </div>
+                          <div class="call-container" id="lightbox">
+                                <div class="call-inside" id="lightbox">
+                                    <div class="call-left" id="lightbox">
+                                        <img src="images/icons/phone-bg.png">
+                                    </div>
+                                    <div class="call-right" id="lightbox">
+                                        <p>Call Seller Directly</p>
+                                        <h4>04XX XXX XXX</h4>
+                                        <a href="/">unlock number</a>
+                                    </div>
+                                </div>
+                                <div class="call-bottom" id="lightbox">
+                                    <p id="italic"><a href="/">Sign In </a>or<a href="/"> Join</a> to unlock all sellers phone numbers instantly</p>
+                                </div>
+                            </div>    	
+                        </div>
+                    </div>   
+            </div>
+           
+          <!-- start carousel -->   
+            
+          <div class="carousel-container bottom top">    
+              
+                <div class="other-works-container">
+                    <img src="images/white.png" alt="" title="" class="leftwhite ad-view">
+            		<img src="images/white.png" alt="" title="" class="rightwhite ad-view">
+
+                    <div class="carousel-ad">
+                    
+                        <a class="open-gallery">
+                        <div class="slide">
+                            <img class="slideimage" src="images/carouselthumb.jpg" />
+                        </div>
+                        </a>
+                        
+                        <a class="open-gallery">
+                        <div class="slide">
+                            <img class="slideimage" src="images/carouselthumb2.jpg" />
+                        </div>
+                        </a>
+                        
+                        <a class="open-gallery">
+                        <div class="slide">
+                            <img class="slideimage" src="images/carouselthumb3.jpg" />
+                        </div>
+                        </a>
+                        
+                        <a class="open-gallery">
+                        <div class="slide">
+                            <img class="slideimage" src="images/carouselthumb.jpg" />
+                        </div>
+                        </a>
+                        
+                        <a class="open-gallery">
+                        <div class="slide">
+                            <img class="slideimage" src="images/carouselthumb2.jpg" />
+                        </div>
+                        </a>
+                        
+                        <a class="open-gallery">
+                        <div class="slide">
+                            <img class="slideimage" src="images/carouselthumb3.jpg" />
+                        </div>
+                        </a>
+                        
+                        <a class="open-gallery">
+                        <div class="slide">
+                            <img class="slideimage" src="images/carouselthumb2.jpg" />
+                        </div>
+                        </a>
+                        
+                        <a class="open-gallery">
+                        <div class="slide">
+                            <img class="slideimage" src="images/carouselthumb3.jpg" />
+                        </div>
+                        </a>
+                </div>
+             </div>	
+         </div>
+             
+         <!-- end carousel -->         
+     
+     	<div class="truck-features">
+        	<ul>
+            	<li><img alt="Truck Engine" Title="Truck Engine" src="images/icons/engine.png">560BHP</li>
+                <li><img alt="Truck Gears" Title="Truck Gears" src="images/icons/gears.png">18</li>
+                <li><img alt="Truck Suspension" Title="Truck Suspension" src="images/icons/suspension.png">Airbag</li>
+     			<li><img alt="Truck Body" Title="Truck Body" src="images/icons/body.png"></li>
+         	</ul>
+        </div>    
+              <!-- Toggle #1 -->
+        <div class="toggle">
+         
+            <!-- Toggle Link -->
+            <a href="#" title="Vehicle Details" class="toggle-trigger">Vehicle Details</a>
+         
+            <!-- Toggle Content to display -->
+            <div class="toggle-content">
+            
+            <div class="ad-view-info">
+                <table>
+                	<tbody>
+                    	<tr>
+                        	<td class="term">PRICE</td>
+                            <td class="description">$27,500</td>
+                            <td class="term">YEAR BUILT</td>
+                            <td class="description">2002</td>
+                        </tr>
+                        <tr class="alt">
+                        	<td class="term">CONDITION</td>
+                            <td class="description">USED</td>
+                            <td class="term">LOCATION</td>
+                            <td class="description">NEW SOUTH WALES</td>
+                        </tr>
+                        <tr>
+                        	<td class="term">MAKE,MODEL</td>
+                            <td class="description">MITSUBISHI FUSO, CANTER</td>
+                            <td class="term">APPLICATION</td>
+                            <td class="description">DUAL CAB, OTHER</td>
+                        </tr>
+                        <tr class="alt">
+                        	<td class="term">TYPE</td>
+                            <td class="description">3-4 TONNE <6.5 TO 8.5 GVM</td>
+                            <td></td>
+                            <td></td>
+                        </tr> 
+                        <tr>
+                        	<td class="term">GVM</td>
+                            <td class="description">7,500KG</td>
+                            <td class="term">GCM</td>
+                            <td class="description">11,000KG</td>
+                        </tr>
+                        <tr class="alt">
+                        	<td class="term">TARE</td>
+                            <td class="description">3,720KG</td>
+                        	<td class="term">KMS</td>
+                            <td class="description">229,500KM</td>
+                        </tr>
+                        <tr>
+                        	<td class="term">CHASSIS NUMBER</td>
+                            <td class="description">JMFFE657FOKJ40356</td>
+                            <td class="term">ENGINE NUMBER</td>
+                            <td class="description">4D33-H98171</td>
+                        </tr> 
+                        <tr class="alt">
+                        	<td class="term">GEARBOX</td>
+                            <td class="description">5SPD</td>
+                        	<td></td>
+                            <td></td>
+                        </tr>   
+                        <tr>
+                        	<td class="term">AD REFERENCE</td>
+                            <td class="description">J59055/td>
+                            <td class="term">STOCK NUMBER</td>
+                            <td class="description">4338</td>
+                        </tr> 
+                        <tr class="alt">
+                        	<td class="term">LAST MODIFIED</td>
+                            <td class="description">16/05/2013</td>
+                        	<td></td>
+                            <td></td>
+                        </tr>                                                                                                
+                   </tbody>                            
+               </table> 
+         </div>
+      <div class="ad-view-info">
+         	<h2>Additional Featured</h2>
+            <div class="col3" div id="ad-view-info">
+            	<ul>
+                	<li>Feature Title A</li>  
+                    <li>Feature Title B</li> 
+                    <li>Feature Title C</li> 
+                    <li>Feature Title D</li> 
+                    <li>Feature Title E</li> 
+                    <li>Feature Title F</li>  
+                </ul>
+            </div> 
+            <div class="col3" div id="ad-view-info">
+            	<ul>
+                	<li>Feature Title A</li>  
+                    <li>Feature Title B</li> 
+                    <li>Feature Title C</li> 
+                    <li>Feature Title D</li> 
+                    <li>Feature Title E</li> 
+                    <li>Feature Title F</li>  
+                </ul>
+            </div>      
+            <div class="col3" div id="ad-view-info">
+            	<ul>
+                	<li>Feature Title A</li>  
+                    <li>Feature Title B</li> 
+                    <li>Feature Title C</li> 
+                    <li>Feature Title D</li> 
+                    <li>Feature Title E</li> 
+                    <li>Feature Title F</li>  
+                </ul>
+            </div> 
+            <div class="col3 last" div id="ad-view-info">
+            	<ul>
+                	<li>Feature Title A</li>  
+                    <li>Feature Title B</li> 
+                    <li>Feature Title C</li> 
+                    <li>Feature Title D</li> 
+                    <li>Feature Title E</li> 
+                    <li>Feature Title F</li>  
+                </ul>
+            </div>
+        </div>    
+                           
+            </div><!-- .toggle-content (end) -->
+        </div><!-- .toggle (end) -->
+         
+        <!-- Toggle #2 -->
+        <div class="toggle">
+         
+            <!-- Toggle Link -->
+            <a href="#" title="Sellers Comments" class="toggle-trigger">Sellers Comments</a>
+         
+            <!-- Toggle Content to display -->
+            <div class="toggle-content">
+            
+            	<div class="ad-view-info">
+                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod.</p>
+                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                </div>
+            </div><!-- .toggle-content (end) -->
+        </div><!-- .toggle (end) -->   
+        
+                <!-- Toggle #3 -->
+        <div class="toggle">
+         
+            <!-- Toggle Link -->
+            <a href="#" title="Contact the Seller" class="toggle-trigger">Contact the Seller</a>
+         
+            <!-- Toggle Content to display -->
+            <div class="toggle-content">
+            	<div class="ad-view-info">
+                <h5>Unlock the Seller's Phone Number</h5>
+                <p id="italic">Seller’s details are only provided to genuine buyers to prevent SMS scams.</p>
+                <p id="italic"><strong><a href="/">Sign In</a></strong> or <strong><a href="/">Join</a></strong> and show all phone numbers instantly.</p>
+                <div id="tab-container2" class="tab-container ad-view">
+                      <ul class='etabs ad-view'>
+                        <li class='tab2' id="entermobile"><a href="#enter-mobile">ENTER YOUR MOBILE</a></li>
+                        <li class='tab2' id="entersms"><a href="#enter-sms">ENTER SMS CODE</a></li>
+                        <li class='tab2' id="numberunlocked"><a href="#number-unlocked">NUMBER UNLOCKED!</a></li>
+                      </ul>
+                      
+                      <div id="enter-mobile">
+                      		<div class="unlock-container">
+                            	<p>Enter your mobile number and you will be sent a SMS code to unlock the sellers contact details.</p>
+                                <input type="tel" name="usrtel" id="enter-mobile-box" placeholder="Enter your mobile number - Eg 04XX XXX XXX">
+                                <div class="sign-up ad-view">
+                                	<a href="/">Get Code</a>
+                                </div>
+                            </div>    
+                      </div>
+                      
+                      <div id="enter-sms">
+                      		<div class="unlock-container">
+                            	<p>Please check your phone and enter the code received via SMS.</p>
+                                <input type="tel" name="usrtel" id="enter-mobile-box" placeholder="Enter your unique SMS code">
+                                <div class="sign-up ad-view">
+                                	<a href="/">Submit</a>
+                                </div>
+                            </div>    
+                      </div>                     
+                      <div id="number-unlocked">
+                      		<div class="unlock-container">
+                            	<h3>Congratulations! The sellers contact details are now unlocked</h3>
+                            </div>    
+                      </div>
+                    </div>
+                </div>  
+                <table>
+                	<tbody>
+                    	<tr>
+                        	<td class="term">LOCATION</td>
+                            <td class="description">$27,500</td>
+                            <td class="term"></td>
+                            <td class="description"></td>
+                        </tr>
+                        <tr class="alt">
+                        	<td class="term">CONTACT</td>
+                            <td class="description">Name SURNAME</td>
+                            <td class="term"></td>
+                            <td class="description">TEL: 04XX XXX XXX</td>
+                        </tr>
+                   </tbody>                            
+               </table> 
+            </div>   
+         </div><!-- .toggle-content (end) -->
+     </div><!-- .toggle (end) -->      
+     
+          
+          
+     <div class="dark-title carousel">
+         <h4>Other Ads from this Seller</h4>
+     </div>  
+     
+     <!-- carousel other ads --> 
+   
+             <div class="carousel-container top">    
+              
+                <div class="other-works-container">
+                    <img src="images/white.png" alt="" title="" class="leftwhite">
+            		<img src="images/white.png" alt="" title="" class="rightwhite">
+
+                    <div class="carousel-other-ads">
+                    
+                        <a href="">	
+                        <div class="slide">
+                            <img class="slideimage" src="images/carouselthumb.jpg" />
+                            <div class="slidetext">
+                                <h5>2007 isuzu npr 200</h5>
+                            </div>
+                        </div>
+                        </a>
+                        
+                        <a href="">
+                        <div class="slide">
+                            <img class="slideimage" src="images/carouselthumb2.jpg" />
+                            <div class="slidetext">
+                                <h5>2006 freightliner argosy 101 prime...</h5>
+                            </div>
+                        </div>
+                        </a>
+                        
+                        <a href="">
+                        <div class="slide">
+                            <img class="slideimage" src="images/carouselthumb3.jpg" />
+                            <div class="slidetext">
+                                <h5>2009 isuzu nrp 200 trade pack table</h5>
+                            </div>
+                        </div>
+                        </a>
+                        
+                        <a href="">
+                        <div class="slide">
+                            <img class="slideimage" src="images/carouselthumb.jpg" />
+                            <div class="slidetext">
+                                <h5>2007 isuzu npr 200</h5>
+                            </div>
+                        </div>
+                        </a>
+                        
+                        <a href="">
+                        <div class="slide">
+                            <img class="slideimage" src="images/carouselthumb2.jpg" />
+                            <div class="slidetext">
+                                <h5>2006 freightliner argosy 101 prime...</h5>
+                            </div>
+                        </div>
+                        </a>
+                        
+                        <a href="">
+                        <div class="slide">
+                            <img class="slideimage" src="images/carouselthumb3.jpg" />
+                            <div class="slidetext">
+                                <h5>2009 isuzu nrp 200 trade pack table</h5>
+                            </div>
+                        </div>
+                        </a>
+                        
+                        <a href="">
+                        <div class="slide">
+                            <img class="slideimage" src="images/carouselthumb2.jpg" />
+                            <div class="slidetext">
+                                <h5>2006 freightliner argosy 101 prime...</h5>
+                            </div>
+                        </div>
+                        </a>
+                        
+                        <a href="">
+                        <div class="slide">
+                            <img class="slideimage" src="images/carouselthumb3.jpg" />
+                            <div class="slidetext">
+                                <h5>2009 isuzu nrp 200 trade pack table</h5>
+                            </div>
+                        </div>
+                        </a>
+			</div>
+         </div>
+    </div>     	
+         <!-- end carousel --> 
+    <!-- disclaimer-->
+
+               <div class="lower-content">       
+                           <h3>DISCLAIMER</h3>
+                           <p id="italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis faucibus justo id scelerisque. Aliquam malesuada scelerisque sapien. Aenean ut velit a libero sollicitudin condimentum. Ut enim lorem, semper a justo quis, bibendum condimentum diam. Donec et fringilla massa. Proin porta, nisl id luctus malesuada, velit ante tempus leo, vel mattis lorem risus at justo. Suspendisse dignissim libero a hendrerit luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+                </div>
+           		<div class="light-head top">
+            	<div class="previous">
+                	<a href="/"><img src="images/icons/previous.png">PREVIOUS AD</a>
+                </div>
+                <div class="back-center">
+                	<a href="/">BACK TO SEARCH RESULTS</a>
+                </div>
+                <div class="next">  
+                	<a href="/">NEXT AD<img src="images/icons/next.png"></a>
+                </div>   
+                
+            </div>
+                
+                <div class="share">
+                	<span class='st_facebook_hcount' displayText='Facebook'></span>
+                    <span class='st_twitter_hcount' displayText='Tweet'></span>
+                    <span class='st_googleplus_hcount' displayText='Google +'></span>
+                    <span class='st_sharethis_hcount' displayText='ShareThis'></span>
+                 </div>     
+        </div>
+   
+<!-- End Middle Column -->
+
+
+<!-- Right Column -->
+
+<!-- enquiry form -->
+
+<div class="right-col ad-view">
+	<div class="enquiry-container">
+         <div class="dark-title top">
+             <h4>Want to Make an Enquiry?</h4>
+         </div>	
+             <div class="enquiry-form">
+                    <form>    
+                        <input type="text" name="name" id="enquiry" placeholder="*Your Name">
+                        <input type="tel" name="usrtel" id="enquiry" placeholder="*Contact Phone Number"> 
+                        <input type="email" name="email" id="enquiry" placeholder="*Contact Phone Number">
+                        <div class="enquiry-location">
+                                <select name="trucksearch" class="trucksearch" tabindex="4">
+                                    <option value="">Location</option>
+                                        <option value="1">USA</option>
+                                        <option value="9">Canada</option>
+                                        <option value="2">France</option>
+                                        <option value="3">Spain</option>
+                                        <option value="6">Bulgaria</option>
+                                        <option value="7" disabled="disabled">Greece</option>
+                                        <option value="8">Italy</option>
+                                </select>
+                        </div>
+                        <textarea rows="4" cols="10" name="email" id="enquiry" placeholder="*Your Enquiry"></textarea>
+                        <input type="checkbox" id="subscribe" name="" value="" checked>
+                             <label for="subscribe" id="subscribe" ><span></span>Subscribe to <strong>Truckworld.com.au</strong></label>
+                             
+                            <div class="trucksearch-select">               
+                                <a type="submit" id="send-button" class="button submit" onClick="">SEND</a> 
+                                <a href="/" class="clear-enquiry">Clear All</a>
+                            </div> 
+                   </form>         
+              </div>
+         </div>     
+              <div class="call-container">
+              		<div class="call-inside">
+                    	<div class="call-left">
+                        	<img src="images/icons/phone-bg.png">
+                        </div>
+                        <div class="call-right">
+                        	<p>Call Seller Directly</p>
+                            <h4>04XX XXX XXX</h4>
+                            <a href="/">unlock number</a>
+                        </div>
+                    </div>
+                    <div class="call-bottom">
+                    	<p id="italic"><a href="/">Sign In </a>or<a href="/"> Join</a> to unlock all sellers phone numbers instantly</p>
+                    </div>
+              </div>          	
+	
+<!-- enquiry form -->   
+
+<!-- right ad start --> 
+    
+    <div class="right-ad-container ad-view">
+        <script src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&amp;c=28&amp;pli=7665993&amp;PluID=0&amp;w=300&amp;h=250&amp;ord=[timestamp]&amp;ucm=true"></script>
+	</div>
+	
+    <!-- right side links-->
+    
+    <div class="right-links-container">
+    	<div class="right-links">
+        	<h5>Related News</h5>
+    	</div>
+        <div class="related-news">
+        	<h5>Lorem ipsum dolor sit amet</h5>
+            <p>Nunc fermentum justo vel consectetur aliquam...</p>
+            <h6>11 Aug 2013</h6>
+        </div>
+        <div class="related-news">
+        	<h5>Lorem ipsum dolor sit amet</h5>
+            <p>Nunc fermentum justo vel consectetur aliquam...</p>
+            <h6>11 Aug 2013</h6>
+        </div>
+        <div class="related-news">
+        	<h5>Lorem ipsum dolor sit amet</h5>
+            <p>Nunc fermentum justo vel consectetur aliquam...</p>
+            <h6>11 Aug 2013</h6>
+        </div>
+        <div class="related-news">
+        	<h5>Lorem ipsum dolor sit amet</h5>
+            <p>Nunc fermentum justo vel consectetur aliquam...</p>
+            <h6>11 Aug 2013</h6>
+        </div>
+        <div class="related-news">
+        	<h5>Lorem ipsum dolor sit amet</h5>
+            <p>Nunc fermentum justo vel consectetur aliquam...</p>
+            <h6>11 Aug 2013</h6>
+        </div>                                
+    </div>   
+    
+        <div class="right-links-container">
+    	<div class="right-links">
+        	<h5>Sponsored Links</h5>
+    	</div>
+        <div class="related-news">
+        	<h5>Lorem ipsum dolor sit amet</h5>
+            <p>Nunc fermentum justo vel consectetur aliquam...</p>
+            <a href="/"><h5>www.truckworld.com.au</h5></a>
+        </div>
+        <div class="related-news">
+        	<h5>Lorem ipsum dolor sit amet</h5>
+            <p>Nunc fermentum justo vel consectetur aliquam...</p>
+            <a href="/"><h5>www.truckworld.com.au</h5></a>
+        </div>
+        <div class="related-news">
+        	<h5>Lorem ipsum dolor sit amet</h5>
+            <p>Nunc fermentum justo vel consectetur aliquam...</p>
+            <a href="/"><h5>www.truckworld.com.au</h5></a>
+        </div>
+        <div class="related-news">
+        	<h5>Lorem ipsum dolor sit amet</h5>
+            <p>Nunc fermentum justo vel consectetur aliquam...</p>
+            <a href="/"><h5>www.truckworld.com.au</h5></a>
+        </div>
+        <div class="related-news">
+        	<h5>Lorem ipsum dolor sit amet</h5>
+            <p>Nunc fermentum justo vel consectetur aliquam...</p>
+            <a href="/"><h5>www.truckworld.com.au</h5></a>
+        </div>                                
+    </div>   
+     
+</div>    
+<!-- end right ad-->
+
+<!-- End Right Column -->
+
+
+</div>
+<!-- End Main body content -->
+
+</div>
+<!-- Footer -->
+
+<footer>
+
+<!-- Footer Section 1 -->
+
+	<div class="footerwrap-1">
+    	<div class="wrapper">
+        	<h1>The online truck sales platform for 5,000+ dealers</h1>
+        </div>
+    </div> 
+       
+<!-- End Footer Section 1 -->
+
+<!-- Footer Section 2 -->
+
+	<div class="footerwrap-2">
+    	<div class="wrapper">
+        	<div class="col12">
+            	<h2>Browse By Category</h2>
+            	<h3>Browse Through a Wide Selection of Commercial Vehicles and Trailers in Australia</h3>
+            </div>    
+        	
+            <div class="col3">
+            	<ul>
+                	<li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+				</ul>
+            </div>
+            
+            <div class="col3">
+            	<ul>
+                	<li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+				</ul>
+            </div>
+            
+            <div class="col3">
+            	<ul>
+                	<li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+				</ul>
+            </div>
+            
+            <div class="col3 last">
+            	<ul>
+                	<li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+				</ul>
+            </div>
+        <div class="onerow">    
+            <div class="return">
+            	<a href="#" class="back-to-top"><h4>RETURN TO TOP</h4></a>
+                    </div>
+                </a>
+            </div>
+        </div>   
+    </div>
+</div>       
+<!-- End Footer Section 2 -->   
+
+
+<!-- Footer Section 3 -->            
+       <div class="footerwrap-3">
+       		<div class="wrapper">
+       		<div class="col12">
+            	<div class="col4">
+                	<img src="images/logo-footer.png" alt="Truckworld Logo" title"Truckworld Logo">
+                </div>
+                <div class="col2">
+                	<h4>TOP LINKS</h4>
+                    <ul>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>    
+			       		<li><a href="/">New Trucks</a></li>
+					</ul>
+              	</div>      
+                <div class="col2">
+                	<h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>    
+			       		<li><a href="/">New Trucks</a></li>
+					</ul>
+              	</div> 			
+                <div class="col2">
+                	<h4>TIPS & HELP</h4>
+                    <ul>
+                        <li><a href="/">About</a></li>
+                    	<li><a href="/">Live Chat</a></li>
+                        <li><a href="/">Help Centre</a></li>
+                    	<li><a href="/">Advertising Tips</a></li>
+                        <li><a href="/">Contact</a></li>
+                    	<li><a href="/">Used Trucks</a></li>    
+			       		<li><a href="/">New Truck</a></li>
+					</ul>
+              	</div> 
+                <div class="col2 last">
+                	<h4>LEGAL</h4>
+                    <ul>
+                        <li><a href="/">Privacy Policy</a></li>
+                    	<li><a href="/">Posting Policy</a></li>
+                        <li><a href="/">Terms of Use</a></li>
+					</ul>
+                	<h4>RELATED</h4>
+                    <ul>
+                        <li><a href="/">TrailerWorld.com.au</a></li>
+                    	<li><a href="/">MachineWorld.com.au</a></li>
+					</ul>                    
+              	</div>  
+           </div>
+   				<div class="onerow">
+                	<div class="col12">
+                    	<div id="footer-nav">
+                        	<ul>
+                                <li><a href="/">Post an Ad</a></li>
+                                <li><a href="/">Search For Sale</a></li>
+                                <li><a href="/">Sitemap</a></li>
+                                <li><a href="/">Truck Finance Options</a></li>
+                                <li><a href="/">Dealers</a></li>
+                                <li class="last" ><a href="/">Manufacturers</a></li>
+                            </ul>
+                        </div>
+                        </div>    
+                    <div class="col12">
+                    	<p>© Copyright Truckworld.com.au 2013. All Rights Reserved.</p>
+                    </div>
+              </div>
+         </div> 
+      </div>   
+   </div>
+</div>
+</div>
+</div>
+                             
+</footer>
+<!-- End Footer -->
+
+
+</div>
+<!-- End Page -->
+
+
+</body>
+</html>

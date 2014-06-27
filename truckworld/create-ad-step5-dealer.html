@@ -1,0 +1,1066 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Truckworld</title>
+
+<!-- HTML5 Shiv -->
+<!--[if lte IE 8]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- fonts -->
+
+<style type="text/css" >
+	@font-face {
+    font-family: 'AvenirLTStd85Heavy';
+    src: url(../fonts/av-heavy.eot);
+    src: url(../fonts/av-heavy.eot) format('embedded-opentype'),
+}
+
+@font-face {
+    font-family: 'AvenirLTStd45Book';
+    src: url(../fonts/avenirltstd-book_0.eot);
+    src: url(../fonts/avenirltstd-book_0.eot) format('embedded-opentype'),
+}
+
+</style>
+   
+<!-- jQuery -->
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- IE Stylesheet -->
+
+<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+
+<!-- Advanced Search -->
+<link href="css/advanced-search.css" rel="stylesheet"/>
+<script type="text/javascript" src="js/advanced-toggle.js"></script>
+
+<!-- Responsive Grid -->
+<link rel="stylesheet" href="css/onepc.css">
+
+<!-- jQuery Easing Plugin -->
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+<!-- HorizontalNav jQuery Plugin - Fit Full Width -->
+<script type="text/javascript" src="js/jquery.horizontalNav.js"></script>
+<script>
+	$(document).ready(function(){
+	  $('.full-width').horizontalNav({
+		responsive: true,
+		tableDisplay: true
+	  });
+	});
+</script>
+
+	<!-- Slider -->
+    <link rel="stylesheet" href="css/responsiveslides.css" media="all">
+    <script src="js/responsiveslides.js"></script>
+	<script>
+      $(function() {
+        $(".rslides").responsiveSlides({
+		  auto: false,
+		  speed: 500,
+		  timeout: 4000,
+		  pager: false,
+		  nav: true,
+		  random: false,
+		  pause: false,
+		  pauseControls: true,
+		  prevText: "Previous",
+		  nextText: "Next",  
+		  namespace: "centered-btns"
+		});
+      // Slideshow super ad
+      $(".rslides2").responsiveSlides({
+		  auto: true,
+		  speed: 3000,
+		  timeout: 4000,
+		  pager: false,
+		  nav: true,
+		  random: false,
+		  pause: false,
+		  pauseControls: true,
+		  prevText: "Previous",
+		  nextText: "Next",  
+        namespace: "large-btns"
+      });
+      });
+    </script> 
+    
+    <!-- return to top --> 
+    
+    <script>
+jQuery(document).ready(function() {
+    var offset = 220;
+    var duration = 1000;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.back-to-top').fadeIn(duration);
+        } else {
+            jQuery('.back-to-top').fadeOut(duration);
+        }
+    });
+    
+    jQuery('.back-to-top').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+});    
+	</script>
+    
+<!-- Tabs -->
+
+<script src="js/jquery.easytabs.min.js" type="text/javascript"></script>
+<script src="js/jquery.hashchange.min.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    $(document).ready( function() {
+      $('#tab-container').easytabs();
+	  $('#tab-container1').easytabs();
+	  $('#tab-container2').easytabs();
+	  $('#tab-container3').easytabs();
+    });
+  </script>
+   
+<!-- show hide divs-->  
+
+<script type="text/javascript">
+$(document).ready(function(){	
+    $('.example2').hide().before('<a href="#" id="toggle-example2">View Saved Ads</a>');
+	$('a#toggle-example2').click(function() {
+		$('.example2').slideToggle(500);
+		return false;
+	});
+});
+$(document).ready(function(){	
+    $('.example3').hide().before('<a href="#" id="toggle-example3">Saved Searches</a>');
+	$('a#toggle-example3').click(function() {
+		$('.example3').slideToggle(500);
+		return false;
+	});
+});
+$(document).ready(function(){	
+    $('.example4').show().before('<a href="#" id="toggle-example4">Compare Saved</a>');
+	$('a#toggle-example4').click(function() {
+		$('.example4').slideToggle(500);
+		return false;
+	});
+});
+
+</script>
+
+<!-- toggle with image change effect -->  
+                    
+<script type="text/javascript">
+jQuery(document).ready(function($) { 
+ 
+    // Find the toggles and hide their content
+    $('.toggle').each(function(){
+        $(this).find('.toggle-content').show();
+    });
+ 
+    // When a toggle is clicked (activated) show their content
+    $('.toggle a.toggle-trigger').click(function(){
+        var el = $(this), parent = el.closest('.toggle');
+ 
+        if( el.hasClass('active') )
+        {
+            parent.find('.toggle-content').slideToggle();
+            el.removeClass('active');
+        }
+        else
+        {
+            parent.find('.toggle-content').slideToggle();
+            el.addClass('active');
+        }
+        return false;
+    });
+ 
+});  //End
+</script>
+
+  
+<!-- select box -->
+
+<link href="css/jquery.selectbox.css" type="text/css" rel="stylesheet" />
+  
+<script type="text/javascript" src="js/jquery.selectbox-0.2.js"></script>
+<script type="text/javascript">
+$(function () {
+	$(".trucksearch").selectbox();
+	$("#radius").selectbox();
+	$(".advanced-search").selectbox();
+});
+</script>  
+
+
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="headwrap">
+
+<!-- Top of Header -->
+
+		<div class="wrapper">
+        	<div class="col10">
+            	<div class="headlinks">
+                    <a href="/"><img src="images/icons/User.png">  Sign In</a>
+                </div>
+                <div class="headlinks"> 
+                <a href="/"><img src="images/icons/Plus.png">  Our Network</a>
+                </div>
+            </div>
+            <div class="col2 last headsocial">
+            	<a href="/"><img src="images/icons/Facebook.png"></a>
+            	<a href="/"><img src="images/icons/Twitter.png"></a>               
+            	<a href="/"><img src="images/icons/Youtube.png"></a>    
+            </div>
+       </div> 
+</div>           
+  	<div class="logohead-container">
+    	<div class="wrapper">
+    	<div class="col12">
+        	<div class="logohead">
+            	<div class="logo account">
+            		<a href="index.html" alt="Truckworld" title="Truckworld.com.au">
+                	<img src="images/logo.png"/></a>
+            	</div>
+                <div class="account-container">
+                	<div class="my-truckworld">
+                    	<h1>My Truckworld</h1>
+                    </div>
+                    <div class="username">
+                    	<a href="/"><h3>Dealer</a></br>Welcome Back!</h3>
+                    </div>
+                    <div class="account-links">
+                    	<a href="/">Dashboard</a> | <a href="/">Logout</a>
+                    </div>
+                </div>    
+            	<div class="bannerLeaderboard account">
+							
+							<script src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&c=28&pli=6157954&PluID=0&w=728&h=90&ord=[timestamp]&ucm=true"></script>
+<noscript>
+<a href="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=brd&FlightID=6157954&Page=&PluID=0&Pos=5073" target="_blank"><img src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=bsr&FlightID=6157954&Page=&PluID=0&Pos=5073" border=0 width=728 height=90></a>
+</noscript>
+
+        	</div></div>
+        </div>
+    </div> 
+ </div>  
+<!-- End Top of Header -->    
+
+<!-- Navigation -->
+
+<div class="navwrap">
+    <div class="wrapper"> 
+        <div class="col12">
+            <nav class="horizontal-nav full-width">
+                <ul class="menu">
+                    <li><a href="index.html"><img alt="Truckworld Home" src="images/icons/home.png"></a></li>
+                    <li><a href="/">Services</a>
+                        <div class="dropdown-5columns dealers fullwidth" id="dashboard">
+                                    
+                                        <div class="menu-head-dashboard fullwidth">
+                                        	<a href="/">Manage Ads</a>
+                                        </div>
+                                        <div class="menu-head-dashboard fullwidth">
+                                        	<a href="create-ad-step1-dealer.html">Create an Ad</a>
+                                        </div>
+                                        <div class="menu-head-dashboard fullwidth">
+                                        	<a href="create-ad-step1-dealer.html">Advertise</a>
+                                        </div>
+                                        <div class="menu-head-dashboard fullwidth">
+                                        	<a href="/">Favourites</a>
+                                        </div>
+                                        <div class="menu-head-dashboard fullwidth">
+                                        	<a href="create-ad-step1-dealer.html">Search Engine</a>
+                                        </div>
+                                        <div class="menu-head-dashboard fullwidth">
+                                        	<a href="/">Dealer Site</a>
+                                        </div>
+                                        <div class="menu-head-dashboard fullwidth">
+                                        	<a href="/">Your Stats</a>
+                                        </div>
+                            
+                            </li>                 
+                    
+                    <li><a href="/">Account Management</a>
+                        <div class="dropdown-4columns dealers" id="dashboard">
+                                    
+                                    <div class="col2 last">
+                                        <div class="menu-head-dashboard">
+                                        	<a href="update-account-step1-dealer.html">Update Account</a>
+                                        </div>
+                                    </div>
+                                    <div class="col3 last">
+                                        <div class="menu-head-dashboard">
+                                        	<a href="/">Password Modification</a>
+                                        </div>
+                                    </div>
+                                    <div class="col2 last">
+                                    
+                                        <div class="menu-head-dashboard">
+                                        	<a href="/">Manage Users</a>
+                                        </div>
+                                    </div>
+                                    <div class="col2 last">
+                                        <div class="menu-head-dashboard">
+                                        	<a href="/">Preferences</a>
+                                        </div>
+                                    </div>
+                            </li>
+                                                
+                    <li><a href="/">Billing</a></li>
+                    <li><a href="/">Subscription</a></li>
+                    <li><a href="/">Alerts</a>
+                    	<div class="alert-nav" id="dealer">
+                        	<a href="/">3</a>
+                        </div>    
+                    </li>
+                    <li><a href="index.html" class="navchat">Truckworld.com.au</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>    
+<!-- End Navigation -->
+
+
+<!-- Main body content -->
+
+<div class="body-wrap">
+
+<div class="wrapper">
+<!-- main body content -->
+  	<div class="offers">
+        <div class="breadcrumbs">
+    	<p><a href="/">Services » Create an Ad » </a>Step5 Pay & Publish</p>
+        </div>
+  <!----- steps ------->      
+        
+        <div class="steps-container">
+            <div class="step create-steps" id="step1-dealer">
+                <h3>STEP 1 - Choose Category</h3>
+            </div>
+            <div class="step create-steps" id="step2-dealer">
+                <h3>STEP 2 - Enter Details</h3>
+            </div>
+            <div class="step create-steps" id="step3-dealer">
+                <h3>STEP 3 - Upload Images</h3>
+            </div>
+            <div class="step create-steps" id="step4-dealer">
+                <h3>STEP 4 - Preview Ad</h3>
+            </div>
+            <div class="step active create-steps" id="step5-dealer">
+                <h3>STEP 5 - Pay & Publish</h3>
+            </div>
+        </div>
+        
+  <!----- end steps ------->
+  
+        <div class="sign-in-container  step2-dealer">
+            	<div id="tab-container3" class="tab-container">
+                    <div class="col12 last">
+                        <h1 id="package-payment">Select Your Ad Package</h1>
+                    </div>
+                    <ul>
+                        <li class="tab-package value">
+                        	<div class="offer-info" id="package">
+                            	<div class="package-head">
+                                    <h2>Value Ad</h2>
+                                    <h5>Donec sodales congue cursus</h5>
+                                    <h2>$30.00 inc GST</h2>
+                                </div>    
+                                <ul class="offer" id="package">
+                                    <li>Sed luctus dolor tempor felis.</li>
+                                    <li>Rhoncus vehicula.</li>
+                                </ul>    
+                          	</div> 
+                            <div class="views">
+                            	<ul>
+                                	<li>In convallis lacus sit amet tempus sollicitudin.</li>
+                                </ul>
+                            </div>
+                            <a class="col6 buy-package" href="#value-tab"></a>
+                        </li>
+                        
+                        <li class="tab-package premium">
+                        	<div class="offer-info" id="package">
+                            	<div class="package-head">
+                                    <h2>Premium</h2>
+                                    <h5>Donec sodales congue cursus</h5>
+                                    <h2>$50.00 inc GST</h2>
+                                </div>    
+                                <ul class="offer" id="package">
+                                    <li>Sed luctus dolor tempor felis.</li>
+                                    <li>Rhoncus vehicula.</li>
+                                </ul>    
+                          	</div> 
+                            <div class="views">
+                            	<ul>
+                                	<li>In convallis lacus sit amet tempus sollicitudin.</li>
+                                </ul>
+                            </div>                  
+                            <a class="col6 buy-package" href="#premium-tab"></a>
+
+                        </li>
+                        
+                        <li class="tab-package deluxe">
+                        	<div class="offer-info" id="package">
+                            	<div class="package-head">
+                                    <h2>Deluxe</h2>
+                                    <h5>Donec sodales congue cursus</h5>
+                                    <h2>$70.00 inc GST</h2>
+                                </div>    
+                                <ul class="offer" id="package">
+                                    <li>Sed luctus dolor tempor felis.</li>
+                                    <li>Rhoncus vehicula.</li>
+                                </ul>    
+                          	</div> 
+                            <div class="views">
+                            	<ul>
+                                	<li>In convallis lacus sit amet tempus sollicitudin.</li>
+                                </ul>
+                            </div><strong></strong>                  
+                            <a class="col6 buy-package" href="#deluxe-tab"></a>
+                        </li>
+                        
+                        <li class="tab-package super">
+                        	<div class="offer-info" id="package">
+                            	<div class="package-head">
+                                    <h2>Super Ad</h2>
+                                    <h5>Donec sodales congue cursus</h5>
+                                    <h2>$100.00 inc GST</h2>
+                                </div>    
+                                <ul class="offer" id="package">
+                                    <li>Sed luctus dolor tempor felis.</li>
+                                    <li>Rhoncus vehicula.</li>
+                                </ul>    
+                          	</div> 
+                            <div class="views">
+                            	<ul>
+                                	<li>In convallis lacus sit amet tempus sollicitudin.</li>
+                                </ul>
+                            </div>                    
+                            <a class="col6 buy-package" href="#super-tab"></a>
+                        </li>  
+            		</ul>
+                    
+                    <div class="onerow"></div>
+                    
+                    <h1 id="package-payment">Ad Summary</h1>
+     
+<div id="value-tab">
+	<div class="offer-container" id="package">
+         <div class="offer-info-package">
+            <table>
+                <tbody>
+                    <tr id="ad-package1">
+                        <td id="first-col">Ad Reference#</td>
+                        <td id="second-col">895623</td>
+                    </tr>
+                    <tr id="ad-package">
+                        <td id="first-col">Package Deal</td>
+                        <td id="second-col">Value Ad</td>
+                    </tr>
+                    <tr id="ad-package">
+                        <td id="first-col">Date Created</td>
+                        <td id="second-col">20/06/2013</td>
+                    </tr>
+                    <tr id="ad-package">
+                        <td id="first-col">Cost</td>
+                        <td id="second-col">$30.00</td>
+                    </tr>
+               </tbody>
+           </table>         
+		</div>
+            
+                    <!-- Value Ad --> 
+         <div class="offer-ad" id="value">
+                	<div class="value-ad">
+                    	<div class="light-head">
+                        	<a href="/" title="View Truckworld ad">2013 FREIGHTLINER ARGOSY Prime Mover</a>
+                            <div class="view-ad-dark">
+                               <a href="/" title="View Truckworld ad">VIEW AD</a>
+                            </div>    
+                        </div>
+                        <div class="value-image-container">
+                        	<a href="/" title="truckworld ad title"><img src="images/super-ad-hold.jpg"></a>
+                        </div>
+                        <div class="value-content">
+                            <h1>$368,924</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut justo vel nunc placerat sagittis. Morbi a ligula sapien. Fusce eu dapibus sapien, sed tincidunt massa...</p>
+                        </div>
+                        <div class="value-details value-content">
+                            <h5>PRIVATE SALE</h5>
+                        	<div class="details">
+                        		<a href="/" title="Phone Seller"><img src="images/icons/phone.png">Ph:04XX XXX XXX</a>
+                            </div>
+                            <div class="details">
+                        		<a href="/" title="Email Seller"><img src="images/icons/email.png">Email Seller</a>
+							</div>
+                            <div class="details">
+                        		<a href="/" title="Save & Compare"><img src="images/icons/save-16.png">Save & Compare</a>
+							</div>
+                       </div>
+                   
+                   <!-- End value Ad -->                           
+				</div>
+            </div> 
+     	</div>
+	</div>
+     
+<div id="premium-tab">
+     
+	<div class="offer-container" id="package">
+    
+         <div class="offer-info-package">
+            <table>
+                <tbody>
+                    <tr id="ad-package">
+                        <td id="first-col">Ad Reference#</td>
+                        <td id="second-col">895623</td>
+                    </tr>
+                    <tr id="ad-package">
+                        <td id="first-col">Package Deal</td>
+                        <td id="second-col">Premium Ad</td>
+                    </tr>
+                    <tr id="ad-package">
+                        <td id="first-col">Date Created</td>
+                        <td id="second-col">20/06/2013</td>
+                    </tr>
+                    <tr id="ad-package">
+                        <td id="first-col">Cost</td>
+                        <td id="second-col">$50.00</td>
+                    </tr>
+               </tbody>
+           </table>         
+		</div>
+    
+            
+            <div class="offer-ad" id="premium">
+                	<div class="premium-ad">
+                    	<div class="light-head">
+                        	<a href="/" title="View Truckworld ad">2013 FREIGHTLINER ARGOSY Prime Mover</a>
+                            <div class="view-ad-dark">
+                               <a href="/" title="View Truckworld ad">VIEW AD</a>
+                            </div>    
+                        </div>
+                        <div class="premium-image-container">
+                        	<a href="/" title="truckworld ad title"><img src="images/super-ad-hold.jpg"></a>
+                        </div>
+                        <div class="premium-content">
+                        	<div class="premium-thumbnail">
+                        	<a href="/" title="truckworld ad thumbnail"><img src="images/super-ad-hold.jpg"></a>
+                            </div>
+                            <div class="premium-thumbnail">
+                            <a href="/" title="truckworld ad thumbnail"><img src="images/super-ad-hold.jpg"></a>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut justo vel nunc placerat sagittis. Morbi a ligula sapien. Fusce eu dapibus sapien, sed tincidunt massa...</p>
+                        </div>
+                        <div class="premium-details premium-content">
+                        	<h1>$368,924</h1>
+                            <h5>PRIVATE SALE</h5>
+                        	<div class="details">
+                        		<a href="/" title="Phone Seller"><img src="images/icons/phone.png">Ph:04XX XXX XXX</a>
+                            </div>
+                            <div class="details">
+                        		<a href="/" title="Email Seller"><img src="images/icons/email.png">Email Seller</a>
+							</div>
+                            <div class="details">
+                        		<a href="/" title="Save & Compare"><img src="images/icons/save-16.png">Save & Compare</a>
+							</div>
+                       </div>
+                   </div>
+              </div>     
+            </div>
+        </div>        
+                  <!-- End Premium Ad -->     
+     
+    
+     <div id="deluxe-tab">
+     
+<div class="offer-container" id="package">
+         <div class="offer-info-package">
+            <table>
+                <tbody>
+                    <tr id="ad-package">
+                        <td id="first-col">Ad Reference#</td>
+                        <td id="second-col">895623</td>
+                    </tr>
+                    <tr id="ad-package">
+                        <td id="first-col">Package Deal</td>
+                        <td id="second-col">Deluxe Ad</td>
+                    </tr>
+                    <tr id="ad-package">
+                        <td id="first-col">Date Created</td>
+                        <td id="second-col">20/06/2013</td>
+                    </tr>
+                    <tr id="ad-package">
+                        <td id="first-col">Cost</td>
+                        <td id="second-col">$70.00</td>
+                    </tr>
+               </tbody>
+           </table>         
+		</div>
+            
+            <div class="offer-ad" id="deluxe">
+               <!-- Deluxe Ad --> 
+                
+                	<div class="deluxe-ad">
+                    	<div class="dark-head">
+                        	<a href="/" title="View Truckworld ad">2013 FREIGHTLINER ARGOSY Prime Mover</a>
+                               <a href="/" class="right margin" title="View Truckworld ad">VIEW AD</a> 
+                        </div>
+                        <div class="deluxe-slide-container">
+                        <div class="callbacks_container dif_caption" id="slider-home">
+                            <ul class="rslides">
+                              <li>
+                                <a href="#"><img src="images/1.jpg" alt=""></a>
+                              </li>
+                              <li>
+                                <a href="#"><img src="images/2.jpg" alt=""></a>
+                              </li>
+                              <li>
+                                <a href="#"><img src="images/3.jpg" alt=""></a>
+                              </li>
+                              <li>
+                                <a href="#"><img src="images/4.jpg" alt=""></a>
+                              </li>
+                            </ul>
+                        </div>
+                        </div>
+                        <div class="deluxe-content">
+                        	<h1>$368,924</h1>
+                            <h5>PRIVATE SALE</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut justo vel nunc placerat sagittis. Morbi a ligula sapien. Fusce eu dapibus sapien, sed tincidunt massa...</p>
+                        </div>
+                        <div class="deluxe-details">
+                        	<div class="details">
+                        		<a href="/" title="Phone Seller"><img src="images/icons/phone.png">Ph:04XX XXX XXX</a>
+                            </div>
+                            <div class="details">
+                        		<a href="/" title="Email Seller"><img src="images/icons/email.png">Email Seller</a>
+							</div>
+                            <div class="details">
+                        		<a href="/" title="Save & Compare"><img src="images/icons/save-16.png">Save & Compare</a>
+							</div>
+                            <div class="view-ad button">
+                           	<a href="/">View More</a>
+                           	</div>   
+                       </div>
+                   </div>
+                   
+                   <!-- End Deluxe Ad -->   
+
+                 </div>
+             </div> 
+     
+     </div>
+     
+     <div id="super-tab">
+        <div class="offer-container" id="package">
+         <div class="offer-info-package">
+            <table>
+                <tbody>
+                    <tr id="ad-package">
+                        <td id="first-col">Ad Reference#</td>
+                        <td id="second-col">895623</td>
+                    </tr>
+                    <tr id="ad-package">
+                        <td id="first-col">Package Deal</td>
+                        <td id="second-col">Super Ad</td>
+                    </tr>
+                    <tr id="ad-package">
+                        <td id="first-col">Date Created</td>
+                        <td id="second-col">20/06/2013</td>
+                    </tr>
+                    <tr id="ad-package">
+                        <td id="first-col">Cost</td>
+                        <td id="second-col">$100.00</td>
+                    </tr>
+               </tbody>
+           </table>         
+		</div>
+            <div class="offer-ad" id="super">
+                <!-- Super Ad --> 
+                        <div class="super-ad">
+                            <div class="dark-head">
+                                <a href="/" title="View Truckworld ad">2013 FREIGHTLINER ARGOSY Prime Mover</a>
+                                <div id="ribbon">
+                                    <a href="/" title="View Truckworld ad"><img src="images/icons/view-ad-ribbon.png"></a>
+                                        <div id="ribbon-text">
+                                            <a href="/" title="View Truckworld ad">View Ad</a>
+                                        </div>
+                                </div>    
+                            </div>
+                                    <div class="super-slide-container">
+                                    	<div class="callbacks_container dif_caption" id="slider-home">
+                                            <ul class="rslides2">
+                                              <li>
+                                                <a href="#"><img src="images/1.jpg" alt=""></a>
+                                              </li>
+                                              <li>
+                                                <a href="#"><img src="images/2.jpg" alt=""></a>
+                                              </li>
+                                              <li>
+                                                <a href="#"><img src="images/3.jpg" alt=""></a>
+                                              </li>
+                                              <li>
+                                                <a href="#"><img src="images/4.jpg" alt=""></a>
+                                              </li>
+                                            </ul>
+                            			</div>
+                            		</div>
+                            <div class="super-content">
+                                <h1>$368,924</h1>
+                                <h5>PRIVATE SALE</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut justo vel nunc placerat sagittis. Morbi a ligula sapien. Fusce eu dapibus sapien, sed tincidunt massa...</p>
+                            </div>
+                            <div class="super-details">
+                                <div class="details">
+                                    <a href="/" title="Phone Seller"><img src="images/icons/phone.png">Ph:04XX XXX XXX</a>
+                                </div>
+                                <div class="details">
+                                    <a href="/" title="Email Seller"><img src="images/icons/email.png">Email Seller</a>
+                                </div>
+                                <div class="details">
+                                    <a href="/" title="Save & Compare"><img src="images/icons/save-16.png">Save & Compare</a>
+                                </div>
+                                <div class="details-2">
+                                    <p><img src="images/icons/engine.png">560HP</p>
+                                </div>
+                                <div class="details-2">
+                                    <p><img src="images/icons/gears.png">18</p>
+                                </div>
+                                <div class="details-2">
+                                    <p><img src="images/icons/suspension.png">Airbag</p>
+                                </div> 
+                               <div class="view-ad button super">
+                                    <a href="/">View More</a>
+                               </div>     
+                           </div>
+                       </div>
+                 </div>
+             </div> 
+	     </div>
+     
+		<div class="onerow"></div>
+        
+        <h1 id="package-payment">How  would you like to pay?</h1>
+   
+     
+    <div class="toggle">
+ 
+            <!-- Toggle Link -->
+            <a href="#" title="Vehicle Details" class="toggle-trigger"><h1>Credit Card Payment</h1><h5>processed instantly, no extra fee</h5></a>
+         
+            <!-- Toggle Content to display -->
+            <div class="toggle-content">
+                 <div class="payment-form-container">
+                	<div class="col3">
+                    	<label for="card-number" id="dates">* Card Number</label>
+                    </div>
+                    <div class="col1">
+                   		<input class="payment"  id="card-number" type="text">
+                    </div>  
+                    <div class="col1">
+                   		<input class="payment"  id="card-number" type="text">
+                    </div>    
+                    <div class="col1">
+                   		<input class="payment"  id="card-number" type="text">
+                    </div>    
+                    <div class="col1">
+                   		<input class="payment"  id="card-number" type="text">
+                    </div>
+                    <div class="col3">
+                    	<img src="images/icons/visa.png" title="Visa" Alt="Visa">
+                    	<img src="images/icons/mastercard.png" title="Mastercard" Alt="Mastercard">                                           
+                    	<img src="images/icons/amex.png" title="American Express" Alt="American Express">
+                    </div>
+                    <div class="onerow">
+                	<div class="col3">
+                    	<label for="card-name" id="dates">* Card Holder Name</label>
+                    </div>
+                    <div class="col3">
+                   		<input class="payment"  id="card-name" type="text">
+                    </div>
+                    <div class="col2">
+                    	<label for="card-number" id="dates">* Expiry Date</label>
+                    </div>
+                    <div class="col2">
+                    	<div class="enquiry-location">
+                              <select name="trucksearch" class="trucksearch" id="category" tabindex="4">
+                                  <option value="">01</option>
+                                  <option value="">02</option>
+                                  <option value="">03</option>
+                                  <option value="">04</option>
+                                  <option value="">05</option>
+                                  <option value="">06</option>
+                                  <option value="">07</option>
+                                  <option value="">08</option>
+                                  <option value="">09</option>
+                                  <option value="">10</option>
+                                  <option value="">11</option>
+                                  <option value="">12</option>
+                              </select>
+                         </div>     
+                    </div>  
+                    
+                    <div class="col2 last">
+                    	<div class="enquiry-location">                   
+                              <select name="trucksearch" class="trucksearch" id="category" tabindex="4">
+                                  <option value="">2013</option>
+                                  <option value="">2014</option>
+                                  <option value="">2015</option>
+                                  <option value="">2016</option>
+                                  <option value="">2017</option>
+                                  <option value="">2018</option>
+                                  <option value="">2019</option>
+                                  <option value="">2020</option>
+                                  <option value="">2021</option>
+                                  <option value="">2022</option>
+                                  <option value="">2023</option>
+                              </select>
+                        </div>      
+                    </div>                     
+                    <div class="onerow"></div>
+                    
+                    <div class="col3">
+                    	<label for="cvv" id="dates">* CVV</label>
+                    </div>
+                    <div class="col1">    
+                   		<input class="payment"  id="cvv" type="text">
+                    </div>    
+                    <div class="col5" id="margin-top">
+                    	    <input type="checkbox" id="ad1" name="" value="" checked="">
+                    		<label for="ad1" id="subscribe"><span></span> Save card details in your Truckworld.com.au account</label>
+					</div>
+					<div class="col3 last">
+	        	    	<div class="offers payment" id="sign-in">
+                            <input type="submit" class="update payment spay" id="sr-submit" value="Submit Payment">  
+                        </div>  
+                    </div>      
+            </div>
+            
+ 	</div>   
+
+ 	<div class="toggle">
+ 
+            <!-- Toggle Link -->
+            <a href="#" title="Vehicle Details" class="toggle-trigger"><h1>Direct Deposiot</h1><h5>processed in approximately 3 days, no extra fee</h5></a>
+         
+            <!-- Toggle Content to display -->
+            <div class="toggle-content">
+            <p>toggle content</p>
+  			</div>
+	 </div>   
+     
+     <div class="toggle">
+ 
+            <!-- Toggle Link -->
+            <a href="#" title="Vehicle Details" class="toggle-trigger"><h1>PayPal Payment</h1><h5>processed instantly, no extra fee</h5></a>
+         
+            <!-- Toggle Content to display -->
+            <div class="toggle-content">
+                <p>This is the faq toggle content</p>
+            </div>
+	 </div>  
+     
+     <div class="toggle">
+ 
+            <!-- Toggle Link -->
+            <a href="#" title="Vehicle Details" class="toggle-trigger"><h1>Cheque Payment</h1><h5>processed in approximately 3 days, no extra $5.00 fee</h5></a>
+         
+            <!-- Toggle Content to display -->
+            <div class="toggle-content">
+                <p>This is the faq toggle content</p>
+            </div>
+	 	</div>       
+      </div>
+   </div>   	
+</div>    
+<!-- End Main body content -->
+
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+
+<footer>
+
+<!-- Footer Section 1 -->
+
+	<div class="footerwrap-1">
+    	<div class="wrapper">
+        	<h1>The online truck sales platform for 5,000+ dealers</h1>
+        </div>
+    </div> 
+       
+<!-- End Footer Section 1 -->
+
+<!-- Footer Section 2 -->
+
+	<div class="footerwrap-2">
+    	<div class="wrapper">
+        	<div class="col12">
+            	<h2>Browse By Category</h2>
+            	<h3>Browse Through a Wide Selection of Commercial Vehicles and Trailers in Australia</h3>
+            </div>    
+        	
+            <div class="col3">
+            	<ul>
+                	<li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+				</ul>
+            </div>
+            
+            <div class="col3">
+            	<ul>
+                	<li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+				</ul>
+            </div>
+            
+            <div class="col3">
+            	<ul>
+                	<li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+				</ul>
+            </div>
+            
+            <div class="col3 last">
+            	<ul>
+                	<li><a href="/">3-4 Tonne Trucks</a></li>
+                    <li><a href="/">5-6-7 Tonne Trucks</a></li>
+                    <li><a href="/">8-9 Tonne Trucks</a></li>
+                    <li><a href="/">12-14 Tonne Trucks</a></li>
+				</ul>
+            </div>
+        <div class="onerow">    
+            <div class="return">
+            	<a href="#" class="back-to-top"><h4>RETURN TO TOP</h4></a>
+                    </div>
+                </a>
+            </div>
+        </div>   
+    </div>
+</div>
+  
+<!-- End Footer Section 2 -->   
+
+
+<!-- Footer Section 3 -->            
+       <div class="footerwrap-3">
+       		<div class="wrapper">
+       		<div class="col12">
+            	<div class="col4">
+                	<img src="images/logo-footer.png" alt="Truckworld Logo" title"Truckworld Logo">
+                </div>
+                <div class="col2">
+                	<h4>TOP LINKS</h4>
+                    <ul>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>    
+			       		<li><a href="/">New Trucks</a></li>
+					</ul>
+              	</div>      
+                <div class="col2">
+                	<h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>
+                        <li><a href="/">New Trucks</a></li>
+                    	<li><a href="/">Used Trucks</a></li>    
+			       		<li><a href="/">New Trucks</a></li>
+					</ul>
+              	</div> 			
+                <div class="col2">
+                	<h4>TIPS & HELP</h4>
+                    <ul>
+                        <li><a href="/">About</a></li>
+                    	<li><a href="/">Live Chat</a></li>
+                        <li><a href="/">Help Centre</a></li>
+                    	<li><a href="/">Advertising Tips</a></li>
+                        <li><a href="/">Contact</a></li>
+                    	<li><a href="/">Used Trucks</a></li>    
+			       		<li><a href="/">New Truck</a></li>
+					</ul>
+              	</div> 
+                <div class="col2 last">
+                	<h4>LEGAL</h4>
+                    <ul>
+                        <li><a href="/">Privacy Policy</a></li>
+                    	<li><a href="/">Posting Policy</a></li>
+                        <li><a href="/">Terms of Use</a></li>
+					</ul>
+                	<h4>RELATED</h4>
+                    <ul>
+                        <li><a href="/">TrailerWorld.com.au</a></li>
+                    	<li><a href="/">MachineWorld.com.au</a></li>
+					</ul>                    
+              	</div>  
+           </div>
+   				<div class="onerow">
+                	<div class="col12">
+                    	<div id="footer-nav">
+                        	<ul>
+                                <li><a href="/">Post an Ad</a></li>
+                                <li><a href="/">Search For Sale</a></li>
+                                <li><a href="/">Sitemap</a></li>
+                                <li><a href="/">Truck Finance Options</a></li>
+                                <li><a href="/">Dealers</a></li>
+                                <li class="last" ><a href="/">Manufacturers</a></li>
+                            </ul>
+                        </div>
+                        </div>    
+                    <div class="col12">
+                    	<p>© Copyright Truckworld.com.au 2013. All Rights Reserved.</p>
+                    </div>
+              </div>
+         </div> 
+      </div>   
+   </div>
+</div>
+</div>
+</div>
+                             
+</footer>
+<!-- End Footer -->
+
+</div>
+<!-- End Page -->
+
+</body>
+</html>
